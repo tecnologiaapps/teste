@@ -1,0 +1,2280 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escritor Destravado em 48H | Señor Lábios</title>
+
+    <meta
+        name="description"
+        content="Descubra como começar a escrever seu livro de ficção em 48 horas com um checklist prático, mesmo que nunca tenha escrito nada!"
+    >
+
+    <!-- =========================================================
+         FONTES ORIGINAIS DO SITE
+
+         O Builder original utiliza:
+         - Outfit para títulos
+         - Inter para textos
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================== */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            background: #ffffff;
+
+            color: #1a1a1a;
+
+            font-family: "Inter", sans-serif;
+
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           VARIÁVEIS ORIGINAIS
+        ========================================================== */
+
+        :root {
+
+            --orange: rgb(252, 131, 55);
+
+            --black: rgb(26, 26, 26);
+
+            --dark: rgb(18, 18, 18);
+
+            --cream: rgb(218, 210, 198);
+
+            --light-cream: rgb(247, 241, 239);
+
+            --light-cream-2: rgb(247, 242, 239);
+
+            --white: rgb(255, 255, 255);
+
+            --footer: rgb(26, 26, 26);
+
+            --heading-font: "Outfit", sans-serif;
+
+            --body-font: "Inter", sans-serif;
+
+            --content-width: 1224px;
+        }
+
+
+        /* =========================================================
+           CONTAINER
+        ========================================================== */
+
+        .container {
+            width: min(
+                var(--content-width),
+                calc(100% - 32px)
+            );
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =========================================================
+           TIPOGRAFIA ORIGINAL
+        ========================================================== */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--heading-font);
+
+            font-style: normal;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            letter-spacing: 0;
+        }
+
+        p {
+            font-family: var(--body-font);
+
+            font-size: 16px;
+
+            font-weight: 400;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           LOGO
+        ========================================================== */
+
+        .logo {
+            width: 180px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =========================================================
+           BOTÃO ORIGINAL
+        ========================================================== */
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 58px;
+
+            padding: 16px 40px;
+
+            border: 0;
+
+            border-radius: 0;
+
+            background: rgb(0, 219, 88);
+
+            color: rgb(255, 255, 255);
+
+            font-family: "Poppins", "Inter", sans-serif;
+
+            font-size: 22px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: rgb(29, 30, 32);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           SEÇÃO 01
+           HERO
+           Background original: #000000
+        ========================================================== */
+
+        .hero {
+            position: relative;
+
+            min-height: 760px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: rgb(0, 0, 0);
+
+            padding: 40px 0;
+        }
+
+        .hero-inner {
+            width: min(1224px, calc(100% - 32px));
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            gap: 30px;
+        }
+
+        .hero-logo {
+            width: 220px;
+
+            margin-bottom: 10px;
+        }
+
+        .hero-image {
+            width: min(500px, 70vw);
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+        .hero-title {
+            max-width: 850px;
+
+            color: #ffffff;
+
+            font-size: 48px;
+
+            line-height: 1.3;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 02
+           DOR / RUMINAÇÕES
+           Background original: rgb(218,210,198)
+        ========================================================== */
+
+        .ruminations {
+            background: rgb(218, 210, 198);
+
+            padding: 80px 0 90px;
+        }
+
+        .ruminations-inner {
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .ruminations-title {
+            color: #1a1a1a;
+
+            font-size: 48px;
+
+            line-height: 1.3;
+
+            margin-bottom: 45px;
+        }
+
+        .ruminations-intro {
+            color: #1a1a1a;
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .ruminations-image {
+            width: min(720px, 100%);
+
+            margin: 0 auto 35px;
+
+            object-fit: contain;
+        }
+
+        .ruminations-final {
+            color: #1a1a1a;
+
+            font-size: 24px;
+
+            line-height: 1.3;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 03
+           O PROBLEMA NÃO É VOCÊ
+           Background original: #121212
+        ========================================================== */
+
+        .problem {
+            background: rgb(18, 18, 18);
+
+            padding: 100px 0;
+        }
+
+        .problem-inner {
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .problem-content {
+            text-align: left;
+        }
+
+        .problem-title {
+            color: #ffffff;
+
+            font-size: 48px;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .problem-text {
+            color: #ffffff;
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 25px;
+        }
+
+        .problem-image {
+            width: 100%;
+
+            max-width: 480px;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 04
+           IMAGEM / TRANSIÇÃO
+           Background original: #F7F1EF
+        ========================================================== */
+
+        .sequence {
+            background: rgb(247, 241, 239);
+
+            padding: 70px 0;
+        }
+
+        .sequence-image {
+            width: min(900px, 100%);
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 05
+           TUDO QUE VOCÊ VAI RECEBER
+           Background original: #F7F2EF
+        ========================================================== */
+
+        .materials {
+            background: rgb(247, 242, 239);
+
+            padding: 90px 0;
+        }
+
+        .materials-title {
+            color: #1a1a1a;
+
+            font-size: 48px;
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .materials-list {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 55px;
+        }
+
+        .material {
+            display: grid;
+
+            grid-template-columns: 260px 1fr;
+
+            align-items: center;
+
+            gap: 45px;
+        }
+
+        .material-image {
+            width: 240px;
+
+            max-height: 230px;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+        .material-content h3 {
+            color: rgb(252, 131, 55);
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+        }
+
+        .material-content p {
+            color: #1a1a1a;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 06
+           ISSO É PARA VOCÊ
+           Background original: #121212
+        ========================================================== */
+
+        .audience {
+            background: rgb(18, 18, 18);
+
+            padding: 100px 0;
+        }
+
+        .audience-inner {
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+        .audience-title {
+            color: #eceff3;
+
+            font-size: 48px;
+
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+        .audience-list {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0;
+        }
+
+        .audience-item {
+            display: grid;
+
+            grid-template-columns: 50px 1fr;
+
+            align-items: center;
+
+            min-height: 90px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .audience-check {
+            color: var(--orange);
+
+            font-family: var(--heading-font);
+
+            font-size: 28px;
+
+            font-weight: 600;
+        }
+
+        .audience-item p {
+            color: #121212;
+
+            background: #ffffff;
+
+            padding: 18px 25px;
+
+            font-size: 24px;
+
+            line-height: 1.3;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 07
+           PREÇO / COMPARAÇÃO
+           Background original: #DAD2C6
+        ========================================================== */
+
+        .comparison {
+            background: rgb(218, 210, 198);
+
+            padding: 90px 0;
+        }
+
+        .comparison-inner {
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .comparison-title {
+            color: rgb(52, 52, 54);
+
+            font-size: 26px;
+
+            line-height: 1.3;
+
+            margin-bottom: 40px;
+        }
+
+        .price-table {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            text-align: left;
+        }
+
+        .price-row {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding: 10px 0;
+        }
+
+        .price-name,
+        .price-value {
+            font-size: 20px;
+
+            line-height: 1.3;
+        }
+
+        .price-name {
+            color: rgb(52, 52, 54);
+        }
+
+        .price-value {
+            color: rgb(156, 149, 149);
+
+            white-space: nowrap;
+        }
+
+        .total {
+            margin-top: 30px;
+
+            color: #1a1a1a;
+
+            font-size: 24px;
+
+            font-weight: 500;
+        }
+
+        .today {
+            margin-top: 45px;
+
+            color: rgb(52, 52, 54);
+
+            font-size: 24px;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================================================
+           OFERTA
+           SEÇÕES 08 / 11 / 12
+
+           Background original: branco
+        ========================================================== */
+
+        .offer {
+            background: rgb(255, 255, 255);
+
+            padding: 90px 0;
+        }
+
+        .offer-inner {
+            width: min(900px, calc(100% - 32px));
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .offer-title {
+            max-width: 650px;
+
+            margin: 0 auto 40px;
+
+            color: rgb(13, 20, 26);
+
+            font-size: 40px;
+
+            line-height: 1.3;
+        }
+
+        .offer-product {
+            width: min(420px, 80vw);
+
+            margin: 0 auto 40px;
+
+            object-fit: contain;
+        }
+
+        .offer-price {
+            color: rgb(13, 20, 26);
+
+            font-family: var(--heading-font);
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            margin-bottom: 8px;
+        }
+
+        .offer-or {
+            color: rgb(13, 20, 26);
+
+            font-family: var(--heading-font);
+
+            font-size: 40px;
+
+            line-height: 1.3;
+
+            margin-bottom: 8px;
+        }
+
+        .offer-cash {
+            color: rgb(13, 20, 26);
+
+            font-family: var(--heading-font);
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .offer-note {
+            margin-top: 25px;
+
+            color: #1a1a1a;
+
+            font-size: 18px;
+
+            line-height: 1.3;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 09
+           CONVERSA DIRETA
+           Background original: #1A1A1A
+        ========================================================== */
+
+        .conversation {
+            background: rgb(26, 26, 26);
+
+            padding: 100px 0;
+        }
+
+        .conversation-inner {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .conversation-title {
+            color: #ffffff;
+
+            font-size: 48px;
+
+            margin-bottom: 55px;
+        }
+
+        .conversation-text {
+            color: #ffffff;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+
+            margin-bottom: 35px;
+        }
+
+        .conversation-highlight {
+            color: #ffffff;
+
+            font-size: 24px;
+
+            line-height: 1.5;
+
+            font-weight: 500;
+
+            margin: 50px auto;
+
+            max-width: 800px;
+        }
+
+        .conversation-image {
+            width: min(500px, 80vw);
+
+            margin: 60px auto 0;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 10
+           POR QUE CONFIAR EM MIM
+           Background original: #DAD2C6
+        ========================================================== */
+
+        .about {
+            background: rgb(218, 210, 198);
+
+            padding: 100px 0;
+        }
+
+        .about-inner {
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 350px 1fr;
+
+            align-items: center;
+
+            gap: 65px;
+        }
+
+        .about-image {
+            width: 320px;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+        .about-title {
+            color: #1a1a1a;
+
+            font-size: 40px;
+
+            margin-bottom: 30px;
+        }
+
+        .about-text {
+            color: #1a1a1c;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           FAQ
+           Background original: branco
+        ========================================================== */
+
+        .faq {
+            background: rgb(255, 255, 255);
+
+            padding: 100px 0;
+        }
+
+        .faq-inner {
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+        .faq-main-title {
+            color: #1a1a1a;
+
+            font-size: 40px;
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .faq-item {
+            padding: 30px 0;
+
+            border-bottom: 1px solid #dedede;
+        }
+
+        .faq-question {
+            color: rgb(252, 131, 55);
+
+            font-family: var(--heading-font);
+
+            font-size: 32px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+        }
+
+        .faq-answer {
+            color: #1a1a1a;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================== */
+
+        footer {
+            background: rgb(26, 26, 26);
+
+            padding: 60px 16px 40px;
+
+            color: #ffffff;
+
+            text-align: center;
+        }
+
+        .footer-support {
+            margin-bottom: 20px;
+
+            font-family: var(--body-font);
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            text-transform: uppercase;
+        }
+
+        .footer-email {
+            margin-bottom: 35px;
+
+            font-size: 20px;
+        }
+
+        .footer-email a {
+            color: #ffffff;
+        }
+
+        .footer-copy {
+            font-size: 14px;
+
+            opacity: 0.8;
+        }
+
+
+        /* =========================================================
+           RESPONSIVIDADE — TABLET
+        ========================================================== */
+
+        @media (max-width: 900px) {
+
+            .problem-inner {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .problem-content {
+                text-align: center;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .material {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .material-image {
+                width: 220px;
+            }
+
+            .material-content {
+                max-width: 700px;
+
+                margin: 0 auto;
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVIDADE — MOBILE
+        ========================================================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 32px);
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding: 50px 16px 60px;
+            }
+
+            .hero-inner {
+                width: 100%;
+
+                gap: 22px;
+            }
+
+            .hero-logo {
+                width: 165px;
+            }
+
+            .hero-title {
+                font-size: 24px;
+
+                line-height: 1.3;
+            }
+
+            .hero-image {
+                width: min(360px, 90vw);
+            }
+
+
+            /* RUMINAÇÕES */
+
+            .ruminations {
+                padding: 55px 16px;
+            }
+
+            .ruminations-title {
+                font-size: 32px;
+
+                margin-bottom: 30px;
+            }
+
+            .ruminations-intro,
+            .ruminations-final {
+                font-size: 16px;
+            }
+
+
+            /* PROBLEMA */
+
+            .problem {
+                padding: 65px 16px;
+            }
+
+            .problem-title {
+                font-size: 32px;
+
+                margin-bottom: 25px;
+            }
+
+            .problem-text {
+                font-size: 18px;
+
+                margin-bottom: 20px;
+            }
+
+            .problem-image {
+                width: min(350px, 90vw);
+            }
+
+
+            /* SEQUÊNCIA */
+
+            .sequence {
+                padding: 40px 16px;
+            }
+
+
+            /* MATERIAIS */
+
+            .materials {
+                padding: 60px 16px;
+            }
+
+            .materials-title {
+                font-size: 32px;
+
+                margin-bottom: 45px;
+            }
+
+            .materials-list {
+                gap: 45px;
+            }
+
+            .material {
+                gap: 20px;
+            }
+
+            .material-image {
+                width: 190px;
+            }
+
+            .material-content h3 {
+                font-size: 24px;
+            }
+
+            .material-content p {
+                font-size: 16px;
+            }
+
+
+            /* AUDIENCE */
+
+            .audience {
+                padding: 65px 16px;
+            }
+
+            .audience-title {
+                font-size: 32px;
+
+                margin-bottom: 40px;
+            }
+
+            .audience-item {
+                grid-template-columns: 35px 1fr;
+
+                min-height: auto;
+
+                padding: 8px 0;
+            }
+
+            .audience-check {
+                font-size: 22px;
+            }
+
+            .audience-item p {
+                padding: 15px;
+
+                font-size: 16px;
+            }
+
+
+            /* COMPARAÇÃO */
+
+            .comparison {
+                padding: 60px 16px;
+            }
+
+            .comparison-title {
+                font-size: 26px;
+            }
+
+            .price-row {
+                gap: 15px;
+            }
+
+            .price-name,
+            .price-value {
+                font-size: 16px;
+            }
+
+            .total,
+            .today {
+                font-size: 18px;
+            }
+
+
+            /* OFERTA */
+
+            .offer {
+                padding: 60px 16px;
+            }
+
+            .offer-inner {
+                width: 100%;
+            }
+
+            .offer-title {
+                font-size: 26px;
+
+                margin-bottom: 30px;
+            }
+
+            .offer-product {
+                width: min(300px, 85vw);
+
+                margin-bottom: 30px;
+            }
+
+            .offer-price {
+                font-size: 48px;
+            }
+
+            .offer-or {
+                font-size: 26px;
+            }
+
+            .offer-cash {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                width: 86.11vw;
+
+                min-height: 70px;
+
+                padding: 16px 20px;
+
+                font-size: 18px;
+            }
+
+            .offer-note {
+                font-size: 16px;
+            }
+
+
+            /* CONVERSA */
+
+            .conversation {
+                padding: 65px 16px;
+            }
+
+            .conversation-title {
+                font-size: 32px;
+
+                margin-bottom: 40px;
+            }
+
+            .conversation-text {
+                font-size: 16px;
+
+                margin-bottom: 25px;
+            }
+
+            .conversation-highlight {
+                font-size: 18px;
+
+                margin: 35px auto;
+            }
+
+            .conversation-image {
+                width: min(330px, 90vw);
+
+                margin-top: 45px;
+            }
+
+
+            /* SOBRE */
+
+            .about {
+                padding: 65px 16px;
+            }
+
+            .about-image {
+                width: 250px;
+            }
+
+            .about-title {
+                font-size: 26px;
+
+                margin-bottom: 25px;
+            }
+
+            .about-text {
+                font-size: 16px;
+            }
+
+
+            /* FAQ */
+
+            .faq {
+                padding: 65px 16px;
+            }
+
+            .faq-main-title {
+                font-size: 32px;
+
+                margin-bottom: 40px;
+            }
+
+            .faq-item {
+                padding: 24px 0;
+            }
+
+            .faq-question {
+                font-size: 24px;
+            }
+
+            .faq-answer {
+                font-size: 16px;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+                padding: 40px 16px;
+            }
+
+            .footer-email {
+                font-size: 18px;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE PEQUENO
+        ========================================================== */
+
+        @media (max-width: 380px) {
+
+            .hero-title {
+                font-size: 22px;
+            }
+
+            .ruminations-title,
+            .problem-title,
+            .materials-title,
+            .audience-title,
+            .conversation-title {
+                font-size: 28px;
+            }
+
+            .offer-price {
+                font-size: 42px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         01 — HERO
+    ========================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <img
+                class="hero-logo"
+                src="site_files/logo-ed48-Xnby7hLjpQsmcDGn.png"
+                alt="Señor Lábios"
+            >
+
+            <img
+                class="hero-image"
+                src="site_files/pontoapontob-fPchDDUh1wQUMIBI.png"
+                alt=""
+            >
+
+            <h2 class="hero-title">
+                Descubra como começar a escrever seu livro de ficção em
+                48 horas com um checklist prático, mesmo que nunca tenha
+                escrito nada!
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         02 — RUMINAÇÕES
+    ========================================================== -->
+
+    <section class="ruminations">
+
+        <div class="container">
+
+            <div class="ruminations-inner">
+
+                <h3 class="ruminations-title">
+                    Você não aguenta mais ver a história rodar na sua
+                    cabeça e, não sair no papel!
+                </h3>
+
+                <p class="ruminations-intro">
+                    Isso te faz sofrer com pensamentos do tipo 👇🏽👇🏽👇🏽
+                </p>
+
+                <img
+                    class="ruminations-image"
+                    src="site_files/ruminacoes-hCCixkrjo3DsPEms.png"
+                    alt=""
+                >
+
+                <p class="ruminations-intro">
+                    É excesso de dúvida, medo de errar e zero direção clara.
+                </p>
+
+                <p class="ruminations-final">
+                    A história fica rodando na sua cabeça, mas não sai no papel
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         03 — O PROBLEMA NÃO É VOCÊ
+    ========================================================== -->
+
+    <section class="problem">
+
+        <div class="container">
+
+            <div class="problem-inner">
+
+                <div class="problem-content">
+
+                    <h3 class="problem-title">
+                        O problema não é você.
+                    </h3>
+
+                    <p class="problem-text">
+                        O problema é tentar escrever sem uma rota simples
+                        para começar.
+                    </p>
+
+                    <p class="problem-text">
+                        Ninguém te ensinou a como sair do zero sem travar,
+                        sem revisar antes da hora e sem se perder no meio
+                        do caminho.
+                    </p>
+
+                    <p class="problem-text">
+                        É horrível se sentir assim
+                    </p>
+
+                </div>
+
+                <img
+                    class="problem-image"
+                    src="site_files/mulher-feliz-pensando-pVm5Yd5YNVDpAmwL.png"
+                    alt=""
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         04 — IMAGEM SEQUENCIAL
+    ========================================================== -->
+
+    <section class="sequence">
+
+        <div class="container">
+
+            <img
+                class="sequence-image"
+                src="site_files/imagem-sequencial-correto-vZbOiFvKVb4Ut5cR.png"
+                alt=""
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         05 — MATERIAIS
+    ========================================================== -->
+
+    <section class="materials">
+
+        <div class="container">
+
+            <h3 class="materials-title">
+                Tudo que você vai receber!
+            </h3>
+
+
+            <div class="materials-list">
+
+
+                <!-- MATERIAL 01 -->
+
+                <article class="material">
+
+                    <img
+                        class="material-image"
+                        src="site_files/1000371487-A0xjPp1JEgUkRrBg.png"
+                        alt=""
+                    >
+
+                    <div class="material-content">
+
+                        <h3>
+                            CHECKLIST: Escritor Destravado em 48H.
+                        </h3>
+
+                        <p>
+                            Ações práticas para tirar sua história da cabeça
+                            e começar a escrever em até 48 horas, seguindo
+                            uma ordem simples que evita travamentos e excesso
+                            de dúvidas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 02 -->
+
+                <article class="material">
+
+                    <img
+                        class="material-image"
+                        src="site_files/1000371486-Yyv0OVZbxLUZ1gV8.png"
+                        alt=""
+                    >
+
+                    <div class="material-content">
+
+                        <h3>
+                            MINI-ROTA: Primeira Página
+                        </h3>
+
+                        <p>
+                            Um mapa direto mostrando exatamente o que fazer
+                            do zero até a primeira página escrita, sem pular
+                            etapas e sem confusão mental.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 03 -->
+
+                <article class="material">
+
+                    <img
+                        class="material-image"
+                        src="site_files/1000371488-AQEZ2nDky6ckrMzQ.png"
+                        alt=""
+                    >
+
+                    <div class="material-content">
+
+                        <h3>
+                            VÍDEO-AULA: Estrutura de Enredo Para Destravar
+                            o Primeiro Capítulo
+                        </h3>
+
+                        <p>
+                            Uma explicação clara da estrutura de enredo que
+                            organiza sua ideia em começo, meio e fim,
+                            evitando o bloqueio logo no início.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 04 -->
+
+                <article class="material">
+
+                    <img
+                        class="material-image"
+                        src="site_files/1000371490-YanJvVqkr7h15KGl.png"
+                        alt=""
+                    >
+
+                    <div class="material-content">
+
+                        <h3>
+                            MAPA: Personagens Iniciais
+                        </h3>
+
+                        <p>
+                            Ferramenta simples para organizar personagens,
+                            conflitos e intenções sem exagero, ideal para
+                            quem trava antes mesmo de começar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIAL 05 -->
+
+                <article class="material">
+
+                    <img
+                        class="material-image"
+                        src="site_files/1000371489-mnlJPVqjnDF8p23r.png"
+                        alt=""
+                    >
+
+                    <div class="material-content">
+
+                        <h3>
+                            ARQUIVO "COMECE AGORA": Templates de Escrita
+                        </h3>
+
+                        <p>
+                            Templates prontos de abertura, cenas iniciais
+                            e ganchos narrativos que ajudam você a escrever
+                            sem ficar olhando para a página em branco.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         06 — ISSO É PARA VOCÊ
+    ========================================================== -->
+
+    <section class="audience">
+
+        <div class="container">
+
+            <div class="audience-inner">
+
+                <h3 class="audience-title">
+                    Isso é para você se....
+                </h3>
+
+
+                <ul class="audience-list">
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Tem uma história rodando na cabeça há meses
+                            ou anos, mas trava toda vez que tenta escrever.
+                        </p>
+
+                    </li>
+
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Sente que não sabe por onde começar e acaba adiando
+                        </p>
+
+                    </li>
+
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Começa animado e desiste logo no início
+                        </p>
+
+                    </li>
+
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Acha que sua ideia é simples demais ou
+                            "não é boa o suficiente"
+                        </p>
+
+                    </li>
+
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Quer escrever seu primeiro livro, mas se sente
+                            inseguro, perdido ou travado.
+                        </p>
+
+                    </li>
+
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Quer sair do zero e escrever de verdade,
+                            não só "pensar" em escrever.
+                        </p>
+
+                    </li>
+
+
+                    <li class="audience-item">
+
+                        <span class="audience-check">✓</span>
+
+                        <p>
+                            Tem pouco tempo e precisa de algo direto,
+                            sem enrolação
+                        </p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         07 — COMPARAÇÃO DE PREÇO
+    ========================================================== -->
+
+    <section class="comparison">
+
+        <div class="container">
+
+            <div class="comparison-inner">
+
+                <h4 class="comparison-title">
+                    Se você fosse adquirir cada item separadamente:
+                </h4>
+
+
+                <div class="price-table">
+
+                    <div class="price-row">
+
+                        <p class="price-name">
+                            Checklist Escritor Destravado
+                        </p>
+
+                        <p class="price-value">
+                            R$67
+                        </p>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <p class="price-name">
+                            Mini-Rota da Primeira Página
+                        </p>
+
+                        <p class="price-value">
+                            R$67
+                        </p>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <p class="price-name">
+                            Vídeo-aula de Enredo
+                        </p>
+
+                        <p class="price-value">
+                            R$49
+                        </p>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <p class="price-name">
+                            Templates Comece Agora
+                        </p>
+
+                        <p class="price-value">
+                            R$67
+                        </p>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <p class="price-name">
+                            Mapa de Personagens
+                        </p>
+
+                        <p class="price-value">
+                            R$67
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="total">
+                    Total real: R$317
+                </p>
+
+
+                <p class="today">
+                    MAS hoje você não paga isso.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         08 — OFERTA DESKTOP
+    ========================================================== -->
+
+    <section class="offer">
+
+        <div class="container">
+
+            <div class="offer-inner">
+
+                <h4 class="offer-title">
+                    O acesso completo ao Escritor Destravado em 48h
+                    sai hoje por apenas:
+                </h4>
+
+
+                <img
+                    class="offer-product"
+                    src="site_files/checklist-sem-fundo-2-bKoMsaScHyvdRt3S.png"
+                    alt=""
+                >
+
+
+                <div class="offer-price">
+                    9x R$8,80
+                </div>
+
+
+                <div class="offer-or">
+                    ou
+                </div>
+
+
+                <div class="offer-cash">
+                    R$67 à vista
+                </div>
+
+
+                <!--
+                    =================================================
+                    ALTERE SOMENTE O HREF PARA COLOCAR SEU LINK
+                    =================================================
+                -->
+
+                <a
+                    class="cta-button"
+                    href="COLOQUE-SEU-LINK-AQUI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Quero começar meu livro hoje!
+                </a>
+
+
+                <p class="offer-note">
+                    Preço de pré-venda, aproveite.
+                    Você economiza R$250!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         09 — CONVERSA DIRETA
+    ========================================================== -->
+
+    <section class="conversation">
+
+        <div class="container">
+
+            <div class="conversation-inner">
+
+                <h4 class="conversation-title">
+                    Agora, uma conversa direta
+                </h4>
+
+
+                <p class="conversation-text">
+                    Você já adiou isso tempo demais.
+                </p>
+
+
+                <p class="conversation-text">
+                    Você já disse para si mesmo que ia começar
+                    "na próxima semana".
+                </p>
+
+
+                <p class="conversation-text">
+                    Já prometeu que quando tivesse mais tempo,
+                    mais clareza, mais confiança... começaria.
+                </p>
+
+
+                <p class="conversation-text">
+                    Mas a verdade é simples e dói um pouco:
+                </p>
+
+
+                <p class="conversation-highlight">
+                    Se você não tomar uma decisão agora, daqui a seis
+                    meses seu livro vai continuar exatamente no mesmo
+                    lugar. Só na sua cabeça.
+                </p>
+
+
+                <p class="conversation-highlight">
+                    O bloqueio não some sozinho. A insegurança não passa
+                    esperando. E o "momento ideal" nunca chega.
+                    Ou você começa agora, com direção e simplicidade,
+                    ou vai continuar carregando esse sonho como um peso.
+                </p>
+
+
+                <p class="conversation-highlight">
+                    A escolha é sua.
+                </p>
+
+
+                <img
+                    class="conversation-image"
+                    src="site_files/mulher-pensativa-5fgeK43v5wH2sHxf.png"
+                    alt=""
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         10 — SOBRE
+    ========================================================== -->
+
+    <section class="about">
+
+        <div class="container">
+
+            <div class="about-inner">
+
+                <img
+                    class="about-image"
+                    src="site_files/foto-de-perfil-oficial-sl-YleQpDwwXPCVjGQy.png"
+                    alt="Señor Lábios"
+                >
+
+
+                <div>
+
+                    <h4 class="about-title">
+                        Por que você pode confiar em mim
+                    </h4>
+
+
+                    <p class="about-text">
+                        Eu não ajudo pessoas a "virarem escritores
+                        da noite para o dia". Eu ajudo pessoas travadas
+                        a começarem. Ao longo dos anos, acompanhei de
+                        perto o que mais impede alguém de escrever:
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         11 — OFERTA DESKTOP REPETIDA
+    ========================================================== -->
+
+    <section class="offer">
+
+        <div class="container">
+
+            <div class="offer-inner">
+
+                <h4 class="offer-title">
+                    O acesso completo ao Escritor Destravado em 48h
+                    sai hoje por apenas:
+                </h4>
+
+
+                <img
+                    class="offer-product"
+                    src="site_files/checklist-sem-fundo-2-bKoMsaScHyvdRt3S.png"
+                    alt=""
+                >
+
+
+                <div class="offer-price">
+                    9x R$8,80
+                </div>
+
+
+                <div class="offer-or">
+                    ou
+                </div>
+
+
+                <div class="offer-cash">
+                    R$67 à vista
+                </div>
+
+
+                <a
+                    class="cta-button"
+                    href="COLOQUE-SEU-LINK-AQUI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Quero começar meu livro hoje!
+                </a>
+
+
+                <p class="offer-note">
+                    Preço de pré-venda, aproveite.
+                    Você economiza R$250!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         12 — OFERTA MOBILE
+    ========================================================== -->
+
+    <section class="offer">
+
+        <div class="container">
+
+            <div class="offer-inner">
+
+                <h4 class="offer-title">
+                    O acesso completo ao Escritor Destravado em 48h
+                    sai hoje por apenas:
+                </h4>
+
+
+                <img
+                    class="offer-product"
+                    src="site_files/checklist-sem-fundo-2-bKoMsaScHyvdRt3S(2).png"
+                    alt=""
+                >
+
+
+                <div class="offer-price">
+                    9x R$8,80
+                </div>
+
+
+                <div class="offer-or">
+                    ou
+                </div>
+
+
+                <div class="offer-cash">
+                    R$67 à vista
+                </div>
+
+
+                <a
+                    class="cta-button"
+                    href="COLOQUE-SEU-LINK-AQUI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Quero começar meu livro hoje!
+                </a>
+
+
+                <p class="offer-note">
+                    Preço de pré-venda, aproveite.
+                    Você economiza R$250!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         13 — FAQ
+    ========================================================== -->
+
+    <section class="faq">
+
+        <div class="container">
+
+            <div class="faq-inner">
+
+                <h3 class="faq-main-title">
+                    Perguntas que passam pela sua cabeça antes de comprar
+                </h3>
+
+
+                <article class="faq-item">
+
+                    <h3 class="faq-question">
+                        Isso é para quem nunca escreveu nada?
+                    </h3>
+
+                    <p class="faq-answer">
+                        Sim. Foi criado exatamente para iniciantes que estão
+                        no zero e travados.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-item">
+
+                    <h3 class="faq-question">
+                        Não tenho muito tempo, vou conseguir aplicar?
+                    </h3>
+
+                    <p class="faq-answer">
+                        Sim. O conteúdo é direto, prático e pensado para caber
+                        na rotina de quem trabalha e vive a vida real.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-item">
+
+                    <h3 class="faq-question">
+                        Como vou receber o produto?
+                    </h3>
+
+                    <p class="faq-answer">
+                        Após a compra, o acesso é liberado imediatamente por
+                        e-mail e pela plataforma.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-item">
+
+                    <h3 class="faq-question">
+                        É um curso longo?
+                    </h3>
+
+                    <p class="faq-answer">
+                        Não. É um produto objetivo, feito para gerar ação rápida
+                        e destravar o início, não para te prender em horas de conteúdo.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-item">
+
+                    <h3 class="faq-question">
+                        E se eu achar que não é para mim?
+                    </h3>
+
+                    <p class="faq-answer">
+                        Você tem garantia. Se não fizer sentido, é só solicitar
+                        reembolso dentro do prazo de 7 dias e pronto.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-item">
+
+                    <h3 class="faq-question">
+                        O pagamento é seguro?
+                    </h3>
+
+                    <p class="faq-answer">
+                        Sim. A plataforma é segura, com checkout protegido e
+                        com confirmação automática.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         14 — FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-support">
+            Suporte
+        </div>
+
+
+        <div class="footer-email">
+
+            <a href="mailto:contato@senhorlabios.com">
+                contato@senhorlabios.com
+            </a>
+
+        </div>
+
+
+        <div class="footer-copy">
+            © 2025. All rights reserved.
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
