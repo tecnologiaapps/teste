@@ -1,79 +1,81 @@
-/* =========================================================
+/* ============================================================
    ESCRITOR DESTRAVADO EM 48H
-   STYLE.CSS — VERSÃO DEFINITIVA
-========================================================= */
+   STYLE.CSS — VERSÃO DEFINITIVA DA PRIMEIRA VERSÃO
+   ============================================================ */
 
 
-/* =========================================================
-   VARIÁVEIS
-========================================================= */
+/* ============================================================
+   01. VARIÁVEIS
+   ============================================================ */
 
 :root {
-    --orange: rgb(252, 131, 55);
-    --orange-dark: rgb(224, 103, 31);
 
-    --green: rgb(0, 219, 88);
+    --orange: #FC8337;
+    --orange-dark: #e96f24;
 
-    --black: rgb(0, 0, 0);
-    --dark: rgb(18, 18, 18);
-    --dark-2: rgb(26, 26, 26);
+    --green: #00DB58;
 
-    --cream: rgb(218, 210, 198);
-    --cream-light: rgb(247, 241, 239);
-    --cream-light-2: rgb(247, 242, 239);
+    --black: #000000;
+    --dark: #121212;
 
-    --white: rgb(255, 255, 255);
+    --cream: #f7f1ef;
+    --cream-light: #f7f2ef;
+    --beige: #dad2c6;
 
-    --text-dark: rgb(26, 26, 26);
-    --text-gray: rgb(86, 88, 94);
-    --price-gray: rgb(156, 149, 149);
+    --white: #ffffff;
 
-    --content-width: 1224px;
+    --text-dark: #343436;
+    --text-gray: #56585e;
+    --text-light: #f5f5f5;
 
-    /*
-       As famílias abaixo correspondem à tipografia
-       utilizada na estrutura original.
-       
-       Quando os arquivos locais das fontes estiverem
-       configurados, estas variáveis continuam sendo
-       utilizadas normalmente.
-    */
-    --heading-font: "Outfit", "Arial", sans-serif;
-    --body-font: "Inter", "Arial", sans-serif;
-    --poppins: "Poppins", "Arial", sans-serif;
-    --quicksand: "Quicksand", "Arial", sans-serif;
-    --open-sans: "Open Sans", "Arial", sans-serif;
+    --old-price: #9c9595;
+
+    --rounded-font:
+        "Trebuchet MS",
+        "Arial Rounded MT Bold",
+        Arial,
+        sans-serif;
+
+    --body-font:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    --content-width: 1120px;
+
 }
 
 
-/* =========================================================
-   RESET
-========================================================= */
+/* ============================================================
+   02. RESET
+   ============================================================ */
 
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
 }
 
+
 html {
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
+
 
 body {
     margin: 0;
     padding: 0;
 
-    background: var(--white);
-    color: var(--text-dark);
-
     font-family: var(--body-font);
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-dark);
 
+    background: var(--white);
+
+    -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+
 
 img {
     display: block;
@@ -82,30 +84,22 @@ img {
     height: auto;
 }
 
-picture {
-    display: block;
-}
 
 a {
     color: inherit;
-    text-decoration: none;
 }
 
+
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-ul {
-    margin: 0;
+h6 {
+    margin-top: 0;
 }
 
-ul {
-    padding: 0;
-    list-style: none;
-}
 
 button,
 a {
@@ -113,281 +107,545 @@ a {
 }
 
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+/* ============================================================
+   03. ESTRUTURA GERAL
+   ============================================================ */
 
 .container {
     width: min(
-        var(--content-width),
-        calc(100% - 32px)
+        calc(100% - 48px),
+        var(--content-width)
     );
 
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-/* =========================================================
-   DESTAQUE LARANJA
-========================================================= */
+/* ============================================================
+   04. CLASSES GERAIS
+   ============================================================ */
 
 .orange {
     color: var(--orange);
 }
 
 
-/* =========================================================
-   SEÇÃO 01 — HERO
-========================================================= */
+/* ============================================================
+   05. SEÇÃO 01 — HERO
+   ============================================================ */
 
 .hero {
+
     background: var(--black);
 
-    padding: 70px 24px 90px;
+    color: var(--white);
+
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 24px 80px;
 
     overflow: hidden;
 }
 
+
 .hero-inner {
-    width: min(1100px, 100%);
+
+    width: min(100%, 1100px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.hero-logo {
+
+    width: 280px;
+    max-width: 65vw;
+
+    margin-bottom: 38px;
+}
+
+
+.hero-main-image {
+
+    width: min(430px, 70vw);
+
+    margin: 0 auto 35px;
+}
+
+
+.hero-title {
+
+    width: min(100%, 900px);
+
+    margin: 0 auto;
+
+    font-family: var(--rounded-font);
+
+    font-size: clamp(
+        34px,
+        4vw,
+        52px
+    );
+
+    line-height: 1.16;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* ============================================================
+   06. SEÇÃO 02 — RUMINAÇÕES
+   ============================================================ */
+
+.ruminations {
+
+    background: var(--beige);
+
+    padding: 90px 24px 100px;
+
+    color: var(--black);
+
+    overflow: hidden;
+}
+
+
+.ruminations-inner {
+
+    max-width: 900px;
 
     margin: 0 auto;
 
     text-align: center;
 }
 
-.hero-logo {
-    width: 375px;
 
-    max-width: 80vw;
+.ruminations-title {
 
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
 
-    object-fit: contain;
+    max-width: 850px;
+
+    font-family: var(--rounded-font);
+
+    font-size: clamp(
+        34px,
+        4vw,
+        48px
+    );
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
 }
 
-.hero-main-image {
-    width: 768px;
 
-    max-width: 100%;
+.ruminations-intro {
 
-    margin: 0 auto 50px;
+    margin: 0 auto 28px;
 
-    object-fit: contain;
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    font-weight: 500;
 }
 
-.hero-title {
-    max-width: 950px;
 
-    margin: 0 auto;
+.ruminations-image {
+
+    width: min(375px, 80vw);
+
+    margin: 35px auto 40px;
+}
+
+
+.ruminations-final {
+
+    margin: 45px auto 0;
+
+    max-width: 760px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   07. SEÇÃO 03 — PROBLEMA
+   ============================================================ */
+
+.problem {
+
+    background: var(--dark);
 
     color: var(--white);
 
-    font-family: var(--heading-font);
+    padding: 100px 24px;
 
-    font-size: 48px;
-    font-weight: 600;
-
-    line-height: 1.25;
-
-    text-align: center;
+    overflow: hidden;
 }
 
-
-/* =========================================================
-   SEÇÃO 02 — RUMINAÇÕES
-========================================================= */
-
-.ruminations {
-    background: var(--cream);
-
-    padding: 95px 0 100px;
-}
-
-.ruminations-inner {
-    width: min(850px, 100%);
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-.ruminations-title {
-    color: var(--text-dark);
-
-    font-family: var(--heading-font);
-
-    font-size: 48px;
-    font-weight: 600;
-
-    line-height: 1.3;
-
-    margin-bottom: 35px;
-}
-
-.ruminations-intro {
-    color: var(--text-dark);
-
-    font-family: var(--body-font);
-
-    font-size: 24px;
-    font-weight: 400;
-
-    line-height: 1.3;
-
-    margin-bottom: 30px;
-}
-
-.ruminations-image {
-    width: 375px;
-
-    max-width: 90vw;
-
-    margin: 0 auto 30px;
-}
-
-.ruminations-final {
-    color: var(--text-dark);
-
-    font-family: var(--body-font);
-
-    font-size: 24px;
-    font-weight: 400;
-
-    line-height: 1.3;
-}
-
-
-/* =========================================================
-   SEÇÃO 03 — PROBLEMA
-========================================================= */
-
-.problem {
-    background: var(--dark);
-
-    padding: 100px 0;
-}
 
 .problem-inner {
-    width: min(1100px, 100%);
+
+    width: min(100%, 1120px);
 
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
-
-    align-items: center;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(280px, 420px);
 
     gap: 70px;
+
+    align-items: center;
 }
+
 
 .problem-content {
-    color: var(--white);
+
+    max-width: 650px;
 }
+
 
 .problem-title {
-    color: var(--white);
-
-    font-family: var(--heading-font);
-
-    font-size: 48px;
-    font-weight: 600;
-
-    line-height: 1.3;
-
-    margin-bottom: 35px;
-}
-
-.problem-text {
-    color: var(--white);
-
-    font-family: var(--body-font);
-
-    font-size: 24px;
-    font-weight: 400;
-
-    line-height: 1.3;
 
     margin-bottom: 30px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
 }
 
-.problem-final {
-    color: var(--white);
 
-    font-family: var(--heading-font);
+.problem-text {
+
+    margin-bottom: 28px;
+
+    font-size: 24px;
+
+    line-height: 1.55;
+
+    font-weight: 500;
+}
+
+
+.problem-final {
+
+    margin-top: 38px;
+
+    margin-bottom: 0;
+
+    color: var(--orange);
+
+    font-family: var(--rounded-font);
 
     font-size: 32px;
-    font-weight: 600;
 
     line-height: 1.3;
 
-    margin-top: 45px;
+    font-weight: 700;
 }
+
 
 .problem-image {
-    width: 480px;
 
-    max-width: 100%;
+    width: 100%;
+
+    max-width: 420px;
 
     margin: 0 auto;
-
-    object-fit: contain;
 }
 
 
-/* =========================================================
-   SEÇÃO 04 — IMAGEM SEQUENCIAL
-========================================================= */
+/* ============================================================
+   08. SEÇÃO 04 — 5 PASSOS
+   ============================================================ */
 
 .sequence {
-    background: var(--cream-light);
 
-    padding: 0;
+    background: var(--cream);
+
+    color: var(--text-dark);
+
+    padding: 85px 24px 100px;
 
     overflow: hidden;
 }
 
-.sequence picture {
-    width: 100%;
-}
 
-.sequence-image {
-    width: 100%;
+.sequence-inner {
 
-    max-width: 1440px;
+    width: min(100%, 1160px);
 
     margin: 0 auto;
+
+    text-align: center;
 }
 
 
-/* =========================================================
-   SEÇÃO 05 — MATERIAIS
-========================================================= */
+.sequence-logo {
+
+    width: 250px;
+
+    max-width: 70vw;
+
+    margin: 0 auto 30px;
+}
+
+
+.sequence-title {
+
+    max-width: 850px;
+
+    margin: 0 auto 28px;
+
+    font-family: var(--rounded-font);
+
+    font-size: clamp(
+        32px,
+        4vw,
+        46px
+    );
+
+    line-height: 1.22;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.sequence-title span {
+
+    color: var(--orange);
+
+}
+
+
+.sequence-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 62px;
+
+    padding: 10px 30px;
+
+    margin: 5px auto 55px;
+
+    border-radius: 40px;
+
+    background: var(--orange);
+
+    color: var(--white);
+
+    font-family: var(--rounded-font);
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.sequence-badge-icon {
+
+    font-size: 27px;
+
+    line-height: 1;
+}
+
+
+/* ------------------------------------------------------------
+   PASSOS
+   ------------------------------------------------------------ */
+
+.sequence-steps {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+.sequence-step {
+
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 42px 22px 28px;
+
+    background: var(--white);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+
+.sequence-number {
+
+    position: absolute;
+
+    top: -24px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    color: var(--white);
+
+    font-family: var(--rounded-font);
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+.sequence-step:nth-child(5)
+.sequence-number {
+
+    background: #f0b20b;
+}
+
+
+.sequence-icon {
+
+    min-height: 85px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    line-height: 1;
+}
+
+
+.sequence-step p {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    color: var(--text-dark);
+}
+
+
+.sequence-step strong {
+
+    color: var(--orange);
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   09. SEÇÃO 05 — TUDO QUE VOCÊ VAI RECEBER
+   ============================================================ */
 
 .materials {
-    background: var(--cream-light-2);
 
-    padding: 95px 0 110px;
-}
+    background: var(--cream-light);
 
-.materials-title {
     color: var(--text-dark);
 
-    font-family: var(--heading-font);
+    padding: 80px 24px 100px;
 
-    font-size: 48px;
-    font-weight: 600;
+    overflow: hidden;
+}
 
-    line-height: 1.3;
+
+.materials-title {
+
+    margin: 0 auto 65px;
 
     text-align: center;
 
-    margin-bottom: 75px;
+    font-family: var(--rounded-font);
+
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
 }
 
+
 .materials-list {
-    width: min(950px, 100%);
+
+    width: min(100%, 900px);
 
     margin: 0 auto;
 
@@ -395,1331 +653,1838 @@ a {
 
     flex-direction: column;
 
-    gap: 65px;
-}
-
-.material {
-    display: grid;
-
-    grid-template-columns: 375px 1fr;
-
-    align-items: center;
-
     gap: 55px;
 }
 
-.material:nth-child(even) {
-    grid-template-columns: 1fr 375px;
+
+/* ------------------------------------------------------------
+   CADA MATERIAL
+   ------------------------------------------------------------ */
+
+.material {
+
+    display: grid;
+
+    grid-template-columns: 150px minmax(0, 1fr);
+
+    gap: 45px;
+
+    align-items: center;
+
+    min-height: 145px;
 }
 
-.material:nth-child(even) .material-image {
-    order: 2;
+
+.material > picture {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 140px;
 }
 
-.material:nth-child(even) .material-content {
-    order: 1;
-}
 
 .material-image {
-    width: 375px;
 
-    max-width: 100%;
+    /*
+       Os arquivos originais possuem dimensões grandes,
+       mas aqui são tratados como ícones ilustrativos.
+    */
 
-    margin: 0 auto;
+    width: auto;
+
+    height: auto;
+
+    max-width: 120px;
+
+    max-height: 115px;
 
     object-fit: contain;
+
+    margin: 0 auto;
 }
+
 
 .material-content {
-    width: 100%;
+
+    min-width: 0;
 }
+
 
 .material-content h3 {
+
+    margin: 0 0 12px;
+
     color: var(--orange);
 
-    font-family: var(--heading-font);
+    font-family: var(--rounded-font);
 
-    font-size: 24px;
+    font-size: 21px;
+
+    line-height: 1.25;
+
     font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-bottom: 18px;
 }
 
+
 .material-content p {
+
+    margin: 0;
+
     color: var(--text-gray);
 
     font-family: var(--body-font);
 
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 17px;
 
-    line-height: 1.5;
+    line-height: 1.55;
+
+    font-weight: 500;
 }
 
 
-/* =========================================================
-   SEÇÃO 06 — AUDIÊNCIA
-========================================================= */
+/* ============================================================
+   10. SEÇÃO 06 — ISSO É PARA VOCÊ
+   ============================================================ */
 
 .audience {
+
     background: var(--dark);
 
-    padding: 95px 0 105px;
-}
-
-.audience-inner {
-    width: min(1050px, 100%);
-
-    margin: 0 auto;
-}
-
-.audience-title {
     color: var(--white);
 
-    font-family: var(--heading-font);
+    padding: 90px 24px 100px;
 
-    font-size: 48px;
-    font-weight: 600;
-
-    line-height: 1.3;
-
-    text-align: center;
-
-    margin-bottom: 65px;
+    overflow: hidden;
 }
 
 
-/*
-   NOVA ESTRUTURA DOS CARTÕES
+.audience-inner {
 
-   Todos possuem:
-   - exatamente a mesma largura;
-   - mesma altura mínima;
-   - fundo laranja;
-   - check integrado;
-   - espaçamento uniforme;
-   - alinhamento consistente.
-
-   Isso substitui o aspecto irregular da versão anterior.
-*/
-
-.audience-list {
-    width: min(950px, 100%);
+    width: min(100%, 1050px);
 
     margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.audience-title {
+
+    margin: 0 0 65px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.audience-list {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
 
     display: flex;
 
     flex-direction: column;
 
     gap: 16px;
+
+    align-items: flex-start;
 }
+
 
 .audience-item {
+
     width: 100%;
-
-    min-height: 82px;
-
-    display: grid;
-
-    grid-template-columns: 54px 1fr;
-
-    align-items: center;
-
-    gap: 18px;
-
-    padding: 18px 30px 18px 20px;
-
-    background: var(--orange);
-
-    border-radius: 8px;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.16);
-
-    transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease;
-}
-
-.audience-item:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 12px 26px rgba(0, 0, 0, 0.22);
-}
-
-
-/*
-   O círculo escuro cria uma área visual própria
-   para o check e evita que ele fique "solto".
-*/
-
-.audience-check {
-    width: 44px;
-    height: 44px;
 
     display: flex;
 
     align-items: center;
-    justify-content: center;
 
-    flex-shrink: 0;
+    gap: 20px;
 
-    background: var(--dark);
+    text-align: left;
+}
 
-    border-radius: 50%;
+
+.audience-check {
+
+    flex: 0 0 32px;
 
     color: var(--orange);
 
-    font-family: var(--heading-font);
+    font-family: Arial, sans-serif;
 
-    font-size: 27px;
-    font-weight: 700;
+    font-size: 38px;
 
     line-height: 1;
+
+    font-weight: 700;
 }
+
 
 .audience-item p {
-    width: 100%;
 
-    color: var(--dark);
+    flex: 1;
 
-    font-family: var(--body-font);
+    margin: 0;
 
-    font-size: 22px;
+    padding: 18px 24px;
+
+    background: var(--white);
+
+    color: var(--black);
+
+    border-radius: 2px;
+
+    font-size: 21px;
+
+    line-height: 1.45;
+
     font-weight: 500;
-
-    line-height: 1.35;
 }
 
 
-/*
-   CONCLUSÃO DA SEÇÃO
-*/
-
 .audience-conclusion {
-    margin: 65px auto 0;
+
+    margin: 65px auto 25px;
 
     max-width: 850px;
 
-    text-align: center;
+    color: var(--white);
 
-    color: rgb(236, 239, 243);
+    font-family: var(--rounded-font);
 
-    font-family: var(--body-font);
+    font-size: 28px;
 
-    font-size: 29px;
-    font-weight: 400;
+    line-height: 1.4;
 
-    line-height: 1.3;
+    font-weight: 700;
 }
+
 
 .audience-logo {
-    width: 305px;
 
-    max-width: 75vw;
+    width: 300px;
 
-    margin: 20px auto;
+    max-width: 70vw;
+
+    margin: 10px auto 20px;
 }
+
 
 .audience-conclusion-last {
-    color: rgb(236, 239, 243);
 
-    font-family: var(--body-font);
+    color: var(--white);
+
+    font-family: var(--rounded-font);
 
     font-size: 32px;
-    font-weight: 400;
 
     line-height: 1.3;
 
-    text-align: center;
+    font-weight: 700;
 }
 
 
-/* =========================================================
-   SEÇÃO 07 — COMPARAÇÃO DE PREÇOS
-========================================================= */
+/* ============================================================
+   11. SEÇÃO 07 — COMPARAÇÃO DE PREÇOS
+   ============================================================ */
 
 .comparison {
-    background: var(--cream);
 
-    padding: 90px 0 100px;
+    background: var(--beige);
+
+    color: var(--text-dark);
+
+    padding: 90px 24px;
+
+    overflow: hidden;
 }
 
+
 .comparison-inner {
-    width: min(800px, 100%);
+
+    width: min(100%, 800px);
 
     margin: 0 auto;
 
     text-align: center;
 }
 
+
 .comparison-title {
-    color: rgb(52, 52, 54);
 
-    font-family: var(--quicksand);
+    margin: 0 0 45px;
 
-    font-size: 26px;
-    font-weight: 700;
+    font-family: var(--rounded-font);
+
+    font-size: 30px;
 
     line-height: 1.3;
 
-    margin-bottom: 45px;
+    font-weight: 700;
 }
 
-.price-list {
-    width: min(650px, 100%);
 
-    margin: 0 auto;
+.price-list {
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 10px;
-}
-
-.price-row {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 25px;
-}
-
-.price-name {
-    color: rgb(52, 52, 54);
-
-    font-family: var(--poppins);
-
-    font-size: 20px;
-    font-weight: 500;
-
-    line-height: 1.3;
-
-    text-align: left;
-}
-
-.price-old {
-    color: var(--price-gray);
-
-    font-family: var(--poppins);
-
-    font-size: 20px;
-    font-weight: 500;
-
-    line-height: 1.3;
-
-    white-space: nowrap;
-}
-
-.comparison-total {
-    color: rgb(52, 52, 54);
-
-    font-family: var(--poppins);
-
-    font-size: 20px;
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-top: 35px;
-}
-
-.comparison-today {
-    color: rgb(52, 52, 54);
-
-    font-family: var(--poppins);
-
-    font-size: 20px;
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-top: 30px;
-}
-
-.comparison-today u {
-    text-underline-offset: 3px;
-}
-
-
-/* =========================================================
-   SEÇÕES 08, 11 E 12 — OFERTAS
-========================================================= */
-
-.offer {
-    background: var(--white);
-
-    padding: 90px 0 100px;
-
-    text-align: center;
-}
-
-.offer-inner {
-    width: min(900px, 100%);
-
-    margin: 0 auto;
-}
-
-.offer-logo {
-    width: 275px;
-
-    max-width: 70vw;
-
-    margin: 0 auto 25px;
-
-    object-fit: contain;
-}
-
-.offer-title {
-    max-width: 700px;
-
-    margin: 0 auto 35px;
-
-    color: rgb(13, 20, 26);
-
-    font-family: var(--quicksand);
-
-    font-size: 40px;
-    font-weight: 700;
-
-    line-height: 1.3;
-}
-
-.offer-product {
-    width: 655px;
-
-    max-width: 90vw;
-
-    margin: 0 auto 35px;
-
-    object-fit: contain;
-}
-
-.offer-price {
-    color: rgb(13, 20, 26);
-
-    font-family: var(--open-sans);
-
-    font-size: 48px;
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-bottom: 8px;
-}
-
-.offer-or {
-    color: rgb(13, 20, 26);
-
-    font-family: var(--open-sans);
-
-    font-size: 40px;
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-bottom: 8px;
-}
-
-.offer-cash {
-    color: rgb(13, 20, 26);
-
-    font-family: var(--open-sans);
-
-    font-size: 24px;
-    font-weight: 700;
-
-    line-height: 1.3;
+    gap: 12px;
 
     margin-bottom: 35px;
 }
 
+
+.price-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(52, 52, 54, 0.12);
+
+    text-align: left;
+}
+
+
+.price-name {
+
+    margin: 0;
+
+    font-family: var(--rounded-font);
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+}
+
+
+.price-old {
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+    color: var(--old-price);
+
+    font-size: 20px;
+}
+
+
+.comparison-total {
+
+    margin: 35px 0 25px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 26px;
+
+    line-height: 1.3;
+}
+
+
+.comparison-today {
+
+    margin: 0;
+
+    font-family: var(--rounded-font);
+
+    font-size: 30px;
+
+    line-height: 1.35;
+}
+
+
+/* ============================================================
+   12. SEÇÕES 08, 11 E 12 — OFERTAS
+   ============================================================ */
+
+.offer {
+
+    background: var(--white);
+
+    color: var(--text-dark);
+
+    padding: 90px 24px 100px;
+
+    overflow: hidden;
+}
+
+
+.offer-inner {
+
+    width: min(100%, 760px);
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.offer-logo {
+
+    width: 280px;
+
+    max-width: 70vw;
+
+    margin: 0 auto 35px;
+}
+
+
+.offer-title {
+
+    width: min(100%, 700px);
+
+    margin: 0 auto 35px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 30px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+}
+
+
+.offer-product {
+
+    width: min(540px, 85vw);
+
+    max-height: 340px;
+
+    object-fit: contain;
+
+    margin: 0 auto 25px;
+}
+
+
+.offer-price {
+
+    margin: 0 0 10px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 46px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+}
+
+
+.offer-or {
+
+    margin: 0 0 10px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 24px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+}
+
+
+.offer-cash {
+
+    margin: 0 0 35px;
+
+    font-family: var(--rounded-font);
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+
 .buy-button {
+
     display: inline-flex;
 
     align-items: center;
     justify-content: center;
 
-    min-height: 64px;
+    width: min(100%, 600px);
 
-    padding: 16px 40px;
+    min-height: 68px;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
 
     background: var(--green);
 
     color: var(--white);
 
-    border: 0;
-    border-radius: 4px;
+    text-decoration: none;
 
-    font-family: var(--poppins);
+    font-family: var(--rounded-font);
 
     font-size: 22px;
-    font-weight: 500;
 
-    line-height: normal;
+    line-height: 1.25;
 
-    text-align: center;
-
-    cursor: pointer;
+    font-weight: 700;
 
     transition:
-        background-color 0.2s ease,
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
+
 .buy-button:hover {
-    background: rgb(29, 30, 32);
 
     transform: translateY(-2px);
 
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.16);
+        0 8px 22px rgba(0, 0, 0, 0.16);
 }
+
+
+.buy-button:active {
+
+    transform: translateY(0);
+}
+
 
 .offer-note {
-    color: rgb(26, 26, 26);
 
-    font-family: var(--heading-font);
+    max-width: 600px;
 
-    font-size: 18px;
-    font-weight: 400;
+    margin: 20px auto 0;
 
-    line-height: 1.3;
+    font-size: 17px;
 
-    margin-top: 25px;
+    line-height: 1.45;
+
+    font-weight: 500;
 }
 
 
-/* =========================================================
-   SEÇÃO 09 — CONVERSA DIRETA
-========================================================= */
+/* ============================================================
+   13. SEÇÃO 09 — CONVERSA DIRETA
+   ============================================================ */
 
 .conversation {
-    background: var(--dark-2);
 
-    padding: 105px 0 115px;
+    background: var(--dark);
+
+    color: var(--white);
+
+    padding: 95px 24px 100px;
+
+    overflow: hidden;
 }
 
+
 .conversation-inner {
-    width: min(900px, 100%);
+
+    width: min(100%, 850px);
 
     margin: 0 auto;
 
     text-align: center;
 }
 
+
 .conversation-title {
-    color: var(--white);
 
-    font-family: var(--quicksand);
+    margin: 0 0 55px;
 
-    font-size: 40px;
+    font-family: var(--rounded-font);
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
     font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-bottom: 60px;
 }
+
 
 .conversation-text {
-    color: var(--white);
 
-    font-family: var(--poppins);
+    margin: 0 auto 27px;
+
+    max-width: 780px;
 
     font-size: 20px;
+
+    line-height: 1.65;
+
     font-weight: 500;
-
-    line-height: 1.3;
-
-    margin-bottom: 35px;
 }
+
 
 .conversation-decision {
-    color: var(--orange);
 
-    font-family: var(--poppins);
+    margin: 45px auto;
 
-    font-size: 20px;
-    font-weight: 500;
+    max-width: 800px;
 
-    line-height: 1.3;
+    font-family: var(--rounded-font);
 
-    max-width: 850px;
+    font-size: 25px;
 
-    margin: 55px auto;
+    line-height: 1.5;
+
+    font-weight: 700;
 }
+
 
 .conversation-spaced {
-    margin-bottom: 20px;
+
+    margin-top: 40px;
+
 }
+
 
 .conversation-final {
+
+    margin: 55px auto 45px;
+
     color: var(--orange);
 
-    font-family: var(--poppins);
+    font-family: var(--rounded-font);
 
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 32px;
 
-    line-height: 1.3;
+    line-height: 1.25;
 
-    margin-top: 45px;
+    font-weight: 700;
 }
+
 
 .conversation-image {
-    width: 720px;
 
-    max-width: 90vw;
+    width: min(520px, 85vw);
 
-    margin: 70px auto 0;
-
-    object-fit: contain;
+    margin: 20px auto 0;
 }
 
 
-/* =========================================================
-   SEÇÃO 10 — SOBRE / CONFIANÇA
-========================================================= */
+/* ============================================================
+   14. SEÇÃO 10 — SOBRE / CONFIANÇA
+   ============================================================ */
 
 .about {
-    background: var(--cream);
 
-    padding: 100px 0;
+    background: var(--beige);
+
+    color: var(--text-dark);
+
+    padding: 90px 24px 100px;
+
+    overflow: hidden;
 }
 
+
 .about-inner {
-    width: min(1050px, 100%);
+
+    width: min(100%, 1000px);
 
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 340px 1fr;
-
-    align-items: center;
+    grid-template-columns:
+        300px
+        minmax(0, 1fr);
 
     gap: 70px;
+
+    align-items: center;
 }
 
+
 .about-image {
-    width: 305px;
+
+    width: 300px;
 
     max-width: 100%;
 
     margin: 0 auto;
-
-    object-fit: contain;
 }
+
 
 .about-title {
-    color: rgb(26, 26, 26);
 
-    font-family: var(--quicksand);
+    margin: 0 0 35px;
 
-    font-size: 40px;
+    font-family: var(--rounded-font);
+
+    font-size: 34px;
+
+    line-height: 1.25;
+
     font-weight: 700;
-
-    line-height: 1.3;
-
-    margin-bottom: 35px;
 }
 
-.about-text {
-    color: rgb(26, 26, 28);
-
-    font-family: var(--poppins);
-
-    font-size: 20px;
-    font-weight: 500;
-
-    line-height: 1.3;
-}
 
 .about-text p {
-    margin-bottom: 25px;
+
+    margin: 0 0 23px;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    font-weight: 500;
 }
 
 
-/* =========================================================
-   SEÇÃO 13 — FAQ
-========================================================= */
+.about-text p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
+   15. SEÇÃO 13 — FAQ
+   ============================================================ */
 
 .faq {
+
     background: var(--white);
 
-    padding: 100px 0 110px;
+    color: var(--text-dark);
+
+    padding: 95px 24px 110px;
+
+    overflow: hidden;
 }
 
+
 .faq-inner {
-    width: min(1000px, 100%);
+
+    width: min(100%, 900px);
 
     margin: 0 auto;
 }
 
+
 .faq-main-title {
-    color: rgb(26, 26, 26);
 
-    font-family: var(--heading-font);
-
-    font-size: 40px;
-    font-weight: 600;
-
-    line-height: 1.3;
+    margin: 0 0 55px;
 
     text-align: center;
 
-    margin-bottom: 65px;
+    font-family: var(--rounded-font);
+
+    font-size: 38px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
 }
+
 
 .faq-item {
-    padding: 30px 0;
 
-    border-bottom: 1px solid rgba(26, 26, 26, 0.14);
+    margin: 0 0 38px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #e5e5e5;
 }
+
+
+.faq-item:last-child {
+
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
 
 .faq-question {
+
+    margin: 0 0 15px;
+
     color: var(--orange);
 
-    font-family: var(--heading-font);
+    font-family: var(--rounded-font);
 
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 28px;
 
     line-height: 1.3;
 
-    margin-bottom: 15px;
+    font-weight: 700;
 }
+
 
 .faq-answer {
-    color: var(--text-gray);
 
-    font-family: var(--heading-font);
+    margin: 0;
 
-    font-size: 24px;
-    font-weight: 400;
+    color: var(--text-dark);
 
-    line-height: 1.3;
+    font-size: 20px;
+
+    line-height: 1.55;
+
+    font-weight: 500;
 }
 
 
-/* =========================================================
-   SEÇÃO 14 — FOOTER
-========================================================= */
+/* ============================================================
+   16. SEÇÃO 14 — FOOTER
+   ============================================================ */
 
 footer {
+
     background: var(--black);
 
-    padding: 45px 20px;
+    color: var(--white);
+
+    padding: 55px 24px 60px;
 
     text-align: center;
+
+    font-family: var(--rounded-font);
 }
+
 
 .footer-support {
-    color: var(--white);
-
-    font-family: var(--heading-font);
-
-    font-size: 22px;
-    font-weight: 600;
 
     margin-bottom: 12px;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
 }
 
-.footer-email {
-    color: var(--white);
 
-    font-family: var(--body-font);
+.footer-email {
+
+    margin-bottom: 30px;
 
     font-size: 18px;
 
-    margin-bottom: 22px;
+    line-height: 1.4;
 }
+
 
 .footer-email a {
+
     color: var(--white);
 
-    transition: color 0.2s ease;
+    text-decoration: none;
 }
 
-.footer-email a:hover {
-    color: var(--orange);
-}
 
 .footer-copy {
-    color: rgba(255, 255, 255, 0.7);
 
-    font-family: var(--body-font);
+    font-size: 15px;
 
-    font-size: 14px;
+    line-height: 1.4;
+
+    opacity: 0.8;
 }
 
 
-/* =========================================================
-   TABLETS
-========================================================= */
+/* ============================================================
+   17. TABLET
+   ============================================================ */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+
+
+    /* --------------------------------------------------------
+       HERO
+       -------------------------------------------------------- */
 
     .hero {
-        padding: 55px 20px 75px;
+
+        min-height: 680px;
+
+        padding-top: 60px;
+        padding-bottom: 70px;
     }
 
-    .hero-title {
-        font-size: 40px;
+
+    .hero-logo {
+
+        width: 250px;
     }
 
+
+    .hero-main-image {
+
+        width: 380px;
+    }
+
+
+    /* --------------------------------------------------------
+       PROBLEM
+       -------------------------------------------------------- */
 
     .problem-inner {
-        grid-template-columns: 1fr;
 
-        gap: 50px;
-
-        text-align: center;
-    }
-
-    .problem-content {
-        max-width: 750px;
-
-        margin: 0 auto;
-    }
-
-    .problem-image {
-        width: 430px;
-    }
-
-
-    .material,
-    .material:nth-child(even) {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
-        text-align: center;
-    }
-
-    .material:nth-child(even) .material-image,
-    .material:nth-child(even) .material-content {
-        order: initial;
-    }
-
-    .material-image {
-        width: 375px;
-    }
-
-    .material-content {
-        max-width: 700px;
-
-        margin: 0 auto;
-    }
-
-
-    .about-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            minmax(0, 1fr)
+            300px;
 
         gap: 45px;
-
-        text-align: center;
     }
+
+
+    .problem-title {
+
+        font-size: 42px;
+    }
+
+
+    .problem-text {
+
+        font-size: 21px;
+    }
+
+
+    /* --------------------------------------------------------
+       SEQUENCE
+       -------------------------------------------------------- */
+
+    .sequence-steps {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        row-gap: 45px;
+    }
+
+
+    .sequence-step {
+
+        min-height: 330px;
+    }
+
+
+    /* --------------------------------------------------------
+       MATERIALS
+       -------------------------------------------------------- */
+
+    .materials-list {
+
+        width: min(100%, 850px);
+    }
+
+
+    .material {
+
+        grid-template-columns: 125px minmax(0, 1fr);
+
+        gap: 35px;
+    }
+
+
+    .material > picture {
+
+        width: 125px;
+        height: 125px;
+    }
+
+
+    .material-image {
+
+        max-width: 105px;
+
+        max-height: 100px;
+    }
+
+
+    /* --------------------------------------------------------
+       ABOUT
+       -------------------------------------------------------- */
+
+    .about-inner {
+
+        grid-template-columns:
+            250px
+            minmax(0, 1fr);
+
+        gap: 45px;
+    }
+
 
     .about-image {
-        width: 280px;
+
+        width: 250px;
     }
 
-    .about-title {
-        font-size: 36px;
-    }
-
-    .about-text {
-        max-width: 750px;
-
-        margin: 0 auto;
-    }
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* ============================================================
+   18. MOBILE
+   ============================================================ */
 
 @media (max-width: 600px) {
 
+
+    /* ========================================================
+       GERAL
+       ======================================================== */
+
     .container {
+
         width: calc(100% - 32px);
     }
 
 
-    /* -----------------------------------------------------
+    /* ========================================================
        HERO
-    ----------------------------------------------------- */
+       ======================================================== */
 
     .hero {
-        padding: 40px 16px 55px;
+
+        min-height: auto;
+
+        padding: 45px 18px 60px;
     }
+
 
     .hero-logo {
-        width: 290px;
 
-        max-width: 85vw;
+        width: 220px;
 
         margin-bottom: 30px;
     }
+
 
     .hero-main-image {
-        width: 100%;
 
-        margin-bottom: 35px;
-    }
-
-    .hero-title {
-        font-size: 28px;
-
-        line-height: 1.28;
-    }
-
-
-    /* -----------------------------------------------------
-       RUMINAÇÕES
-    ----------------------------------------------------- */
-
-    .ruminations {
-        padding: 65px 0 70px;
-    }
-
-    .ruminations-title {
-        font-size: 30px;
-
-        margin-bottom: 25px;
-    }
-
-    .ruminations-intro {
-        font-size: 18px;
-
-        margin-bottom: 25px;
-    }
-
-    .ruminations-image {
-        width: 375px;
-
-        max-width: 100%;
-
-        margin-bottom: 25px;
-    }
-
-    .ruminations-final {
-        font-size: 18px;
-    }
-
-
-    /* -----------------------------------------------------
-       PROBLEMA
-    ----------------------------------------------------- */
-
-    .problem {
-        padding: 70px 0;
-    }
-
-    .problem-title {
-        font-size: 30px;
-
-        margin-bottom: 25px;
-    }
-
-    .problem-text {
-        font-size: 18px;
-
-        margin-bottom: 22px;
-    }
-
-    .problem-final {
-        font-size: 24px;
-
-        margin-top: 35px;
-    }
-
-    .problem-image {
-        width: 375px;
-
-        max-width: 100%;
-    }
-
-
-    /* -----------------------------------------------------
-       MATERIAIS
-    ----------------------------------------------------- */
-
-    .materials {
-        padding: 65px 0 75px;
-    }
-
-    .materials-title {
-        font-size: 30px;
-
-        margin-bottom: 50px;
-    }
-
-    .materials-list {
-        gap: 50px;
-    }
-
-    .material {
-        gap: 25px;
-    }
-
-    .material-image {
-        width: 375px;
-
-        max-width: 100%;
-    }
-
-    .material-content h3 {
-        font-size: 22px;
-
-        margin-bottom: 13px;
-    }
-
-    .material-content p {
-        font-size: 16px;
-
-        line-height: 1.45;
-    }
-
-
-    /* -----------------------------------------------------
-       AUDIÊNCIA
-       NOVA APRESENTAÇÃO
-    ----------------------------------------------------- */
-
-    .audience {
-        padding: 65px 0 75px;
-    }
-
-    .audience-title {
-        font-size: 30px;
-
-        margin-bottom: 40px;
-    }
-
-    .audience-list {
-        gap: 12px;
-    }
-
-    .audience-item {
-        min-height: 0;
-
-        grid-template-columns: 42px 1fr;
-
-        gap: 14px;
-
-        padding: 16px 18px 16px 14px;
-
-        border-radius: 7px;
-    }
-
-    .audience-check {
-        width: 36px;
-        height: 36px;
-
-        font-size: 22px;
-    }
-
-    .audience-item p {
-        font-size: 17px;
-
-        line-height: 1.35;
-    }
-
-    .audience-conclusion {
-        margin-top: 50px;
-
-        font-size: 20px;
-    }
-
-    .audience-logo {
-        width: 250px;
-
-        max-width: 75vw;
-
-        margin: 16px auto;
-    }
-
-    .audience-conclusion-last {
-        font-size: 22px;
-    }
-
-
-    /* -----------------------------------------------------
-       COMPARAÇÃO
-    ----------------------------------------------------- */
-
-    .comparison {
-        padding: 65px 0 75px;
-    }
-
-    .comparison-title {
-        font-size: 22px;
-
-        margin-bottom: 35px;
-    }
-
-    .price-list {
-        gap: 13px;
-    }
-
-    .price-row {
-        gap: 15px;
-    }
-
-    .price-name {
-        font-size: 16px;
-    }
-
-    .price-old {
-        font-size: 16px;
-    }
-
-    .comparison-total,
-    .comparison-today {
-        font-size: 17px;
-    }
-
-
-    /* -----------------------------------------------------
-       OFERTAS
-    ----------------------------------------------------- */
-
-    .offer {
-        padding: 65px 0 75px;
-    }
-
-    .offer-logo {
-        width: 245px;
-
-        margin-bottom: 22px;
-    }
-
-    .offer-title {
-        font-size: 28px;
-
-        margin-bottom: 30px;
-    }
-
-    .offer-product {
-        width: 100%;
-
-        max-width: 100%;
-
-        margin-bottom: 30px;
-    }
-
-    .offer-price {
-        font-size: 42px;
-    }
-
-    .offer-or {
-        font-size: 32px;
-    }
-
-    .offer-cash {
-        font-size: 21px;
-
-        margin-bottom: 30px;
-    }
-
-    .buy-button {
-        width: min(100%, 390px);
-
-        min-height: 58px;
-
-        padding: 14px 20px;
-
-        font-size: 18px;
-    }
-
-    .offer-note {
-        font-size: 16px;
-
-        margin-top: 20px;
-    }
-
-
-    /* -----------------------------------------------------
-       CONVERSA
-    ----------------------------------------------------- */
-
-    .conversation {
-        padding: 70px 0 75px;
-    }
-
-    .conversation-title {
-        font-size: 30px;
-
-        margin-bottom: 45px;
-    }
-
-    .conversation-text {
-        font-size: 16px;
+        width: 310px;
 
         margin-bottom: 28px;
     }
 
-    .conversation-decision {
-        font-size: 16px;
 
-        margin: 45px auto;
+    .hero-title {
+
+        font-size: 31px;
+
+        line-height: 1.2;
+
+        letter-spacing: -0.3px;
     }
 
-    .conversation-spaced {
-        margin-bottom: 18px;
+
+    /* ========================================================
+       RUMINAÇÕES
+       ======================================================== */
+
+    .ruminations {
+
+        padding: 65px 18px 75px;
     }
 
-    .conversation-final {
+
+    .ruminations-title {
+
+        font-size: 31px;
+
+        line-height: 1.22;
+    }
+
+
+    .ruminations-intro {
+
         font-size: 18px;
 
-        margin-top: 35px;
-    }
-
-    .conversation-image {
-        width: 720px;
-
-        max-width: 100%;
-
-        margin-top: 50px;
+        line-height: 1.5;
     }
 
 
-    /* -----------------------------------------------------
-       SOBRE
-    ----------------------------------------------------- */
+    .ruminations-image {
 
-    .about {
-        padding: 70px 0;
-    }
+        width: min(340px, 90vw);
 
-    .about-inner {
-        gap: 35px;
-    }
-
-    .about-image {
-        width: 250px;
-    }
-
-    .about-title {
-        font-size: 26px;
+        margin-top: 28px;
 
         margin-bottom: 30px;
     }
 
-    .about-text {
-        font-size: 16px;
 
-        line-height: 1.45;
+    .ruminations-final {
+
+        margin-top: 35px;
+
+        font-size: 24px;
+
+        line-height: 1.35;
     }
 
-    .about-text p {
+
+    /* ========================================================
+       PROBLEM
+       ======================================================== */
+
+    .problem {
+
+        padding: 65px 18px 75px;
+    }
+
+
+    .problem-inner {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+
+    .problem-content {
+
+        max-width: none;
+    }
+
+
+    .problem-title {
+
+        margin-bottom: 25px;
+
+        font-size: 35px;
+    }
+
+
+    .problem-text {
+
         margin-bottom: 22px;
+
+        font-size: 18px;
+
+        line-height: 1.55;
     }
 
 
-    /* -----------------------------------------------------
-       FAQ
-    ----------------------------------------------------- */
+    .problem-final {
 
-    .faq {
-        padding: 70px 16px 80px;
-    }
+        margin-top: 30px;
 
-    .faq-main-title {
-        font-size: 30px;
-
-        margin-bottom: 45px;
-    }
-
-    .faq-item {
-        padding: 25px 0;
-    }
-
-    .faq-question {
         font-size: 24px;
     }
 
-    .faq-answer {
-        font-size: 16px;
 
-        line-height: 1.45;
+    .problem-image {
+
+        width: min(375px, 88vw);
     }
 
 
-    /* -----------------------------------------------------
-       FOOTER
-    ----------------------------------------------------- */
+    /* ========================================================
+       SEÇÃO 04 — 5 PASSOS
+       ======================================================== */
 
-    footer {
-        padding: 40px 16px;
+    .sequence {
+
+        padding: 65px 16px 75px;
     }
 
-    .footer-email {
-        font-size: 18px;
-    }
-}
 
+    .sequence-logo {
 
-/* =========================================================
-   CELULARES MUITO PEQUENOS
-========================================================= */
+        width: 210px;
 
-@media (max-width: 380px) {
-
-    .hero-title {
-        font-size: 26px;
+        margin-bottom: 28px;
     }
 
-    .ruminations-title,
-    .materials-title,
-    .audience-title {
-        font-size: 28px;
+
+    .sequence-title {
+
+        font-size: 29px;
+
+        line-height: 1.25;
+
+        margin-bottom: 25px;
     }
 
-    .problem-title {
-        font-size: 28px;
+
+    .sequence-title-break {
+
+        display: none;
     }
 
-    .offer-price {
-        font-size: 38px;
+
+    .sequence-badge {
+
+        width: auto;
+
+        max-width: 100%;
+
+        min-height: 55px;
+
+        padding: 10px 23px;
+
+        margin-bottom: 50px;
+
+        font-size: 22px;
     }
 
-    .buy-button {
+
+    .sequence-badge-icon {
+
+        font-size: 23px;
+    }
+
+
+    .sequence-steps {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 48px;
+
+        align-items: stretch;
+
+        width: min(100%, 430px);
+
+        margin: 0 auto;
+    }
+
+
+    .sequence-step {
+
+        min-height: auto;
+
+        padding:
+            42px
+            28px
+            30px;
+
+        border-radius: 16px;
+    }
+
+
+    .sequence-number {
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 25px;
+    }
+
+
+    .sequence-icon {
+
+        min-height: 70px;
+
+        margin-bottom: 16px;
+
+        font-size: 50px;
+    }
+
+
+    .sequence-step p {
+
         font-size: 17px;
+
+        line-height: 1.55;
+    }
+
+
+    /* ========================================================
+       SEÇÃO 05 — MATERIAIS
+       ======================================================== */
+
+    .materials {
+
+        padding: 60px 18px 75px;
+    }
+
+
+    .materials-title {
+
+        margin-bottom: 50px;
+
+        font-size: 32px;
+    }
+
+
+    .materials-list {
+
+        width: 100%;
+
+        gap: 42px;
+    }
+
+
+    .material {
+
+        grid-template-columns:
+            85px
+            minmax(0, 1fr);
+
+        gap: 20px;
+
+        min-height: 110px;
+
+        align-items: center;
+    }
+
+
+    .material > picture {
+
+        width: 85px;
+        height: 85px;
     }
 
 
     /*
-       Mantemos os cartões uniformes também em telas
-       muito pequenas.
+       No celular os ícones ficam deliberadamente pequenos.
+       Eles são elementos ilustrativos; o texto é o protagonista.
     */
 
-    .audience-item {
-        grid-template-columns: 38px 1fr;
+    .material-image {
 
-        gap: 12px;
+        max-width: 70px;
 
-        padding: 14px 14px 14px 12px;
+        max-height: 70px;
     }
 
+
+    .material-content h3 {
+
+        margin-bottom: 8px;
+
+        font-size: 17px;
+
+        line-height: 1.25;
+    }
+
+
+    .material-content p {
+
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+
+    /* ========================================================
+       AUDIENCE
+       ======================================================== */
+
+    .audience {
+
+        padding: 65px 16px 75px;
+    }
+
+
+    .audience-title {
+
+        margin-bottom: 45px;
+
+        font-size: 34px;
+    }
+
+
+    .audience-list {
+
+        gap: 13px;
+    }
+
+
+    .audience-item {
+
+        gap: 10px;
+
+        align-items: stretch;
+    }
+
+
     .audience-check {
-        width: 34px;
-        height: 34px;
+
+        flex: 0 0 27px;
+
+        font-size: 31px;
+
+        padding-top: 9px;
+    }
+
+
+    .audience-item p {
+
+        padding: 14px 15px;
+
+        font-size: 16px;
+
+        line-height: 1.45;
+    }
+
+
+    .audience-conclusion {
+
+        margin-top: 45px;
+
+        font-size: 20px;
+
+        line-height: 1.45;
+    }
+
+
+    .audience-logo {
+
+        width: 230px;
+
+        margin-top: 5px;
+    }
+
+
+    .audience-conclusion-last {
+
+        font-size: 23px;
+    }
+
+
+    /* ========================================================
+       COMPARAÇÃO
+       ======================================================== */
+
+    .comparison {
+
+        padding: 65px 18px 75px;
+    }
+
+
+    .comparison-title {
+
+        font-size: 24px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .price-list {
+
+        gap: 7px;
+    }
+
+
+    .price-row {
+
+        gap: 15px;
+
+        padding: 11px 0;
+    }
+
+
+    .price-name {
+
+        font-size: 16px;
+
+        line-height: 1.35;
+    }
+
+
+    .price-old {
+
+        font-size: 16px;
+    }
+
+
+    .comparison-total {
+
+        font-size: 22px;
+    }
+
+
+    .comparison-today {
+
+        font-size: 24px;
+    }
+
+
+    /* ========================================================
+       OFERTAS
+       ======================================================== */
+
+    .offer {
+
+        padding: 65px 18px 75px;
+    }
+
+
+    .offer-logo {
+
+        width: 230px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .offer-title {
+
+        font-size: 23px;
+
+        line-height: 1.4;
+
+        margin-bottom: 30px;
+    }
+
+
+    .offer-product {
+
+        width: min(390px, 90vw);
+
+        max-height: 260px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .offer-price {
+
+        font-size: 38px;
+    }
+
+
+    .offer-or {
 
         font-size: 20px;
     }
 
-    .audience-item p {
+
+    .offer-cash {
+
+        font-size: 31px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .buy-button {
+
+        width: 100%;
+
+        min-height: 62px;
+
+        padding: 13px 20px;
+
+        font-size: 18px;
+    }
+
+
+    .offer-note {
+
+        font-size: 15px;
+    }
+
+
+    /* ========================================================
+       CONVERSATION
+       ======================================================== */
+
+    .conversation {
+
+        padding: 70px 18px 80px;
+    }
+
+
+    .conversation-title {
+
+        margin-bottom: 40px;
+
+        font-size: 31px;
+    }
+
+
+    .conversation-text {
+
+        font-size: 16px;
+
+        line-height: 1.65;
+
+        margin-bottom: 22px;
+    }
+
+
+    .conversation-decision {
+
+        margin: 35px auto;
+
+        font-size: 19px;
+
+        line-height: 1.55;
+    }
+
+
+    .conversation-spaced {
+
+        margin-top: 30px;
+    }
+
+
+    .conversation-final {
+
+        margin-top: 45px;
+
+        margin-bottom: 35px;
+
+        font-size: 25px;
+    }
+
+
+    .conversation-image {
+
+        width: min(375px, 88vw);
+    }
+
+
+    /* ========================================================
+       ABOUT
+       ======================================================== */
+
+    .about {
+
+        padding: 65px 18px 75px;
+    }
+
+
+    .about-inner {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+        text-align: center;
+    }
+
+
+    .about-image {
+
+        width: 230px;
+    }
+
+
+    .about-title {
+
+        margin-bottom: 30px;
+
+        font-size: 28px;
+    }
+
+
+    .about-text {
+
+        text-align: left;
+    }
+
+
+    .about-text p {
+
+        margin-bottom: 20px;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    /* ========================================================
+       FAQ
+       ======================================================== */
+
+    .faq {
+
+        padding: 70px 18px 80px;
+    }
+
+
+    .faq-main-title {
+
+        margin-bottom: 45px;
+
+        font-size: 29px;
+
+        line-height: 1.3;
+    }
+
+
+    .faq-item {
+
+        margin-bottom: 30px;
+
+        padding-bottom: 25px;
+    }
+
+
+    .faq-question {
+
+        margin-bottom: 11px;
+
+        font-size: 23px;
+
+        line-height: 1.3;
+    }
+
+
+    .faq-answer {
+
+        font-size: 16px;
+
+        line-height: 1.55;
+    }
+
+
+    /* ========================================================
+       FOOTER
+       ======================================================== */
+
+    footer {
+
+        padding: 45px 18px 50px;
+    }
+
+
+    .footer-support {
+
+        font-size: 18px;
+    }
+
+
+    .footer-email {
+
+        font-size: 16px;
+
+        word-break: break-word;
+    }
+
+
+    .footer-copy {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* ============================================================
+   19. CELULARES MUITO PEQUENOS
+   ============================================================ */
+
+@media (max-width: 380px) {
+
+
+    .hero-title {
+
+        font-size: 28px;
+    }
+
+
+    .sequence-title {
+
+        font-size: 27px;
+    }
+
+
+    .sequence-badge {
+
+        font-size: 20px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .material {
+
+        grid-template-columns:
+            72px
+            minmax(0, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .material > picture {
+
+        width: 72px;
+        height: 72px;
+    }
+
+
+    .material-image {
+
+        max-width: 60px;
+
+        max-height: 60px;
+    }
+
+
+    .material-content h3 {
+
         font-size: 16px;
     }
+
+
+    .material-content p {
+
+        font-size: 14px;
+    }
+
+
+    .audience-item p {
+
+        font-size: 15px;
+
+        padding: 13px;
+    }
+
+
+    .price-name,
+    .price-old {
+
+        font-size: 15px;
+    }
+
+
+    .buy-button {
+
+        font-size: 17px;
+    }
+
 }
