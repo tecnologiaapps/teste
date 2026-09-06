@@ -1,7 +1,9 @@
+html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -16,24 +18,18 @@
         content="Descubra como começar a escrever seu livro de ficção em 48 horas com um checklist prático, mesmo que nunca tenha escrito nada!"
     >
 
-    <!-- =========================================================
-         FONTES
-         O site original utiliza diferentes famílias dependendo
-         do elemento. Mantemos essas famílias para preservar
-         a identidade visual original.
-    ========================================================== -->
+    <!--
+        Todas as fontes, imagens e estilos utilizados pela página
+        são locais.
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        O arquivo style.css contém a configuração visual.
+        As imagens estão dentro de site_files/.
+    -->
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans:wght@500;700&family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;700&display=swap"
         rel="stylesheet"
+        href="style.css"
     >
-
-
-    <link rel="stylesheet" href="style.css">
-
 
 </head>
 
@@ -124,11 +120,20 @@
                 </p>
 
 
-                <img
-                    class="ruminations-image"
-                    src="site_files/ruminacoes-hCCixkrjo3DsPEms.png"
-                    alt=""
-                >
+                <picture>
+
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="site_files/ruminacoes-hCCixkrjo3DsPEms(1).png"
+                    >
+
+                    <img
+                        class="ruminations-image"
+                        src="site_files/ruminacoes-hCCixkrjo3DsPEms.png"
+                        alt=""
+                    >
+
+                </picture>
 
 
                 <p class="ruminations-intro">
@@ -868,11 +873,20 @@
                 </p>
 
 
-                <img
-                    class="conversation-image"
-                    src="site_files/mulher-pensativa-5fgeK43v5wH2sHxf.png"
-                    alt=""
-                >
+                <picture>
+
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="site_files/mulher-pensativa-5fgeK43v5wH2sHxf(1).png"
+                    >
+
+                    <img
+                        class="conversation-image"
+                        src="site_files/mulher-pensativa-5fgeK43v5wH2sHxf.png"
+                        alt=""
+                    >
+
+                </picture>
 
             </div>
 
@@ -1062,7 +1076,7 @@
 
     <!-- =========================================================
          SEÇÃO 12
-         TERCEIRA OFERTA / VERSÃO MOBILE ORIGINAL
+         TERCEIRA OFERTA
     ========================================================== -->
 
     <section class="offer">
@@ -1286,3 +1300,4 @@
 </body>
 
 </html>
+
