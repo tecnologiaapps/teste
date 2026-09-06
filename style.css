@@ -1,39 +1,54 @@
 /* =========================================================
-   SEÑOR LÁBIOS
-   STYLE.CSS
-   ========================================================= */
+   ESCRITOR DESTRAVADO EM 48H
+   STYLE.CSS — VERSÃO DEFINITIVA
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
 
 :root {
-    --orange: #FC8337;
-    --green: #00DB58;
+    --orange: rgb(252, 131, 55);
+    --orange-dark: rgb(224, 103, 31);
 
-    --black: #000000;
-    --dark: #121212;
-    --dark-2: #1A1A1A;
+    --green: rgb(0, 219, 88);
 
-    --cream: #DAD2C6;
-    --cream-light: #F7F1EF;
-    --cream-light-2: #F7F2EF;
+    --black: rgb(0, 0, 0);
+    --dark: rgb(18, 18, 18);
+    --dark-2: rgb(26, 26, 26);
 
-    --white: #FFFFFF;
+    --cream: rgb(218, 210, 198);
+    --cream-light: rgb(247, 241, 239);
+    --cream-light-2: rgb(247, 242, 239);
 
-    --text-dark: #1A1A1A;
-    --text-gray: #56585E;
-    --price-gray: #9C9595;
+    --white: rgb(255, 255, 255);
 
-    --heading-font: "Outfit", sans-serif;
-    --body-font: "Inter", sans-serif;
-    --poppins: "Poppins", sans-serif;
-    --quicksand: "Quicksand", sans-serif;
-    --open-sans: "Open Sans", sans-serif;
+    --text-dark: rgb(26, 26, 26);
+    --text-gray: rgb(86, 88, 94);
+    --price-gray: rgb(156, 149, 149);
 
     --content-width: 1224px;
+
+    /*
+       As famílias abaixo correspondem à tipografia
+       utilizada na estrutura original.
+       
+       Quando os arquivos locais das fontes estiverem
+       configurados, estas variáveis continuam sendo
+       utilizadas normalmente.
+    */
+    --heading-font: "Outfit", "Arial", sans-serif;
+    --body-font: "Inter", "Arial", sans-serif;
+    --poppins: "Poppins", "Arial", sans-serif;
+    --quicksand: "Quicksand", "Arial", sans-serif;
+    --open-sans: "Open Sans", "Arial", sans-serif;
 }
 
 
 /* =========================================================
    RESET
-   ========================================================= */
+========================================================= */
 
 *,
 *::before,
@@ -56,18 +71,23 @@ body {
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
 
-    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 
 img {
     display: block;
+
     max-width: 100%;
     height: auto;
 }
 
+picture {
+    display: block;
+}
+
 a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -77,8 +97,14 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
     margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
 }
 
 button,
@@ -88,25 +114,22 @@ a {
 
 
 /* =========================================================
-   ELEMENTOS GERAIS
-   ========================================================= */
+   CONTAINER
+========================================================= */
 
 .container {
-    width: min(var(--content-width), calc(100% - 40px));
+    width: min(
+        var(--content-width),
+        calc(100% - 32px)
+    );
+
     margin: 0 auto;
 }
 
-.heading {
-    font-family: var(--heading-font);
-    font-weight: 600;
-    line-height: 1.25;
-}
 
-.body {
-    font-family: var(--body-font);
-    font-weight: 400;
-    line-height: 1.5;
-}
+/* =========================================================
+   DESTAQUE LARANJA
+========================================================= */
 
 .orange {
     color: var(--orange);
@@ -114,67 +137,13 @@ a {
 
 
 /* =========================================================
-   BOTÃO
-   ========================================================= */
-
-.buy-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 320px;
-    min-height: 64px;
-
-    padding: 16px 42px;
-
-    border: 0;
-    border-radius: 6px;
-
-    background: var(--green);
-    color: var(--white);
-
-    font-family: var(--poppins);
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.2;
-
-    text-align: center;
-
-    cursor: pointer;
-
-    box-shadow: 0 10px 28px rgba(0, 219, 88, 0.16);
-
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.buy-button:hover {
-    background: #00C94F;
-    transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(0, 219, 88, 0.24);
-}
-
-.buy-button:active {
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
    SEÇÃO 01 — HERO
-   ========================================================= */
+========================================================= */
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 716px;
-
-    padding: 56px 20px 64px;
-
     background: var(--black);
+
+    padding: 70px 24px 90px;
 
     overflow: hidden;
 }
@@ -182,38 +151,43 @@ a {
 .hero-inner {
     width: min(1100px, 100%);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
 
     text-align: center;
 }
 
 .hero-logo {
-    width: 241px;
-    max-width: 55vw;
+    width: 375px;
 
-    margin-bottom: 42px;
+    max-width: 80vw;
+
+    margin: 0 auto 40px;
+
+    object-fit: contain;
 }
 
 .hero-main-image {
-    width: 476px;
-    max-width: min(80vw, 476px);
+    width: 768px;
 
-    margin-bottom: 46px;
+    max-width: 100%;
+
+    margin: 0 auto 50px;
 
     object-fit: contain;
 }
 
 .hero-title {
-    width: min(850px, 100%);
+    max-width: 950px;
+
+    margin: 0 auto;
 
     color: var(--white);
 
     font-family: var(--heading-font);
-    font-size: clamp(34px, 4vw, 48px);
+
+    font-size: 48px;
     font-weight: 600;
+
     line-height: 1.25;
 
     text-align: center;
@@ -222,87 +196,90 @@ a {
 
 /* =========================================================
    SEÇÃO 02 — RUMINAÇÕES
-   ========================================================= */
+========================================================= */
 
 .ruminations {
-    min-height: 850px;
-
-    padding: 92px 20px 100px;
-
     background: var(--cream);
 
-    display: flex;
-    align-items: center;
+    padding: 95px 0 100px;
 }
 
 .ruminations-inner {
-    width: min(1000px, 100%);
+    width: min(850px, 100%);
+
     margin: 0 auto;
 
     text-align: center;
 }
 
 .ruminations-title {
-    width: min(900px, 100%);
-
-    margin: 0 auto 34px;
-
     color: var(--text-dark);
 
     font-family: var(--heading-font);
-    font-size: clamp(34px, 4vw, 48px);
+
+    font-size: 48px;
     font-weight: 600;
-    line-height: 1.25;
+
+    line-height: 1.3;
+
+    margin-bottom: 35px;
 }
 
 .ruminations-intro {
-    margin-bottom: 30px;
-
     color: var(--text-dark);
 
     font-family: var(--body-font);
+
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.4;
+
+    line-height: 1.3;
+
+    margin-bottom: 30px;
 }
 
 .ruminations-image {
     width: 375px;
-    max-width: 100%;
 
-    margin: 0 auto 32px;
+    max-width: 90vw;
+
+    margin: 0 auto 30px;
 }
 
 .ruminations-final {
     color: var(--text-dark);
 
     font-family: var(--body-font);
+
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.4;
+
+    line-height: 1.3;
 }
 
 
 /* =========================================================
    SEÇÃO 03 — PROBLEMA
-   ========================================================= */
+========================================================= */
 
 .problem {
-    padding: 105px 20px 115px;
-
     background: var(--dark);
+
+    padding: 100px 0;
 }
 
 .problem-inner {
     width: min(1100px, 100%);
+
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
+
+    grid-template-columns: 1fr 1fr;
 
     align-items: center;
 
-    gap: 72px;
+    gap: 70px;
 }
 
 .problem-content {
@@ -310,40 +287,47 @@ a {
 }
 
 .problem-title {
-    margin-bottom: 32px;
-
     color: var(--white);
 
     font-family: var(--heading-font);
-    font-size: clamp(34px, 4vw, 48px);
+
+    font-size: 48px;
     font-weight: 600;
-    line-height: 1.25;
+
+    line-height: 1.3;
+
+    margin-bottom: 35px;
 }
 
 .problem-text {
-    margin-bottom: 28px;
-
     color: var(--white);
 
     font-family: var(--body-font);
+
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.45;
+
+    line-height: 1.3;
+
+    margin-bottom: 30px;
 }
 
 .problem-final {
-    margin-top: 44px;
-
     color: var(--white);
 
     font-family: var(--heading-font);
+
     font-size: 32px;
     font-weight: 600;
+
     line-height: 1.3;
+
+    margin-top: 45px;
 }
 
 .problem-image {
     width: 480px;
+
     max-width: 100%;
 
     margin: 0 auto;
@@ -354,23 +338,24 @@ a {
 
 /* =========================================================
    SEÇÃO 04 — IMAGEM SEQUENCIAL
-   ========================================================= */
+========================================================= */
 
 .sequence {
-    padding: 0;
-
     background: var(--cream-light);
+
+    padding: 0;
 
     overflow: hidden;
 }
 
-.sequence-image {
-    display: block;
-
+.sequence picture {
     width: 100%;
-    max-width: 1440px;
+}
 
-    height: auto;
+.sequence-image {
+    width: 100%;
+
+    max-width: 1440px;
 
     margin: 0 auto;
 }
@@ -378,52 +363,65 @@ a {
 
 /* =========================================================
    SEÇÃO 05 — MATERIAIS
-   ========================================================= */
+========================================================= */
 
 .materials {
-    padding: 100px 20px 115px;
-
     background: var(--cream-light-2);
+
+    padding: 95px 0 110px;
 }
 
 .materials-title {
-    margin-bottom: 72px;
-
     color: var(--text-dark);
 
     font-family: var(--heading-font);
-    font-size: clamp(34px, 4vw, 48px);
+
+    font-size: 48px;
     font-weight: 600;
-    line-height: 1.25;
+
+    line-height: 1.3;
 
     text-align: center;
+
+    margin-bottom: 75px;
 }
 
 .materials-list {
     width: min(950px, 100%);
+
     margin: 0 auto;
 
     display: flex;
+
     flex-direction: column;
 
-    gap: 58px;
+    gap: 65px;
 }
 
 .material {
     display: grid;
 
-    grid-template-columns: 180px minmax(0, 1fr);
+    grid-template-columns: 375px 1fr;
 
     align-items: center;
 
-    gap: 44px;
+    gap: 55px;
+}
 
-    padding: 8px 0;
+.material:nth-child(even) {
+    grid-template-columns: 1fr 375px;
+}
+
+.material:nth-child(even) .material-image {
+    order: 2;
+}
+
+.material:nth-child(even) .material-content {
+    order: 1;
 }
 
 .material-image {
-    width: 150px;
-    height: 150px;
+    width: 375px;
 
     max-width: 100%;
 
@@ -432,134 +430,209 @@ a {
     object-fit: contain;
 }
 
-.material-content h3 {
-    margin-bottom: 12px;
+.material-content {
+    width: 100%;
+}
 
+.material-content h3 {
     color: var(--orange);
 
     font-family: var(--heading-font);
+
     font-size: 24px;
     font-weight: 700;
+
     line-height: 1.3;
+
+    margin-bottom: 18px;
 }
 
 .material-content p {
     color: var(--text-gray);
 
-    font-family: var(--heading-font);
+    font-family: var(--body-font);
+
     font-size: 18px;
     font-weight: 400;
+
     line-height: 1.5;
 }
 
 
 /* =========================================================
-   SEÇÃO 06 — ISSO É PARA VOCÊ
-   ========================================================= */
+   SEÇÃO 06 — AUDIÊNCIA
+========================================================= */
 
 .audience {
-    padding: 105px 20px 115px;
-
     background: var(--dark);
 
-    overflow: hidden;
+    padding: 95px 0 105px;
 }
 
 .audience-inner {
-    width: min(1100px, 100%);
+    width: min(1050px, 100%);
+
     margin: 0 auto;
 }
 
 .audience-title {
-    margin-bottom: 62px;
-
-    color: #ECEFF3;
+    color: var(--white);
 
     font-family: var(--heading-font);
-    font-size: clamp(34px, 4vw, 48px);
+
+    font-size: 48px;
     font-weight: 600;
-    line-height: 1.25;
+
+    line-height: 1.3;
 
     text-align: center;
+
+    margin-bottom: 65px;
 }
 
+
+/*
+   NOVA ESTRUTURA DOS CARTÕES
+
+   Todos possuem:
+   - exatamente a mesma largura;
+   - mesma altura mínima;
+   - fundo laranja;
+   - check integrado;
+   - espaçamento uniforme;
+   - alinhamento consistente.
+
+   Isso substitui o aspecto irregular da versão anterior.
+*/
+
 .audience-list {
+    width: min(950px, 100%);
+
+    margin: 0 auto;
+
     display: flex;
+
     flex-direction: column;
 
     gap: 16px;
-
-    padding: 0;
-    margin: 0;
-
-    list-style: none;
 }
 
 .audience-item {
+    width: 100%;
+
+    min-height: 82px;
+
     display: grid;
 
-    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-columns: 54px 1fr;
 
     align-items: center;
 
-    gap: 14px;
+    gap: 18px;
+
+    padding: 18px 30px 18px 20px;
+
+    background: var(--orange);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
 }
 
+.audience-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+
+/*
+   O círculo escuro cria uma área visual própria
+   para o check e evita que ele fique "solto".
+*/
+
 .audience-check {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--dark);
+
+    border-radius: 50%;
+
     color: var(--orange);
 
     font-family: var(--heading-font);
-    font-size: 26px;
-    font-weight: 600;
 
-    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1;
 }
 
 .audience-item p {
-    width: fit-content;
-    max-width: 100%;
+    width: 100%;
 
-    padding: 17px 25px;
-
-    background: var(--white);
     color: var(--dark);
 
     font-family: var(--body-font);
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.35;
 
-    border-radius: 2px;
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: 1.35;
 }
 
+
+/*
+   CONCLUSÃO DA SEÇÃO
+*/
+
 .audience-conclusion {
+    margin: 65px auto 0;
+
     max-width: 850px;
 
-    margin: 62px auto 0;
+    text-align: center;
 
-    color: #ECEFF3;
+    color: rgb(236, 239, 243);
 
     font-family: var(--body-font);
+
     font-size: 29px;
     font-weight: 400;
-    line-height: 1.4;
 
-    text-align: center;
+    line-height: 1.3;
 }
 
 .audience-logo {
     width: 305px;
-    max-width: 65vw;
+
+    max-width: 75vw;
 
     margin: 20px auto;
 }
 
 .audience-conclusion-last {
-    color: #ECEFF3;
+    color: rgb(236, 239, 243);
 
     font-family: var(--body-font);
+
     font-size: 32px;
     font-weight: 400;
+
     line-height: 1.3;
 
     text-align: center;
@@ -568,99 +641,106 @@ a {
 
 /* =========================================================
    SEÇÃO 07 — COMPARAÇÃO DE PREÇOS
-   ========================================================= */
+========================================================= */
 
 .comparison {
-    padding: 94px 20px 105px;
-
     background: var(--cream);
+
+    padding: 90px 0 100px;
 }
 
 .comparison-inner {
     width: min(800px, 100%);
+
     margin: 0 auto;
 
     text-align: center;
 }
 
 .comparison-title {
-    margin-bottom: 44px;
-
-    color: #343436;
+    color: rgb(52, 52, 54);
 
     font-family: var(--quicksand);
+
     font-size: 26px;
     font-weight: 700;
-    line-height: 1.35;
+
+    line-height: 1.3;
+
+    margin-bottom: 45px;
 }
 
 .price-list {
     width: min(650px, 100%);
+
     margin: 0 auto;
 
     display: flex;
+
     flex-direction: column;
 
-    gap: 7px;
+    gap: 10px;
 }
 
 .price-row {
     display: flex;
 
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
-    gap: 24px;
-
-    padding: 3px 0;
+    gap: 25px;
 }
 
 .price-name {
-    color: #343436;
+    color: rgb(52, 52, 54);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.35;
+
+    line-height: 1.3;
 
     text-align: left;
 }
 
 .price-old {
-    flex-shrink: 0;
-
     color: var(--price-gray);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.35;
+
+    line-height: 1.3;
 
     white-space: nowrap;
-
-    text-decoration: line-through;
 }
 
 .comparison-total {
-    margin-top: 34px;
-
-    color: #343436;
+    color: rgb(52, 52, 54);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.35;
+
+    line-height: 1.3;
+
+    margin-top: 35px;
 }
 
 .comparison-today {
-    margin-top: 28px;
-
-    color: #343436;
+    color: rgb(52, 52, 54);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.35;
+
+    line-height: 1.3;
+
+    margin-top: 30px;
 }
 
 .comparison-today u {
@@ -669,146 +749,211 @@ a {
 
 
 /* =========================================================
-   SEÇÕES 08 / 11 / 12 — OFERTAS
-   ========================================================= */
+   SEÇÕES 08, 11 E 12 — OFERTAS
+========================================================= */
 
 .offer {
-    padding: 96px 20px 108px;
-
     background: var(--white);
+
+    padding: 90px 0 100px;
 
     text-align: center;
 }
 
 .offer-inner {
     width: min(900px, 100%);
+
     margin: 0 auto;
 }
 
 .offer-logo {
     width: 275px;
+
     max-width: 70vw;
 
-    margin: 0 auto 28px;
-}
-
-.offer-product {
-    width: 655px;
-    max-width: min(90vw, 655px);
-
-    margin: 0 auto 38px;
+    margin: 0 auto 25px;
 
     object-fit: contain;
 }
 
 .offer-title {
-    width: min(700px, 100%);
+    max-width: 700px;
 
-    margin: 0 auto 34px;
+    margin: 0 auto 35px;
 
-    color: #0D141A;
+    color: rgb(13, 20, 26);
 
     font-family: var(--quicksand);
-    font-size: clamp(32px, 3.5vw, 40px);
+
+    font-size: 40px;
     font-weight: 700;
+
     line-height: 1.3;
+}
+
+.offer-product {
+    width: 655px;
+
+    max-width: 90vw;
+
+    margin: 0 auto 35px;
+
+    object-fit: contain;
 }
 
 .offer-price {
-    margin-bottom: 5px;
-
-    color: #0D141A;
+    color: rgb(13, 20, 26);
 
     font-family: var(--open-sans);
-    font-size: clamp(42px, 4vw, 48px);
+
+    font-size: 48px;
     font-weight: 700;
-    line-height: 1.25;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
 }
 
 .offer-or {
-    margin-bottom: 5px;
-
-    color: #0D141A;
+    color: rgb(13, 20, 26);
 
     font-family: var(--open-sans);
+
     font-size: 40px;
     font-weight: 700;
-    line-height: 1.25;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
 }
 
 .offer-cash {
-    margin-bottom: 34px;
-
-    color: #0D141A;
+    color: rgb(13, 20, 26);
 
     font-family: var(--open-sans);
+
     font-size: 24px;
     font-weight: 700;
+
     line-height: 1.3;
+
+    margin-bottom: 35px;
+}
+
+.buy-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 64px;
+
+    padding: 16px 40px;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    border: 0;
+    border-radius: 4px;
+
+    font-family: var(--poppins);
+
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: normal;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.buy-button:hover {
+    background: rgb(29, 30, 32);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
 .offer-note {
-    margin-top: 23px;
-
-    color: var(--text-dark);
+    color: rgb(26, 26, 26);
 
     font-family: var(--heading-font);
+
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.4;
+
+    line-height: 1.3;
+
+    margin-top: 25px;
 }
 
 
 /* =========================================================
    SEÇÃO 09 — CONVERSA DIRETA
-   ========================================================= */
+========================================================= */
 
 .conversation {
-    padding: 108px 20px 118px;
-
     background: var(--dark-2);
+
+    padding: 105px 0 115px;
 }
 
 .conversation-inner {
     width: min(900px, 100%);
+
     margin: 0 auto;
 
     text-align: center;
 }
 
 .conversation-title {
-    margin-bottom: 58px;
-
     color: var(--white);
 
     font-family: var(--quicksand);
+
     font-size: 40px;
     font-weight: 700;
+
     line-height: 1.3;
+
+    margin-bottom: 60px;
 }
 
 .conversation-text {
-    margin-bottom: 32px;
-
     color: var(--white);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.45;
+
+    line-height: 1.3;
+
+    margin-bottom: 35px;
 }
 
 .conversation-decision {
-    width: min(850px, 100%);
-
-    margin: 52px auto;
-
     color: var(--orange);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.45;
+
+    line-height: 1.3;
+
+    max-width: 850px;
+
+    margin: 55px auto;
 }
 
 .conversation-spaced {
@@ -816,21 +961,24 @@ a {
 }
 
 .conversation-final {
-    margin-top: 42px;
-
     color: var(--orange);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.45;
+
+    line-height: 1.3;
+
+    margin-top: 45px;
 }
 
 .conversation-image {
     width: 720px;
+
     max-width: 90vw;
 
-    margin: 68px auto 0;
+    margin: 70px auto 0;
 
     object-fit: contain;
 }
@@ -838,29 +986,31 @@ a {
 
 /* =========================================================
    SEÇÃO 10 — SOBRE / CONFIANÇA
-   ========================================================= */
+========================================================= */
 
 .about {
-    padding: 105px 20px 110px;
-
     background: var(--cream);
+
+    padding: 100px 0;
 }
 
 .about-inner {
     width: min(1050px, 100%);
+
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 310px minmax(0, 1fr);
+    grid-template-columns: 340px 1fr;
 
     align-items: center;
 
-    gap: 72px;
+    gap: 70px;
 }
 
 .about-image {
     width: 305px;
+
     max-width: 100%;
 
     margin: 0 auto;
@@ -869,652 +1019,648 @@ a {
 }
 
 .about-title {
-    margin-bottom: 32px;
-
-    color: var(--text-dark);
+    color: rgb(26, 26, 26);
 
     font-family: var(--quicksand);
+
     font-size: 40px;
     font-weight: 700;
+
     line-height: 1.3;
+
+    margin-bottom: 35px;
 }
 
 .about-text {
-    color: #1A1A1C;
+    color: rgb(26, 26, 28);
 
     font-family: var(--poppins);
+
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.5;
+
+    line-height: 1.3;
 }
 
 .about-text p {
-    margin-bottom: 24px;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 25px;
 }
 
 
 /* =========================================================
    SEÇÃO 13 — FAQ
-   ========================================================= */
+========================================================= */
 
 .faq {
-    padding: 105px 20px 115px;
-
     background: var(--white);
+
+    padding: 100px 0 110px;
 }
 
 .faq-inner {
     width: min(1000px, 100%);
+
     margin: 0 auto;
 }
 
 .faq-main-title {
-    margin-bottom: 62px;
-
-    color: var(--text-dark);
+    color: rgb(26, 26, 26);
 
     font-family: var(--heading-font);
+
     font-size: 40px;
     font-weight: 600;
+
     line-height: 1.3;
 
     text-align: center;
+
+    margin-bottom: 65px;
 }
 
 .faq-item {
-    padding: 29px 0;
+    padding: 30px 0;
 
-    border-bottom: 1px solid rgba(26, 26, 26, 0.13);
-}
-
-.faq-item:first-of-type {
-    padding-top: 0;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.14);
 }
 
 .faq-question {
-    margin-bottom: 13px;
-
     color: var(--orange);
 
     font-family: var(--heading-font);
+
     font-size: 32px;
     font-weight: 700;
+
     line-height: 1.3;
+
+    margin-bottom: 15px;
 }
 
 .faq-answer {
     color: var(--text-gray);
 
     font-family: var(--heading-font);
+
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.45;
-}
 
-
-/* =========================================================
-   SEÇÃO 14 — FOOTER
-   ========================================================= */
-
-footer {
-    min-height: 121px;
-
-    padding: 40px 20px;
-
-    background: var(--black);
-    color: var(--white);
-
-    text-align: center;
-}
-
-.footer-support {
-    margin-bottom: 10px;
-
-    color: var(--white);
-
-    font-family: var(--body-font);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-
-    text-transform: uppercase;
-}
-
-.footer-email {
-    margin-bottom: 13px;
-
-    color: var(--white);
-
-    font-family: var(--body-font);
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.footer-email a {
-    color: var(--white);
-
-    text-decoration: underline;
-    text-underline-offset: 3px;
-
-    transition: opacity 0.2s ease;
-}
-
-.footer-email a:hover {
-    opacity: 0.75;
-}
-
-.footer-copy {
-    color: var(--white);
-
-    font-family: var(--body-font);
-    font-size: 14px;
     line-height: 1.3;
 }
 
 
 /* =========================================================
-   TABLET
-   ========================================================= */
+   SEÇÃO 14 — FOOTER
+========================================================= */
 
-@media (max-width: 1000px) {
+footer {
+    background: var(--black);
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.footer-support {
+    color: var(--white);
+
+    font-family: var(--heading-font);
+
+    font-size: 22px;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.footer-email {
+    color: var(--white);
+
+    font-family: var(--body-font);
+
+    font-size: 18px;
+
+    margin-bottom: 22px;
+}
+
+.footer-email a {
+    color: var(--white);
+
+    transition: color 0.2s ease;
+}
+
+.footer-email a:hover {
+    color: var(--orange);
+}
+
+.footer-copy {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: var(--body-font);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 55px 20px 75px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
 
     .problem-inner {
-        grid-template-columns: 1fr 420px;
-        gap: 45px;
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        text-align: center;
     }
+
+    .problem-content {
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+
+    .problem-image {
+        width: 430px;
+    }
+
+
+    .material,
+    .material:nth-child(even) {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+    .material:nth-child(even) .material-image,
+    .material:nth-child(even) .material-content {
+        order: initial;
+    }
+
+    .material-image {
+        width: 375px;
+    }
+
+    .material-content {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
 
     .about-inner {
-        grid-template-columns: 270px minmax(0, 1fr);
+        grid-template-columns: 1fr;
+
         gap: 45px;
+
+        text-align: center;
     }
 
-    .material {
-        grid-template-columns: 150px minmax(0, 1fr);
-        gap: 30px;
+    .about-image {
+        width: 280px;
     }
 
-    .audience-item p {
-        font-size: 21px;
+    .about-title {
+        font-size: 36px;
+    }
+
+    .about-text {
+        max-width: 750px;
+
+        margin: 0 auto;
     }
 }
 
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
 
     .container {
         width: calc(100% - 32px);
     }
 
 
-    /* HERO */
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .hero {
-        min-height: auto;
-
-        padding: 58px 16px 66px;
+        padding: 40px 16px 55px;
     }
 
     .hero-logo {
-        width: 195px;
-        max-width: 65vw;
+        width: 290px;
 
-        margin-bottom: 34px;
+        max-width: 85vw;
+
+        margin-bottom: 30px;
     }
 
     .hero-main-image {
-        width: 318px;
-        max-width: 90vw;
+        width: 100%;
 
-        margin-bottom: 34px;
+        margin-bottom: 35px;
     }
 
     .hero-title {
-        width: min(360px, 100%);
+        font-size: 28px;
 
-        font-size: 24px;
-        line-height: 1.32;
-    }
-
-
-    /* RUMINAÇÕES */
-
-    .ruminations {
-        min-height: auto;
-
-        padding: 66px 16px 72px;
-    }
-
-    .ruminations-title {
-        margin-bottom: 28px;
-
-        font-size: 32px;
         line-height: 1.28;
     }
 
-    .ruminations-intro {
-        margin-bottom: 24px;
 
-        font-size: 16px;
-        line-height: 1.45;
+    /* -----------------------------------------------------
+       RUMINAÇÕES
+    ----------------------------------------------------- */
+
+    .ruminations {
+        padding: 65px 0 70px;
+    }
+
+    .ruminations-title {
+        font-size: 30px;
+
+        margin-bottom: 25px;
+    }
+
+    .ruminations-intro {
+        font-size: 18px;
+
+        margin-bottom: 25px;
     }
 
     .ruminations-image {
         width: 375px;
+
         max-width: 100%;
 
         margin-bottom: 25px;
     }
 
     .ruminations-final {
-        font-size: 16px;
-        line-height: 1.45;
+        font-size: 18px;
     }
 
 
-    /* PROBLEMA */
+    /* -----------------------------------------------------
+       PROBLEMA
+    ----------------------------------------------------- */
 
     .problem {
-        padding: 72px 16px 78px;
-    }
-
-    .problem-inner {
-        grid-template-columns: 1fr;
-
-        gap: 42px;
-
-        text-align: center;
-    }
-
-    .problem-content {
-        text-align: center;
+        padding: 70px 0;
     }
 
     .problem-title {
-        margin-bottom: 24px;
+        font-size: 30px;
 
-        font-size: 32px;
-        line-height: 1.3;
+        margin-bottom: 25px;
     }
 
     .problem-text {
-        margin-bottom: 23px;
-
         font-size: 18px;
-        line-height: 1.5;
+
+        margin-bottom: 22px;
     }
 
     .problem-final {
-        margin-top: 34px;
-
         font-size: 24px;
-        line-height: 1.35;
+
+        margin-top: 35px;
     }
 
     .problem-image {
         width: 375px;
+
         max-width: 100%;
     }
 
 
-    /* SEQUÊNCIA */
-
-    .sequence-image {
-        width: 100%;
-    }
-
-
-    /* MATERIAIS */
+    /* -----------------------------------------------------
+       MATERIAIS
+    ----------------------------------------------------- */
 
     .materials {
-        padding: 67px 16px 78px;
+        padding: 65px 0 75px;
     }
 
     .materials-title {
-        margin-bottom: 48px;
+        font-size: 30px;
 
-        font-size: 32px;
-        line-height: 1.3;
+        margin-bottom: 50px;
     }
 
     .materials-list {
-        gap: 48px;
+        gap: 50px;
     }
 
     .material {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 19px;
-
-        text-align: center;
+        gap: 25px;
     }
 
     .material-image {
-        width: 100px;
-        height: 100px;
+        width: 375px;
 
-        margin: 0 auto;
+        max-width: 100%;
     }
 
     .material-content h3 {
-        margin-bottom: 11px;
+        font-size: 22px;
 
-        font-size: 24px;
-        line-height: 1.3;
+        margin-bottom: 13px;
     }
 
     .material-content p {
         font-size: 16px;
-        line-height: 1.55;
+
+        line-height: 1.45;
     }
 
 
-    /* AUDIÊNCIA */
+    /* -----------------------------------------------------
+       AUDIÊNCIA
+       NOVA APRESENTAÇÃO
+    ----------------------------------------------------- */
 
     .audience {
-        padding: 68px 16px 78px;
+        padding: 65px 0 75px;
     }
 
     .audience-title {
-        margin-bottom: 43px;
+        font-size: 30px;
 
-        font-size: 32px;
-        line-height: 1.3;
+        margin-bottom: 40px;
     }
 
     .audience-list {
-        gap: 15px;
-    }
-
-    .audience-item {
-        grid-template-columns: 24px minmax(0, 1fr);
-
-        gap: 9px;
-
-        align-items: start;
-    }
-
-    .audience-check {
-        padding-top: 12px;
-
-        font-size: 19px;
-    }
-
-    .audience-item p {
-        width: 100%;
-
-        padding: 14px 15px;
-
-        font-size: 16px;
-        line-height: 1.45;
-
-        text-align: left;
-    }
-
-    .audience-conclusion {
-        margin-top: 44px;
-
-        font-size: 20px;
-        line-height: 1.45;
-    }
-
-    .audience-logo {
-        width: 195px;
-        max-width: 65vw;
-
-        margin: 15px auto;
-    }
-
-    .audience-conclusion-last {
-        font-size: 20px;
-        line-height: 1.4;
-    }
-
-
-    /* COMPARAÇÃO */
-
-    .comparison {
-        padding: 68px 16px 78px;
-    }
-
-    .comparison-title {
-        margin-bottom: 34px;
-
-        font-size: 24px;
-        line-height: 1.35;
-    }
-
-    .price-list {
-        gap: 10px;
-    }
-
-    .price-row {
-        align-items: flex-start;
-
         gap: 12px;
     }
 
-    .price-name,
-    .price-old {
-        font-size: 16px;
-        line-height: 1.4;
+    .audience-item {
+        min-height: 0;
+
+        grid-template-columns: 42px 1fr;
+
+        gap: 14px;
+
+        padding: 16px 18px 16px 14px;
+
+        border-radius: 7px;
+    }
+
+    .audience-check {
+        width: 36px;
+        height: 36px;
+
+        font-size: 22px;
+    }
+
+    .audience-item p {
+        font-size: 17px;
+
+        line-height: 1.35;
+    }
+
+    .audience-conclusion {
+        margin-top: 50px;
+
+        font-size: 20px;
+    }
+
+    .audience-logo {
+        width: 250px;
+
+        max-width: 75vw;
+
+        margin: 16px auto;
+    }
+
+    .audience-conclusion-last {
+        font-size: 22px;
+    }
+
+
+    /* -----------------------------------------------------
+       COMPARAÇÃO
+    ----------------------------------------------------- */
+
+    .comparison {
+        padding: 65px 0 75px;
+    }
+
+    .comparison-title {
+        font-size: 22px;
+
+        margin-bottom: 35px;
+    }
+
+    .price-list {
+        gap: 13px;
+    }
+
+    .price-row {
+        gap: 15px;
     }
 
     .price-name {
-        max-width: 75%;
+        font-size: 16px;
+    }
 
-        text-align: left;
+    .price-old {
+        font-size: 16px;
     }
 
     .comparison-total,
     .comparison-today {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    .comparison-total {
-        margin-top: 30px;
-    }
-
-    .comparison-today {
-        margin-top: 25px;
+        font-size: 17px;
     }
 
 
-    /* OFERTAS */
+    /* -----------------------------------------------------
+       OFERTAS
+    ----------------------------------------------------- */
 
     .offer {
-        padding: 68px 16px 78px;
+        padding: 65px 0 75px;
     }
 
     .offer-logo {
-        width: 173px;
-        max-width: 60vw;
+        width: 245px;
 
-        margin-bottom: 23px;
-    }
-
-    .offer-product {
-        width: 328px;
-        max-width: 90vw;
-
-        margin-bottom: 29px;
+        margin-bottom: 22px;
     }
 
     .offer-title {
-        margin-bottom: 28px;
+        font-size: 28px;
 
-        font-size: 26px;
-        line-height: 1.35;
+        margin-bottom: 30px;
+    }
+
+    .offer-product {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-bottom: 30px;
     }
 
     .offer-price {
-        margin-bottom: 5px;
-
-        font-size: 48px;
-        line-height: 1.2;
+        font-size: 42px;
     }
 
     .offer-or {
-        font-size: 26px;
-        line-height: 1.25;
+        font-size: 32px;
     }
 
     .offer-cash {
-        margin-bottom: 28px;
+        font-size: 21px;
 
-        font-size: 18px;
-        line-height: 1.35;
+        margin-bottom: 30px;
     }
 
     .buy-button {
-        width: 100%;
-        min-width: 0;
+        width: min(100%, 390px);
 
-        min-height: 68px;
+        min-height: 58px;
 
         padding: 14px 20px;
 
         font-size: 18px;
-        line-height: 1.3;
     }
 
     .offer-note {
-        margin-top: 19px;
-
         font-size: 16px;
-        line-height: 1.45;
+
+        margin-top: 20px;
     }
 
 
-    /* CONVERSA */
+    /* -----------------------------------------------------
+       CONVERSA
+    ----------------------------------------------------- */
 
     .conversation {
-        padding: 72px 16px 82px;
+        padding: 70px 0 75px;
     }
 
     .conversation-title {
-        margin-bottom: 43px;
+        font-size: 30px;
 
-        font-size: 26px;
-        line-height: 1.3;
+        margin-bottom: 45px;
     }
 
     .conversation-text {
-        margin-bottom: 27px;
-
         font-size: 16px;
-        line-height: 1.5;
+
+        margin-bottom: 28px;
     }
 
     .conversation-decision {
-        margin: 38px auto;
-
         font-size: 16px;
-        line-height: 1.5;
+
+        margin: 45px auto;
     }
 
     .conversation-spaced {
-        margin-bottom: 19px;
+        margin-bottom: 18px;
     }
 
     .conversation-final {
-        margin-top: 34px;
+        font-size: 18px;
 
-        font-size: 16px;
-        line-height: 1.5;
+        margin-top: 35px;
     }
 
     .conversation-image {
-        width: 375px;
+        width: 720px;
+
         max-width: 100%;
 
-        margin-top: 48px;
+        margin-top: 50px;
     }
 
 
-    /* SOBRE */
+    /* -----------------------------------------------------
+       SOBRE
+    ----------------------------------------------------- */
 
     .about {
-        padding: 72px 16px 80px;
+        padding: 70px 0;
     }
 
     .about-inner {
-        grid-template-columns: 1fr;
-
-        gap: 34px;
-
-        text-align: center;
+        gap: 35px;
     }
 
     .about-image {
         width: 250px;
-        max-width: 75vw;
     }
 
     .about-title {
-        margin-bottom: 27px;
-
         font-size: 26px;
-        line-height: 1.35;
+
+        margin-bottom: 30px;
     }
 
     .about-text {
         font-size: 16px;
-        line-height: 1.55;
 
-        text-align: center;
+        line-height: 1.45;
     }
 
     .about-text p {
-        margin-bottom: 21px;
+        margin-bottom: 22px;
     }
 
 
-    /* FAQ */
+    /* -----------------------------------------------------
+       FAQ
+    ----------------------------------------------------- */
 
     .faq {
-        padding: 72px 16px 82px;
+        padding: 70px 16px 80px;
     }
 
     .faq-main-title {
-        margin-bottom: 43px;
+        font-size: 30px;
 
-        font-size: 32px;
-        line-height: 1.3;
+        margin-bottom: 45px;
     }
 
     .faq-item {
-        padding: 24px 0;
+        padding: 25px 0;
     }
 
     .faq-question {
-        margin-bottom: 12px;
-
         font-size: 24px;
-        line-height: 1.35;
     }
 
     .faq-answer {
         font-size: 16px;
-        line-height: 1.55;
+
+        line-height: 1.45;
     }
 
 
-    /* FOOTER */
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
 
     footer {
-        min-height: 121px;
-
         padding: 40px 16px;
     }
 
@@ -1525,22 +1671,13 @@ footer {
 
 
 /* =========================================================
-   CELULARES PEQUENOS
-   ========================================================= */
+   CELULARES MUITO PEQUENOS
+========================================================= */
 
 @media (max-width: 380px) {
 
-    .hero {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    .hero-logo {
-        width: 180px;
-    }
-
     .hero-title {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .ruminations-title,
@@ -1553,19 +1690,36 @@ footer {
         font-size: 28px;
     }
 
-    .offer-title {
-        font-size: 24px;
-    }
-
     .offer-price {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .buy-button {
         font-size: 17px;
     }
 
-    .faq-main-title {
-        font-size: 28px;
+
+    /*
+       Mantemos os cartões uniformes também em telas
+       muito pequenas.
+    */
+
+    .audience-item {
+        grid-template-columns: 38px 1fr;
+
+        gap: 12px;
+
+        padding: 14px 14px 14px 12px;
+    }
+
+    .audience-check {
+        width: 34px;
+        height: 34px;
+
+        font-size: 20px;
+    }
+
+    .audience-item p {
+        font-size: 16px;
     }
 }
