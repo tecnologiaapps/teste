@@ -1,6 +1,6 @@
 /* ============================================================
    ESCRITOR DESTRAVADO EM 48H
-   STYLE.CSS — VERSÃO DEFINITIVA DA PRIMEIRA VERSÃO
+   STYLE.CSS — VERSÃO DEFINITIVA
    ============================================================ */
 
 
@@ -489,10 +489,6 @@ a {
 }
 
 
-/* ------------------------------------------------------------
-   PASSOS
-   ------------------------------------------------------------ */
-
 .sequence-steps {
 
     display: grid;
@@ -657,10 +653,6 @@ a {
 }
 
 
-/* ------------------------------------------------------------
-   CADA MATERIAL
-   ------------------------------------------------------------ */
-
 .material {
 
     display: grid;
@@ -688,11 +680,6 @@ a {
 
 
 .material-image {
-
-    /*
-       Os arquivos originais possuem dimensões grandes,
-       mas aqui são tratados como ícones ilustrativos.
-    */
 
     width: auto;
 
@@ -750,6 +737,13 @@ a {
    10. SEÇÃO 06 — ISSO É PARA VOCÊ
    ============================================================ */
 
+/*
+   ESTA É A ÚNICA SEÇÃO ALTERADA NESTA VERSÃO.
+   
+   Os itens voltam a ser blocos LARANJAS, uniformes,
+   com o texto em branco.
+*/
+
 .audience {
 
     background: var(--dark);
@@ -788,6 +782,8 @@ a {
 
 .audience-list {
 
+    width: 100%;
+
     margin: 0;
 
     padding: 0;
@@ -800,7 +796,7 @@ a {
 
     gap: 16px;
 
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 
@@ -834,25 +830,43 @@ a {
 }
 
 
+/*
+   O retângulo ocupa sempre exatamente o mesmo espaço
+   em todos os itens.
+*/
+
 .audience-item p {
 
     flex: 1;
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
 
     margin: 0;
 
     padding: 18px 24px;
 
-    background: var(--white);
+    background: var(--orange);
 
-    color: var(--black);
+    color: var(--white);
 
-    border-radius: 2px;
+    border-radius: 5px;
+
+    font-family: var(--rounded-font);
 
     font-size: 21px;
 
     line-height: 1.45;
 
-    font-weight: 500;
+    font-weight: 600;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -1267,7 +1281,6 @@ a {
 .conversation-spaced {
 
     margin-top: 40px;
-
 }
 
 
@@ -1526,10 +1539,6 @@ footer {
 @media (max-width: 950px) {
 
 
-    /* --------------------------------------------------------
-       HERO
-       -------------------------------------------------------- */
-
     .hero {
 
         min-height: 680px;
@@ -1550,10 +1559,6 @@ footer {
         width: 380px;
     }
 
-
-    /* --------------------------------------------------------
-       PROBLEM
-       -------------------------------------------------------- */
 
     .problem-inner {
 
@@ -1577,10 +1582,6 @@ footer {
     }
 
 
-    /* --------------------------------------------------------
-       SEQUENCE
-       -------------------------------------------------------- */
-
     .sequence-steps {
 
         grid-template-columns:
@@ -1595,10 +1596,6 @@ footer {
         min-height: 330px;
     }
 
-
-    /* --------------------------------------------------------
-       MATERIALS
-       -------------------------------------------------------- */
 
     .materials-list {
 
@@ -1629,10 +1626,6 @@ footer {
     }
 
 
-    /* --------------------------------------------------------
-       ABOUT
-       -------------------------------------------------------- */
-
     .about-inner {
 
         grid-template-columns:
@@ -1658,19 +1651,13 @@ footer {
 @media (max-width: 600px) {
 
 
-    /* ========================================================
-       GERAL
-       ======================================================== */
-
     .container {
 
         width: calc(100% - 32px);
     }
 
 
-    /* ========================================================
-       HERO
-       ======================================================== */
+    /* HERO */
 
     .hero {
 
@@ -1706,9 +1693,7 @@ footer {
     }
 
 
-    /* ========================================================
-       RUMINAÇÕES
-       ======================================================== */
+    /* RUMINAÇÕES */
 
     .ruminations {
 
@@ -1752,9 +1737,7 @@ footer {
     }
 
 
-    /* ========================================================
-       PROBLEM
-       ======================================================== */
+    /* PROBLEM */
 
     .problem {
 
@@ -1812,9 +1795,7 @@ footer {
     }
 
 
-    /* ========================================================
-       SEÇÃO 04 — 5 PASSOS
-       ======================================================== */
+    /* SEÇÃO 04 */
 
     .sequence {
 
@@ -1924,9 +1905,7 @@ footer {
     }
 
 
-    /* ========================================================
-       SEÇÃO 05 — MATERIAIS
-       ======================================================== */
+    /* SEÇÃO 05 */
 
     .materials {
 
@@ -1971,11 +1950,6 @@ footer {
     }
 
 
-    /*
-       No celular os ícones ficam deliberadamente pequenos.
-       Eles são elementos ilustrativos; o texto é o protagonista.
-    */
-
     .material-image {
 
         max-width: 70px;
@@ -2003,7 +1977,7 @@ footer {
 
 
     /* ========================================================
-       AUDIENCE
+       SEÇÃO 06 — ISSO É PARA VOCÊ
        ======================================================== */
 
     .audience {
@@ -2023,10 +1997,14 @@ footer {
     .audience-list {
 
         gap: 13px;
+
+        width: 100%;
     }
 
 
     .audience-item {
+
+        width: 100%;
 
         gap: 10px;
 
@@ -2044,13 +2022,31 @@ footer {
     }
 
 
+    /*
+       Os retângulos continuam uniformes no celular.
+       O texto se adapta dentro deles, sem alterar
+       a largura do bloco.
+    */
+
     .audience-item p {
 
+        width: 100%;
+
+        min-height: 60px;
+
         padding: 14px 15px;
+
+        background: var(--orange);
+
+        color: var(--white);
+
+        border-radius: 5px;
 
         font-size: 16px;
 
         line-height: 1.45;
+
+        font-weight: 600;
     }
 
 
@@ -2078,9 +2074,7 @@ footer {
     }
 
 
-    /* ========================================================
-       COMPARAÇÃO
-       ======================================================== */
+    /* COMPARAÇÃO */
 
     .comparison {
 
@@ -2136,9 +2130,7 @@ footer {
     }
 
 
-    /* ========================================================
-       OFERTAS
-       ======================================================== */
+    /* OFERTAS */
 
     .offer {
 
@@ -2212,9 +2204,7 @@ footer {
     }
 
 
-    /* ========================================================
-       CONVERSATION
-       ======================================================== */
+    /* CONVERSATION */
 
     .conversation {
 
@@ -2272,9 +2262,7 @@ footer {
     }
 
 
-    /* ========================================================
-       ABOUT
-       ======================================================== */
+    /* ABOUT */
 
     .about {
 
@@ -2324,9 +2312,7 @@ footer {
     }
 
 
-    /* ========================================================
-       FAQ
-       ======================================================== */
+    /* FAQ */
 
     .faq {
 
@@ -2370,9 +2356,7 @@ footer {
     }
 
 
-    /* ========================================================
-       FOOTER
-       ======================================================== */
+    /* FOOTER */
 
     footer {
 
