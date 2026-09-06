@@ -17,14 +17,6 @@
         content="Descubra como começar a escrever seu livro de ficção em 48 horas com um checklist prático, mesmo que nunca tenha escrito nada!"
     >
 
-    <!--
-        Todas as fontes, imagens e estilos utilizados pela página
-        são locais.
-
-        O arquivo style.css contém a configuração visual.
-        As imagens estão dentro de site_files/.
-    -->
-
     <link
         rel="stylesheet"
         href="style.css"
@@ -119,20 +111,11 @@
                 </p>
 
 
-                <picture>
-
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="site_files/ruminacoes-hCCixkrjo3DsPEms(1).png"
-                    >
-
-                    <img
-                        class="ruminations-image"
-                        src="site_files/ruminacoes-hCCixkrjo3DsPEms.png"
-                        alt=""
-                    >
-
-                </picture>
+                <img
+                    class="ruminations-image"
+                    src="site_files/ruminacoes-hCCixkrjo3DsPEms.png"
+                    alt=""
+                >
 
 
                 <p class="ruminations-intro">
@@ -224,25 +207,199 @@
 
     <!-- =========================================================
          SEÇÃO 04
-         IMAGEM SEQUENCIAL
+         5 PASSOS PARA COMEÇAR
+         
+         A antiga imagem sequencial foi substituída por
+         HTML/CSS para funcionar corretamente em desktop
+         e celular.
     ========================================================== -->
 
     <section class="sequence">
 
-        <picture>
+        <div class="container">
 
-            <source
-                media="(max-width: 600px)"
-                srcset="site_files/imagem-sequencial-correto-vZbOiFvKVb4Ut5cR(1).png"
-            >
+            <div class="sequence-inner">
 
-            <img
-                class="sequence-image"
-                src="site_files/imagem-sequencial-correto-vZbOiFvKVb4Ut5cR.png"
-                alt=""
-            >
 
-        </picture>
+                <picture>
+
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="site_files/logo-ed48-Xnby7hLjpQsmcDGn(4).png"
+                    >
+
+                    <img
+                        class="sequence-logo"
+                        src="site_files/logo-ed48-Xnby7hLjpQsmcDGn(5).png"
+                        alt="Escritor Destravado em 48H"
+                    >
+
+                </picture>
+
+
+                <h3 class="sequence-title">
+
+                    Para começar a escrever seu livro, você
+
+                    <br class="sequence-title-break">
+
+                    irá precisar seguir estes
+                    <span>5 passos.</span>
+
+                </h3>
+
+
+                <div class="sequence-badge">
+
+                    <span class="sequence-badge-icon">
+                        ⏱
+                    </span>
+
+                    <span>
+                        Tudo isso em 48H
+                    </span>
+
+                </div>
+
+
+                <div class="sequence-steps">
+
+
+                    <!-- PASSO 01 -->
+
+                    <article class="sequence-step">
+
+                        <div class="sequence-number">
+                            1
+                        </div>
+
+                        <div class="sequence-icon">
+                            📍
+                        </div>
+
+                        <p>
+
+                            Leia a
+                            <strong>
+                                “MINI-ROTA Primeira página”
+                            </strong>
+
+                            ela mostra o que você deve fazer
+                            de zero até a primeira página escrita!
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- PASSO 02 -->
+
+                    <article class="sequence-step">
+
+                        <div class="sequence-number">
+                            2
+                        </div>
+
+                        <div class="sequence-icon">
+                            📋
+                        </div>
+
+                        <p>
+
+                            Siga o checklist
+                            <strong>
+                                “Escritor destravado em 48hs”
+                            </strong>
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- PASSO 03 -->
+
+                    <article class="sequence-step">
+
+                        <div class="sequence-number">
+                            3
+                        </div>
+
+                        <div class="sequence-icon">
+                            ▶️
+                        </div>
+
+                        <p>
+
+                            Assista a vídeoaula:
+                            <strong>
+                                “Estrutura de enredo para destravar
+                                o primeiro capítulo”
+                            </strong>
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- PASSO 04 -->
+
+                    <article class="sequence-step">
+
+                        <div class="sequence-number">
+                            4
+                        </div>
+
+                        <div class="sequence-icon">
+                            🗺️
+                        </div>
+
+                        <p>
+
+                            Preencha o
+                            <strong>
+                                “Mapa de Personagens Iniciais”
+                            </strong>
+
+                            para cada personagem importante,
+                            em até 5 minutos cada!
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- PASSO 05 -->
+
+                    <article class="sequence-step">
+
+                        <div class="sequence-number">
+                            5
+                        </div>
+
+                        <div class="sequence-icon">
+                            📁
+                        </div>
+
+                        <p>
+
+                            Acesse o pack
+                            <strong>
+                                “Comece agora”
+                            </strong>
+
+                            são seus templates de ganchos de abertura
+                            e cenas iniciais para você não travar.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
@@ -450,6 +607,7 @@
 
                 </article>
 
+
             </div>
 
         </div>
@@ -477,7 +635,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Tem uma história rodando na cabeça há meses ou
@@ -489,7 +649,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Sente que não sabe por onde começar e acaba
@@ -501,7 +663,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Começa animado e desiste logo no início
@@ -512,7 +676,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Acha que sua ideia é simples demais ou
@@ -524,7 +690,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Quer escrever seu primeiro livro, mas se sente
@@ -536,7 +704,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Quer sair do zero e escrever de verdade,
@@ -548,7 +718,9 @@
 
                     <li class="audience-item">
 
-                        <span class="audience-check">✓</span>
+                        <span class="audience-check">
+                            ✓
+                        </span>
 
                         <p>
                             Tem pouco tempo e precisa de algo direto,
@@ -562,10 +734,8 @@
 
                 <div class="audience-conclusion">
 
-                    <span>
-                        Se você se identificou com dois ou mais itens acima
-                        então, o
-                    </span>
+                    Se você se identificou com dois ou mais itens acima
+                    então, o
 
                 </div>
 
@@ -680,11 +850,14 @@
 
                     </div>
 
+
                 </div>
 
 
                 <p class="comparison-total">
-                    <strong>Total real: R$317</strong>
+                    <strong>
+                        Total real: R$317
+                    </strong>
                 </p>
 
 
@@ -753,7 +926,9 @@
 
 
                 <h4 class="offer-price">
-                    <strong>9x R$8,80</strong>
+                    <strong>
+                        9x R$8,80
+                    </strong>
                 </h4>
 
 
@@ -817,10 +992,14 @@
 
 
                 <p class="conversation-text">
+
                     Já prometeu que quando tivesse mais tempo,
                     mais clareza, mais confiança...
+
                     <br>
+
                     começaria.
+
                 </p>
 
 
@@ -837,7 +1016,8 @@
                         exatamente no mesmo lugar.
                     </span>
 
-                    <br><br>
+                    <br>
+                    <br>
 
                     <span class="orange">
                         Só na sua cabeça.
@@ -1078,6 +1258,87 @@
          TERCEIRA OFERTA
     ========================================================== -->
 
+    <section class="offer">
+
+        <div class="container">
+
+            <div class="offer-inner">
+
+                <picture>
+
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="site_files/logo-ed48-Xnby7hLjpQsmcDGn(4).png"
+                    >
+
+                    <img
+                        class="offer-logo"
+                        src="site_files/logo-ed48-Xnby7hLjpQsmcDGn(5).png"
+                        alt="Escritor Destravado em 48H"
+                    >
+
+                </picture>
+
+
+                <h4 class="offer-title">
+                    O acesso completo ao Escritor Destravado em 48h
+                    sai hoje por apenas:
+                </h4>
+
+
+                <picture>
+
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="site_files/checklist-sem-fundo-2-bKoMsaScHyvdRt3S(2).png"
+                    >
+
+                    <img
+                        class="offer-product"
+                        src="site_files/checklist-sem-fundo-2-bKoMsaScHyvdRt3S(1).png"
+                        alt=""
+                    >
+
+                </picture>
+
+
+                <h4 class="offer-price">
+                    9x R$8,80
+                </h4>
+
+
+                <h4 class="offer-or">
+                    ou
+                </h4>
+
+
+                <h4 class="offer-cash">
+                    R$67 à vista
+                </h4>
+
+
+                <a
+                    class="buy-button"
+                    href="COLOQUE-SEU-LINK-AQUI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Quero começar meu livro hoje!
+                </a>
+
+
+                <p class="offer-note">
+                    Preço de pré-venda, aproveite.
+                    Você economiza R$250!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- =========================================================
          SEÇÃO 13
          FAQ
@@ -1218,4 +1479,3 @@
 </body>
 
 </html>
-
