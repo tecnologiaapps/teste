@@ -1,0 +1,1679 @@
+/* =========================================================
+           RESET
+        ========================================================== */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            background: #ffffff;
+
+            color: #1a1a1a;
+
+            font-family: "Inter", sans-serif;
+
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        /* =========================================================
+           VARIÁVEIS
+        ========================================================== */
+
+        :root {
+
+            --orange: rgb(252, 131, 55);
+
+            --black: rgb(0, 0, 0);
+
+            --dark: rgb(18, 18, 18);
+
+            --dark-2: rgb(26, 26, 26);
+
+            --cream: rgb(218, 210, 198);
+
+            --cream-light: rgb(247, 241, 239);
+
+            --cream-light-2: rgb(247, 242, 239);
+
+            --white: rgb(255, 255, 255);
+
+            --text-dark: rgb(26, 26, 26);
+
+            --text-gray: rgb(86, 88, 94);
+
+            --price-gray: rgb(156, 149, 149);
+
+            --heading-font: "Outfit", sans-serif;
+
+            --body-font: "Inter", sans-serif;
+
+            --poppins: "Poppins", sans-serif;
+
+            --quicksand: "Quicksand", sans-serif;
+
+            --open-sans: "Open Sans", sans-serif;
+
+            --content-width: 1224px;
+        }
+
+
+        /* =========================================================
+           CONTAINER
+        ========================================================== */
+
+        .container {
+            width: min(
+                var(--content-width),
+                calc(100% - 32px)
+            );
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           TIPOGRAFIA BASE DO BUILDER
+        ========================================================== */
+
+        .heading {
+            font-family: var(--heading-font);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .body {
+            font-family: var(--body-font);
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           DESTAQUE LARANJA
+        ========================================================== */
+
+        .orange {
+            color: var(--orange);
+        }
+
+
+        /* =========================================================
+           BOTÃO DE COMPRA
+           Baseado nas propriedades encontradas no Builder.
+        ========================================================== */
+
+        .buy-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 64px;
+
+            padding: 16px 40px;
+
+            background: rgb(0, 219, 88);
+
+            color: rgb(255, 255, 255);
+
+            border: 0;
+            border-radius: 0;
+
+            font-family: var(--poppins);
+
+            font-size: 22px;
+
+            font-weight: 500;
+
+            line-height: normal;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .buy-button:hover {
+            background: rgb(29, 30, 32);
+
+            transform: translateY(-2px);
+        }
+
+        .buy-button:active {
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           SEÇÃO 01
+           HERO
+        ========================================================== */
+
+        .hero {
+            background: var(--black);
+
+            min-height: 716px;
+
+            padding: 40px 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            width: min(
+                var(--content-width),
+                calc(100% - 32px)
+            );
+
+            min-height: 636px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: 241px;
+
+            margin-bottom: 50px;
+        }
+
+        .hero-main-image {
+            width: 476px;
+
+            max-width: 80vw;
+
+            margin-bottom: 54px;
+
+            object-fit: contain;
+        }
+
+        .hero-title {
+            max-width: 850px;
+
+            color: rgb(255, 255, 255);
+
+            font-family: var(--heading-font);
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 02
+           RUMINAÇÕES
+        ========================================================== */
+
+        .ruminations {
+            background: var(--cream);
+
+            min-height: 850px;
+
+            padding: 85px 0;
+        }
+
+        .ruminations-inner {
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .ruminations-title {
+            max-width: 900px;
+
+            margin: 0 auto 35px;
+
+            color: var(--text-dark);
+
+            font-family: var(--heading-font);
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+        }
+
+        .ruminations-intro {
+            color: var(--text-dark);
+
+            font-family: var(--body-font);
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 30px;
+        }
+
+        .ruminations-image {
+            width: 375px;
+
+            max-width: 90vw;
+
+            margin: 0 auto 30px;
+        }
+
+        .ruminations-final {
+            color: var(--text-dark);
+
+            font-family: var(--body-font);
+
+            font-size: 24px;
+
+            line-height: 1.3;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 03
+           PROBLEMA
+        ========================================================== */
+
+        .problem {
+            background: var(--dark);
+
+            padding: 100px 0;
+        }
+
+        .problem-inner {
+            width: min(1100px, 100%);
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .problem-content {
+            color: white;
+        }
+
+        .problem-title {
+            color: white;
+
+            font-family: var(--heading-font);
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .problem-text {
+            color: white;
+
+            font-family: var(--body-font);
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 30px;
+        }
+
+        .problem-final {
+            color: white;
+
+            font-family: var(--heading-font);
+
+            font-size: 32px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            margin-top: 45px;
+        }
+
+        .problem-image {
+            width: 480px;
+
+            max-width: 100%;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 04
+           IMAGEM DE TRANSIÇÃO
+        ========================================================== */
+
+        .sequence {
+            background: var(--cream-light);
+
+            padding: 0;
+
+            overflow: hidden;
+        }
+
+        .sequence-image {
+            width: 100%;
+
+            max-width: 1440px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 05
+           MATERIAIS
+        ========================================================== */
+
+        .materials {
+            background: var(--cream-light-2);
+
+            padding: 95px 0 110px;
+        }
+
+        .materials-title {
+            color: var(--text-dark);
+
+            font-family: var(--heading-font);
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            text-align: center;
+
+            margin-bottom: 75px;
+        }
+
+        .materials-list {
+            width: min(950px, 100%);
+
+            margin: 0 auto;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 65px;
+        }
+
+        .material {
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            align-items: center;
+
+            gap: 45px;
+        }
+
+        .material-image {
+            width: 150px;
+
+            max-height: 150px;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+        .material-content h3 {
+            color: var(--orange);
+
+            font-family: var(--heading-font);
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 14px;
+        }
+
+        .material-content p {
+            color: var(--text-gray);
+
+            font-family: var(--heading-font);
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 06
+           ISSO É PARA VOCÊ
+        ========================================================== */
+
+        .audience {
+            background: var(--dark);
+
+            padding: 100px 0 110px;
+
+            overflow: hidden;
+        }
+
+        .audience-inner {
+            width: min(1100px, 100%);
+
+            margin: 0 auto;
+        }
+
+        .audience-title {
+            color: rgb(236, 239, 243);
+
+            font-family: var(--heading-font);
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .audience-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 18px;
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .audience-item {
+            display: grid;
+
+            grid-template-columns: 36px 1fr;
+
+            align-items: center;
+
+            gap: 16px;
+        }
+
+        .audience-check {
+            color: var(--orange);
+
+            font-family: var(--heading-font);
+
+            font-size: 26px;
+
+            font-weight: 600;
+
+            text-align: center;
+        }
+
+        .audience-item p {
+            display: inline-block;
+
+            width: fit-content;
+
+            max-width: 100%;
+
+            color: rgb(18, 18, 18);
+
+            background: white;
+
+            padding: 17px 25px;
+
+            font-family: var(--body-font);
+
+            font-size: 24px;
+
+            line-height: 1.3;
+        }
+
+        .audience-conclusion {
+            margin: 65px auto 0;
+
+            text-align: center;
+
+            color: rgb(236, 239, 243);
+
+            font-family: var(--body-font);
+
+            font-size: 29px;
+
+            line-height: 1.3;
+
+            font-weight: 400;
+        }
+
+        .audience-logo {
+            width: 305px;
+
+            margin: 20px auto;
+
+        }
+
+        .audience-conclusion-last {
+            color: rgb(236, 239, 243);
+
+            font-family: var(--body-font);
+
+            font-size: 32px;
+
+            line-height: 1.3;
+
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 07
+           COMPARAÇÃO DE PREÇOS
+        ========================================================== */
+
+        .comparison {
+            background: var(--cream);
+
+            padding: 90px 0 100px;
+        }
+
+        .comparison-inner {
+            width: min(800px, 100%);
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .comparison-title {
+            color: rgb(52, 52, 54);
+
+            font-family: var(--quicksand);
+
+            font-size: 26px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 45px;
+        }
+
+        .price-list {
+            width: min(650px, 100%);
+
+            margin: 0 auto;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+        .price-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .price-name {
+            color: rgb(52, 52, 54);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            text-align: left;
+        }
+
+        .price-old {
+            color: var(--price-gray);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            white-space: nowrap;
+        }
+
+        .comparison-total {
+            color: rgb(52, 52, 54);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-top: 35px;
+        }
+
+        .comparison-today {
+            color: rgb(52, 52, 54);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-top: 30px;
+        }
+
+        .comparison-today u {
+            text-underline-offset: 3px;
+        }
+
+
+        /* =========================================================
+           OFERTAS
+           SEÇÕES 08, 11 E 12
+
+           Elas NÃO são fundidas.
+           Cada uma continua sendo uma seção independente.
+        ========================================================== */
+
+        .offer {
+            background: white;
+
+            padding: 90px 0 100px;
+
+            text-align: center;
+        }
+
+        .offer-inner {
+            width: min(900px, 100%);
+
+            margin: 0 auto;
+        }
+
+        .offer-logo {
+            width: 275px;
+
+            max-width: 70vw;
+
+            margin: 0 auto 25px;
+        }
+
+        .offer-product {
+            width: 655px;
+
+            max-width: 90vw;
+
+            margin: 0 auto 35px;
+
+            object-fit: contain;
+        }
+
+        .offer-title {
+            max-width: 700px;
+
+            margin: 0 auto 35px;
+
+            color: rgb(13, 20, 26);
+
+            font-family: var(--quicksand);
+
+            font-size: 40px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+        }
+
+        .offer-price {
+            color: rgb(13, 20, 26);
+
+            font-family: var(--open-sans);
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 8px;
+        }
+
+        .offer-or {
+            color: rgb(13, 20, 26);
+
+            font-family: var(--open-sans);
+
+            font-size: 40px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 8px;
+        }
+
+        .offer-cash {
+            color: rgb(13, 20, 26);
+
+            font-family: var(--open-sans);
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .offer-note {
+            color: rgb(26, 26, 26);
+
+            font-family: var(--heading-font);
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            line-height: 1.3;
+
+            margin-top: 25px;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 09
+           CONVERSA DIRETA
+        ========================================================== */
+
+        .conversation {
+            background: var(--dark-2);
+
+            padding: 105px 0 115px;
+        }
+
+        .conversation-inner {
+            width: min(900px, 100%);
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .conversation-title {
+            color: white;
+
+            font-family: var(--quicksand);
+
+            font-size: 40px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 60px;
+        }
+
+        .conversation-text {
+            color: white;
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .conversation-decision {
+            color: var(--orange);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            margin: 55px auto;
+
+            max-width: 850px;
+        }
+
+        .conversation-spaced {
+            margin-bottom: 20px;
+        }
+
+        .conversation-final {
+            color: var(--orange);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            margin-top: 45px;
+        }
+
+        .conversation-image {
+            width: 720px;
+
+            max-width: 90vw;
+
+            margin: 70px auto 0;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           SEÇÃO 10
+           SOBRE / CONFIANÇA
+        ========================================================== */
+
+        .about {
+            background: var(--cream);
+
+            padding: 100px 0;
+        }
+
+        .about-inner {
+            width: min(1050px, 100%);
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 340px 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .about-image {
+            width: 305px;
+
+            max-width: 100%;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+        }
+
+        .about-title {
+            color: rgb(26, 26, 26);
+
+            font-family: var(--quicksand);
+
+            font-size: 40px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 35px;
+        }
+
+        .about-text {
+            color: rgb(26, 26, 28);
+
+            font-family: var(--poppins);
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            line-height: 1.3;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================================
+           FAQ — SEÇÃO 13
+        ========================================================== */
+
+        .faq {
+            background: white;
+
+            padding: 100px 0 110px;
+        }
+
+        .faq-inner {
+            width: min(1000px, 100%);
+
+            margin: 0 auto;
+        }
+
+        .faq-main-title {
+            color: rgb(26, 26, 26);
+
+            font-family: var(--heading-font);
+
+            font-size: 40px;
+
+            font-weight: 600;
+
+            line-height: 1.3;
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .faq-item {
+            padding: 30px 0;
+
+            border-bottom: 1px solid rgba(26, 26, 26, 0.14);
+        }
+
+        .faq-question {
+            color: var(--orange);
+
+            font-family: var(--heading-font);
+
+            font-size: 32px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+
+            font-family: var(--heading-font);
+
+            font-size: 24px;
+
+            font-weight: 400;
+
+            line-height: 1.3;
+        }
+
+
+        /* =========================================================
+           FOOTER — SEÇÃO 14
+        ========================================================== */
+
+        footer {
+            background: var(--black);
+
+            min-height: 121px;
+
+            padding: 40px 16px;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .footer-support {
+            color: white;
+
+            font-family: var(--body-font);
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            line-height: 1.5;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-email {
+            color: white;
+
+            font-family: var(--body-font);
+
+            font-size: 20px;
+
+            line-height: 1.5;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-email a {
+            color: white;
+
+            text-decoration: underline;
+
+            text-underline-offset: 3px;
+        }
+
+        .footer-copy {
+            color: white;
+
+            font-family: var(--body-font);
+
+            font-size: 14px;
+
+            line-height: 1.3;
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                min-height: 665px;
+            }
+
+            .hero-inner {
+                min-height: 585px;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .problem-inner {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+                text-align: center;
+            }
+
+            .problem-content {
+                text-align: center;
+            }
+
+            .problem-image {
+                width: 420px;
+            }
+
+            .material {
+                grid-template-columns: 150px 1fr;
+
+                gap: 30px;
+            }
+
+            .about-inner {
+                grid-template-columns: 280px 1fr;
+
+                gap: 45px;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 32px);
+            }
+
+
+            /* -----------------------------------------------------
+               HERO
+            ----------------------------------------------------- */
+
+            .hero {
+                min-height: auto;
+
+                padding: 64px 16px;
+            }
+
+            .hero-inner {
+                width: 100%;
+
+                min-height: auto;
+            }
+
+            .hero-logo {
+                width: 195px;
+
+                margin-bottom: 35px;
+            }
+
+            .hero-main-image {
+                width: 318px;
+
+                max-width: 90vw;
+
+                margin-bottom: 35px;
+            }
+
+            .hero-title {
+                max-width: 360px;
+
+                font-size: 24px;
+
+                line-height: 1.3;
+            }
+
+
+            /* -----------------------------------------------------
+               RUMINAÇÕES
+            ----------------------------------------------------- */
+
+            .ruminations {
+                padding: 64px 16px;
+            }
+
+            .ruminations-title {
+                font-size: 32px;
+
+                margin-bottom: 30px;
+            }
+
+            .ruminations-intro {
+                font-size: 16px;
+
+                margin-bottom: 25px;
+            }
+
+            .ruminations-image {
+                width: 375px;
+
+                max-width: 100%;
+
+                margin-bottom: 25px;
+            }
+
+            .ruminations-final {
+                font-size: 16px;
+            }
+
+
+            /* -----------------------------------------------------
+               PROBLEMA
+            ----------------------------------------------------- */
+
+            .problem {
+                padding: 70px 16px;
+            }
+
+            .problem-title {
+                font-size: 32px;
+
+                margin-bottom: 25px;
+            }
+
+            .problem-text {
+                font-size: 18px;
+
+                margin-bottom: 24px;
+            }
+
+            .problem-final {
+                font-size: 24px;
+
+                margin-top: 35px;
+            }
+
+            .problem-image {
+                width: 375px;
+
+                max-width: 100%;
+            }
+
+
+            /* -----------------------------------------------------
+               SEQUÊNCIA
+            ----------------------------------------------------- */
+
+            .sequence-image {
+                width: 100%;
+            }
+
+
+            /* -----------------------------------------------------
+               MATERIAIS
+            ----------------------------------------------------- */
+
+            .materials {
+                padding: 65px 16px 75px;
+            }
+
+            .materials-title {
+                font-size: 32px;
+
+                margin-bottom: 50px;
+            }
+
+            .materials-list {
+                gap: 50px;
+            }
+
+            .material {
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                text-align: center;
+            }
+
+            .material-image {
+                width: 95px;
+
+                height: 95px;
+
+                margin: 0 auto;
+            }
+
+            .material-content h3 {
+                font-size: 24px;
+
+                margin-bottom: 12px;
+            }
+
+            .material-content p {
+                font-size: 16px;
+
+                line-height: 1.5;
+            }
+
+
+            /* -----------------------------------------------------
+               AUDIENCE
+            ----------------------------------------------------- */
+
+            .audience {
+                padding: 65px 16px 75px;
+            }
+
+            .audience-title {
+                font-size: 32px;
+
+                margin-bottom: 45px;
+            }
+
+            .audience-list {
+                gap: 16px;
+            }
+
+            .audience-item {
+                grid-template-columns: 25px 1fr;
+
+                gap: 10px;
+
+                align-items: start;
+            }
+
+            .audience-check {
+                font-size: 20px;
+
+                padding-top: 14px;
+            }
+
+            .audience-item p {
+                width: 100%;
+
+                padding: 14px 16px;
+
+                font-size: 16px;
+            }
+
+            .audience-conclusion {
+                font-size: 20px;
+
+                margin-top: 45px;
+            }
+
+            .audience-logo {
+                width: 195px;
+
+                margin: 15px auto;
+            }
+
+            .audience-conclusion-last {
+                font-size: 20px;
+            }
+
+
+            /* -----------------------------------------------------
+               COMPARAÇÃO
+            ----------------------------------------------------- */
+
+            .comparison {
+                padding: 65px 16px 75px;
+            }
+
+            .comparison-title {
+                font-size: 26px;
+
+                margin-bottom: 35px;
+            }
+
+            .price-list {
+                gap: 10px;
+            }
+
+            .price-row {
+                gap: 15px;
+            }
+
+            .price-name,
+            .price-old {
+                font-size: 16px;
+            }
+
+            .comparison-total,
+            .comparison-today {
+                font-size: 16px;
+            }
+
+
+            /* -----------------------------------------------------
+               OFERTA
+            ----------------------------------------------------- */
+
+            .offer {
+                padding: 65px 16px 75px;
+            }
+
+            .offer-inner {
+                width: 100%;
+            }
+
+            .offer-logo {
+                width: 173px;
+
+                margin-bottom: 25px;
+            }
+
+            .offer-product {
+                width: 328px;
+
+                max-width: 90vw;
+
+                margin-bottom: 30px;
+            }
+
+            .offer-title {
+                font-size: 26px;
+
+                margin-bottom: 30px;
+            }
+
+            .offer-price {
+                font-size: 48px;
+            }
+
+            .offer-or {
+                font-size: 26px;
+            }
+
+            .offer-cash {
+                font-size: 18px;
+
+                margin-bottom: 30px;
+            }
+
+            .buy-button {
+                width: 86.111vw;
+
+                min-height: 70px;
+
+                padding: 14px 20px;
+
+                font-size: 18px;
+            }
+
+            .offer-note {
+                font-size: 16px;
+
+                margin-top: 20px;
+            }
+
+
+            /* -----------------------------------------------------
+               CONVERSA
+            ----------------------------------------------------- */
+
+            .conversation {
+                padding: 70px 16px 80px;
+            }
+
+            .conversation-title {
+                font-size: 26px;
+
+                margin-bottom: 45px;
+            }
+
+            .conversation-text {
+                font-size: 16px;
+
+                margin-bottom: 28px;
+            }
+
+            .conversation-decision {
+                font-size: 16px;
+
+                margin: 40px auto;
+            }
+
+            .conversation-final {
+                font-size: 16px;
+
+                margin-top: 35px;
+            }
+
+            .conversation-image {
+                width: 375px;
+
+                max-width: 100%;
+
+                margin-top: 50px;
+            }
+
+
+            /* -----------------------------------------------------
+               SOBRE
+            ----------------------------------------------------- */
+
+            .about {
+                padding: 70px 16px;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+                text-align: center;
+            }
+
+            .about-image {
+                width: 250px;
+            }
+
+            .about-title {
+                font-size: 26px;
+
+                margin-bottom: 30px;
+            }
+
+            .about-text {
+                font-size: 16px;
+
+                text-align: center;
+            }
+
+            .about-text p {
+                margin-bottom: 22px;
+            }
+
+
+            /* -----------------------------------------------------
+               FAQ
+            ----------------------------------------------------- */
+
+            .faq {
+                padding: 70px 16px 80px;
+            }
+
+            .faq-main-title {
+                font-size: 32px;
+
+                margin-bottom: 45px;
+            }
+
+            .faq-item {
+                padding: 25px 0;
+            }
+
+            .faq-question {
+                font-size: 24px;
+            }
+
+            .faq-answer {
+                font-size: 16px;
+            }
+
+
+            /* -----------------------------------------------------
+               FOOTER
+            ----------------------------------------------------- */
+
+            footer {
+                padding: 40px 16px;
+            }
+
+            .footer-email {
+                font-size: 18px;
+            }
+        }
+
+
+        /* =========================================================
+           CELULARES MUITO PEQUENOS
+        ========================================================== */
+
+        @media (max-width: 380px) {
+
+            .hero-title {
+                font-size: 22px;
+            }
+
+            .ruminations-title,
+            .materials-title,
+            .audience-title {
+                font-size: 28px;
+            }
+
+            .problem-title {
+                font-size: 28px;
+            }
+
+            .offer-price {
+                font-size: 42px;
+            }
+
+            .buy-button {
+                font-size: 17px;
+            }
+        }
