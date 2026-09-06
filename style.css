@@ -1,5 +1,6 @@
 /* =========================================================
-   SEÑOR LÁBIOS — ESTILO DA LANDING PAGE
+   SEÑOR LÁBIOS
+   STYLE.CSS
    ========================================================= */
 
 :root {
@@ -121,8 +122,8 @@ a {
     align-items: center;
     justify-content: center;
 
-    min-height: 64px;
     min-width: 320px;
+    min-height: 64px;
 
     padding: 16px 42px;
 
@@ -138,6 +139,7 @@ a {
     line-height: 1.2;
 
     text-align: center;
+
     cursor: pointer;
 
     box-shadow: 0 10px 28px rgba(0, 219, 88, 0.16);
@@ -149,7 +151,7 @@ a {
 }
 
 .buy-button:hover {
-    background: #00c94f;
+    background: #00C94F;
     transform: translateY(-3px);
     box-shadow: 0 14px 34px rgba(0, 219, 88, 0.24);
 }
@@ -160,7 +162,7 @@ a {
 
 
 /* =========================================================
-   01 — HERO
+   SEÇÃO 01 — HERO
    ========================================================= */
 
 .hero {
@@ -169,6 +171,7 @@ a {
     justify-content: center;
 
     min-height: 716px;
+
     padding: 56px 20px 64px;
 
     background: var(--black);
@@ -218,7 +221,7 @@ a {
 
 
 /* =========================================================
-   02 — RUMINAÇÕES
+   SEÇÃO 02 — RUMINAÇÕES
    ========================================================= */
 
 .ruminations {
@@ -268,8 +271,6 @@ a {
     max-width: 100%;
 
     margin: 0 auto 32px;
-
-    border-radius: 4px;
 }
 
 .ruminations-final {
@@ -283,7 +284,7 @@ a {
 
 
 /* =========================================================
-   03 — O PROBLEMA
+   SEÇÃO 03 — PROBLEMA
    ========================================================= */
 
 .problem {
@@ -300,6 +301,7 @@ a {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
 
     align-items: center;
+
     gap: 72px;
 }
 
@@ -351,7 +353,7 @@ a {
 
 
 /* =========================================================
-   04 — IMAGEM DE TRANSIÇÃO
+   SEÇÃO 04 — IMAGEM SEQUENCIAL
    ========================================================= */
 
 .sequence {
@@ -375,7 +377,7 @@ a {
 
 
 /* =========================================================
-   05 — MATERIAIS
+   SEÇÃO 05 — MATERIAIS
    ========================================================= */
 
 .materials {
@@ -409,6 +411,7 @@ a {
 
 .material {
     display: grid;
+
     grid-template-columns: 180px minmax(0, 1fr);
 
     align-items: center;
@@ -421,6 +424,7 @@ a {
 .material-image {
     width: 150px;
     height: 150px;
+
     max-width: 100%;
 
     margin: 0 auto;
@@ -450,7 +454,7 @@ a {
 
 
 /* =========================================================
-   06 — ISSO É PARA VOCÊ
+   SEÇÃO 06 — ISSO É PARA VOCÊ
    ========================================================= */
 
 .audience {
@@ -482,6 +486,7 @@ a {
 .audience-list {
     display: flex;
     flex-direction: column;
+
     gap: 16px;
 
     padding: 0;
@@ -492,6 +497,7 @@ a {
 
 .audience-item {
     display: grid;
+
     grid-template-columns: 34px minmax(0, 1fr);
 
     align-items: center;
@@ -561,7 +567,7 @@ a {
 
 
 /* =========================================================
-   07 — COMPARAÇÃO DE PREÇOS
+   SEÇÃO 07 — COMPARAÇÃO DE PREÇOS
    ========================================================= */
 
 .comparison {
@@ -594,11 +600,13 @@ a {
 
     display: flex;
     flex-direction: column;
+
     gap: 7px;
 }
 
 .price-row {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -629,8 +637,8 @@ a {
     line-height: 1.35;
 
     white-space: nowrap;
+
     text-decoration: line-through;
-    text-decoration-thickness: 1px;
 }
 
 .comparison-total {
@@ -661,8 +669,7 @@ a {
 
 
 /* =========================================================
-   08 / 11 / 12 — OFERTAS
-   Cada bloco continua sendo uma seção independente.
+   SEÇÕES 08 / 11 / 12 — OFERTAS
    ========================================================= */
 
 .offer {
@@ -753,7 +760,7 @@ a {
 
 
 /* =========================================================
-   09 — CONVERSA DIRETA
+   SEÇÃO 09 — CONVERSA DIRETA
    ========================================================= */
 
 .conversation {
@@ -830,7 +837,7 @@ a {
 
 
 /* =========================================================
-   10 — CONFIANÇA
+   SEÇÃO 10 — SOBRE / CONFIANÇA
    ========================================================= */
 
 .about {
@@ -844,6 +851,7 @@ a {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: 310px minmax(0, 1fr);
 
     align-items: center;
@@ -890,7 +898,7 @@ a {
 
 
 /* =========================================================
-   13 — FAQ
+   SEÇÃO 13 — FAQ
    ========================================================= */
 
 .faq {
@@ -949,7 +957,7 @@ a {
 
 
 /* =========================================================
-   14 — FOOTER
+   SEÇÃO 14 — FOOTER
    ========================================================= */
 
 footer {
@@ -1036,7 +1044,7 @@ footer {
 
 
 /* =========================================================
-   TABLET / MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 760px) {
@@ -1182,6 +1190,7 @@ footer {
 
     .material {
         display: grid;
+
         grid-template-columns: 1fr;
 
         gap: 19px;
@@ -1374,8 +1383,6 @@ footer {
         min-height: 68px;
 
         padding: 14px 20px;
-
-        border-radius: 6px;
 
         font-size: 18px;
         line-height: 1.3;
