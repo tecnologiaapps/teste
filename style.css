@@ -1,1679 +1,1564 @@
 /* =========================================================
-           RESET
-        ========================================================== */
+   SEÑOR LÁBIOS — ESTILO DA LANDING PAGE
+   ========================================================= */
+
+:root {
+    --orange: #FC8337;
+    --green: #00DB58;
+
+    --black: #000000;
+    --dark: #121212;
+    --dark-2: #1A1A1A;
+
+    --cream: #DAD2C6;
+    --cream-light: #F7F1EF;
+    --cream-light-2: #F7F2EF;
+
+    --white: #FFFFFF;
+
+    --text-dark: #1A1A1A;
+    --text-gray: #56585E;
+    --price-gray: #9C9595;
+
+    --heading-font: "Outfit", sans-serif;
+    --body-font: "Inter", sans-serif;
+    --poppins: "Poppins", sans-serif;
+    --quicksand: "Quicksand", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+
+    --content-width: 1224px;
+}
+
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
+/* =========================================================
+   RESET
+   ========================================================= */
 
-        html {
-            scroll-behavior: smooth;
-        }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
+html {
+    scroll-behavior: smooth;
+}
 
-            background: #ffffff;
+body {
+    margin: 0;
+    padding: 0;
 
-            color: #1a1a1a;
+    background: var(--white);
+    color: var(--text-dark);
 
-            font-family: "Inter", sans-serif;
+    font-family: var(--body-font);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    overflow-x: hidden;
+}
 
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
+a {
+    text-decoration: none;
+}
 
-        a {
-            text-decoration: none;
-        }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            margin: 0;
-        }
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
-        button,
-        a {
-            -webkit-tap-highlight-color: transparent;
-        }
 
+/* =========================================================
+   ELEMENTOS GERAIS
+   ========================================================= */
 
-        /* =========================================================
-           VARIÁVEIS
-        ========================================================== */
+.container {
+    width: min(var(--content-width), calc(100% - 40px));
+    margin: 0 auto;
+}
 
-        :root {
+.heading {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    line-height: 1.25;
+}
 
-            --orange: rgb(252, 131, 55);
+.body {
+    font-family: var(--body-font);
+    font-weight: 400;
+    line-height: 1.5;
+}
 
-            --black: rgb(0, 0, 0);
+.orange {
+    color: var(--orange);
+}
 
-            --dark: rgb(18, 18, 18);
 
-            --dark-2: rgb(26, 26, 26);
+/* =========================================================
+   BOTÃO
+   ========================================================= */
 
-            --cream: rgb(218, 210, 198);
+.buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-            --cream-light: rgb(247, 241, 239);
+    min-height: 64px;
+    min-width: 320px;
 
-            --cream-light-2: rgb(247, 242, 239);
+    padding: 16px 42px;
 
-            --white: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 6px;
 
-            --text-dark: rgb(26, 26, 26);
+    background: var(--green);
+    color: var(--white);
 
-            --text-gray: rgb(86, 88, 94);
+    font-family: var(--poppins);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
 
-            --price-gray: rgb(156, 149, 149);
+    text-align: center;
+    cursor: pointer;
 
-            --heading-font: "Outfit", sans-serif;
+    box-shadow: 0 10px 28px rgba(0, 219, 88, 0.16);
 
-            --body-font: "Inter", sans-serif;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
-            --poppins: "Poppins", sans-serif;
+.buy-button:hover {
+    background: #00c94f;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(0, 219, 88, 0.24);
+}
 
-            --quicksand: "Quicksand", sans-serif;
+.buy-button:active {
+    transform: translateY(-1px);
+}
 
-            --open-sans: "Open Sans", sans-serif;
 
-            --content-width: 1224px;
-        }
+/* =========================================================
+   01 — HERO
+   ========================================================= */
 
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        /* =========================================================
-           CONTAINER
-        ========================================================== */
+    min-height: 716px;
+    padding: 56px 20px 64px;
 
-        .container {
-            width: min(
-                var(--content-width),
-                calc(100% - 32px)
-            );
+    background: var(--black);
 
-            margin: 0 auto;
-        }
+    overflow: hidden;
+}
 
+.hero-inner {
+    width: min(1100px, 100%);
 
-        /* =========================================================
-           TIPOGRAFIA BASE DO BUILDER
-        ========================================================== */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        .heading {
-            font-family: var(--heading-font);
-            font-weight: 600;
-            line-height: 1.3;
-        }
+    text-align: center;
+}
 
-        .body {
-            font-family: var(--body-font);
-            font-weight: 400;
-            line-height: 1.5;
-        }
+.hero-logo {
+    width: 241px;
+    max-width: 55vw;
 
+    margin-bottom: 42px;
+}
 
-        /* =========================================================
-           DESTAQUE LARANJA
-        ========================================================== */
+.hero-main-image {
+    width: 476px;
+    max-width: min(80vw, 476px);
 
-        .orange {
-            color: var(--orange);
-        }
+    margin-bottom: 46px;
 
+    object-fit: contain;
+}
 
-        /* =========================================================
-           BOTÃO DE COMPRA
-           Baseado nas propriedades encontradas no Builder.
-        ========================================================== */
+.hero-title {
+    width: min(850px, 100%);
 
-        .buy-button {
-            display: inline-flex;
+    color: var(--white);
 
-            align-items: center;
-            justify-content: center;
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.25;
 
-            min-height: 64px;
+    text-align: center;
+}
 
-            padding: 16px 40px;
 
-            background: rgb(0, 219, 88);
+/* =========================================================
+   02 — RUMINAÇÕES
+   ========================================================= */
 
-            color: rgb(255, 255, 255);
+.ruminations {
+    min-height: 850px;
 
-            border: 0;
-            border-radius: 0;
+    padding: 92px 20px 100px;
 
-            font-family: var(--poppins);
+    background: var(--cream);
 
-            font-size: 22px;
+    display: flex;
+    align-items: center;
+}
 
-            font-weight: 500;
+.ruminations-inner {
+    width: min(1000px, 100%);
+    margin: 0 auto;
 
-            line-height: normal;
+    text-align: center;
+}
 
-            text-align: center;
+.ruminations-title {
+    width: min(900px, 100%);
 
-            cursor: pointer;
+    margin: 0 auto 34px;
 
-            transition:
-                background-color 0.2s ease,
-                transform 0.2s ease;
-        }
+    color: var(--text-dark);
 
-        .buy-button:hover {
-            background: rgb(29, 30, 32);
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.25;
+}
 
-            transform: translateY(-2px);
-        }
+.ruminations-intro {
+    margin-bottom: 30px;
 
-        .buy-button:active {
-            transform: translateY(0);
-        }
+    color: var(--text-dark);
 
+    font-family: var(--body-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+}
 
-        /* =========================================================
-           SEÇÃO 01
-           HERO
-        ========================================================== */
+.ruminations-image {
+    width: 375px;
+    max-width: 100%;
 
-        .hero {
-            background: var(--black);
+    margin: 0 auto 32px;
 
-            min-height: 716px;
+    border-radius: 4px;
+}
 
-            padding: 40px 0;
+.ruminations-final {
+    color: var(--text-dark);
 
-            display: flex;
+    font-family: var(--body-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+}
 
-            align-items: center;
 
-            justify-content: center;
+/* =========================================================
+   03 — O PROBLEMA
+   ========================================================= */
 
-            overflow: hidden;
-        }
+.problem {
+    padding: 105px 20px 115px;
 
-        .hero-inner {
-            width: min(
-                var(--content-width),
-                calc(100% - 32px)
-            );
+    background: var(--dark);
+}
 
-            min-height: 636px;
+.problem-inner {
+    width: min(1100px, 100%);
+    margin: 0 auto;
 
-            display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
 
-            flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
 
-            align-items: center;
+.problem-content {
+    color: var(--white);
+}
 
-            justify-content: center;
+.problem-title {
+    margin-bottom: 32px;
 
-            text-align: center;
-        }
+    color: var(--white);
 
-        .hero-logo {
-            width: 241px;
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.25;
+}
 
-            margin-bottom: 50px;
-        }
+.problem-text {
+    margin-bottom: 28px;
 
-        .hero-main-image {
-            width: 476px;
+    color: var(--white);
 
-            max-width: 80vw;
+    font-family: var(--body-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.45;
+}
 
-            margin-bottom: 54px;
+.problem-final {
+    margin-top: 44px;
 
-            object-fit: contain;
-        }
+    color: var(--white);
 
-        .hero-title {
-            max-width: 850px;
+    font-family: var(--heading-font);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+}
 
-            color: rgb(255, 255, 255);
+.problem-image {
+    width: 480px;
+    max-width: 100%;
 
-            font-family: var(--heading-font);
+    margin: 0 auto;
 
-            font-size: 48px;
+    object-fit: contain;
+}
 
-            font-weight: 600;
 
-            line-height: 1.3;
+/* =========================================================
+   04 — IMAGEM DE TRANSIÇÃO
+   ========================================================= */
 
-            text-align: center;
-        }
+.sequence {
+    padding: 0;
 
+    background: var(--cream-light);
 
-        /* =========================================================
-           SEÇÃO 02
-           RUMINAÇÕES
-        ========================================================== */
+    overflow: hidden;
+}
 
-        .ruminations {
-            background: var(--cream);
+.sequence-image {
+    display: block;
 
-            min-height: 850px;
+    width: 100%;
+    max-width: 1440px;
 
-            padding: 85px 0;
-        }
+    height: auto;
 
-        .ruminations-inner {
-            max-width: 1000px;
+    margin: 0 auto;
+}
 
-            margin: 0 auto;
 
-            text-align: center;
-        }
+/* =========================================================
+   05 — MATERIAIS
+   ========================================================= */
 
-        .ruminations-title {
-            max-width: 900px;
+.materials {
+    padding: 100px 20px 115px;
 
-            margin: 0 auto 35px;
+    background: var(--cream-light-2);
+}
 
-            color: var(--text-dark);
+.materials-title {
+    margin-bottom: 72px;
 
-            font-family: var(--heading-font);
+    color: var(--text-dark);
 
-            font-size: 48px;
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.25;
 
-            font-weight: 600;
+    text-align: center;
+}
 
-            line-height: 1.3;
-        }
+.materials-list {
+    width: min(950px, 100%);
+    margin: 0 auto;
 
-        .ruminations-intro {
-            color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
 
-            font-family: var(--body-font);
+    gap: 58px;
+}
 
-            font-size: 24px;
+.material {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
 
-            line-height: 1.3;
+    align-items: center;
 
-            margin-bottom: 30px;
-        }
+    gap: 44px;
 
-        .ruminations-image {
-            width: 375px;
+    padding: 8px 0;
+}
 
-            max-width: 90vw;
+.material-image {
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
 
-            margin: 0 auto 30px;
-        }
+    margin: 0 auto;
 
-        .ruminations-final {
-            color: var(--text-dark);
+    object-fit: contain;
+}
 
-            font-family: var(--body-font);
+.material-content h3 {
+    margin-bottom: 12px;
 
-            font-size: 24px;
+    color: var(--orange);
 
-            line-height: 1.3;
-        }
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+}
 
+.material-content p {
+    color: var(--text-gray);
 
-        /* =========================================================
-           SEÇÃO 03
-           PROBLEMA
-        ========================================================== */
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
 
-        .problem {
-            background: var(--dark);
 
-            padding: 100px 0;
-        }
+/* =========================================================
+   06 — ISSO É PARA VOCÊ
+   ========================================================= */
 
-        .problem-inner {
-            width: min(1100px, 100%);
+.audience {
+    padding: 105px 20px 115px;
 
-            margin: 0 auto;
+    background: var(--dark);
 
-            display: grid;
+    overflow: hidden;
+}
 
-            grid-template-columns: 1fr 1fr;
+.audience-inner {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
 
-            align-items: center;
+.audience-title {
+    margin-bottom: 62px;
 
-            gap: 70px;
-        }
+    color: #ECEFF3;
 
-        .problem-content {
-            color: white;
-        }
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.25;
 
-        .problem-title {
-            color: white;
+    text-align: center;
+}
 
-            font-family: var(--heading-font);
+.audience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
-            font-size: 48px;
+    padding: 0;
+    margin: 0;
 
-            font-weight: 600;
+    list-style: none;
+}
 
-            line-height: 1.3;
+.audience-item {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
 
-            margin-bottom: 35px;
-        }
+    align-items: center;
 
-        .problem-text {
-            color: white;
+    gap: 14px;
+}
 
-            font-family: var(--body-font);
+.audience-check {
+    color: var(--orange);
 
-            font-size: 24px;
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 600;
 
-            line-height: 1.3;
+    text-align: center;
+}
 
-            margin-bottom: 30px;
-        }
+.audience-item p {
+    width: fit-content;
+    max-width: 100%;
 
-        .problem-final {
-            color: white;
+    padding: 17px 25px;
 
-            font-family: var(--heading-font);
+    background: var(--white);
+    color: var(--dark);
 
-            font-size: 32px;
+    font-family: var(--body-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.35;
 
-            font-weight: 600;
+    border-radius: 2px;
+}
 
-            line-height: 1.3;
+.audience-conclusion {
+    max-width: 850px;
 
-            margin-top: 45px;
-        }
+    margin: 62px auto 0;
 
-        .problem-image {
-            width: 480px;
+    color: #ECEFF3;
 
-            max-width: 100%;
+    font-family: var(--body-font);
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.4;
 
-            margin: 0 auto;
+    text-align: center;
+}
 
-            object-fit: contain;
-        }
+.audience-logo {
+    width: 305px;
+    max-width: 65vw;
 
+    margin: 20px auto;
+}
 
-        /* =========================================================
-           SEÇÃO 04
-           IMAGEM DE TRANSIÇÃO
-        ========================================================== */
+.audience-conclusion-last {
+    color: #ECEFF3;
 
-        .sequence {
-            background: var(--cream-light);
+    font-family: var(--body-font);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
 
-            padding: 0;
+    text-align: center;
+}
 
-            overflow: hidden;
-        }
 
-        .sequence-image {
-            width: 100%;
+/* =========================================================
+   07 — COMPARAÇÃO DE PREÇOS
+   ========================================================= */
 
-            max-width: 1440px;
+.comparison {
+    padding: 94px 20px 105px;
 
-            margin: 0 auto;
-        }
+    background: var(--cream);
+}
 
+.comparison-inner {
+    width: min(800px, 100%);
+    margin: 0 auto;
 
-        /* =========================================================
-           SEÇÃO 05
-           MATERIAIS
-        ========================================================== */
+    text-align: center;
+}
 
-        .materials {
-            background: var(--cream-light-2);
+.comparison-title {
+    margin-bottom: 44px;
 
-            padding: 95px 0 110px;
-        }
+    color: #343436;
 
-        .materials-title {
-            color: var(--text-dark);
+    font-family: var(--quicksand);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+}
 
-            font-family: var(--heading-font);
+.price-list {
+    width: min(650px, 100%);
+    margin: 0 auto;
 
-            font-size: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
 
-            font-weight: 600;
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-            line-height: 1.3;
+    gap: 24px;
 
-            text-align: center;
+    padding: 3px 0;
+}
 
-            margin-bottom: 75px;
-        }
+.price-name {
+    color: #343436;
 
-        .materials-list {
-            width: min(950px, 100%);
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
 
-            margin: 0 auto;
+    text-align: left;
+}
 
-            display: flex;
+.price-old {
+    flex-shrink: 0;
 
-            flex-direction: column;
+    color: var(--price-gray);
 
-            gap: 65px;
-        }
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
 
-        .material {
-            display: grid;
+    white-space: nowrap;
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+}
 
-            grid-template-columns: 180px 1fr;
+.comparison-total {
+    margin-top: 34px;
 
-            align-items: center;
+    color: #343436;
 
-            gap: 45px;
-        }
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+}
 
-        .material-image {
-            width: 150px;
+.comparison-today {
+    margin-top: 28px;
 
-            max-height: 150px;
+    color: #343436;
 
-            margin: 0 auto;
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+}
 
-            object-fit: contain;
-        }
+.comparison-today u {
+    text-underline-offset: 3px;
+}
 
-        .material-content h3 {
-            color: var(--orange);
 
-            font-family: var(--heading-font);
+/* =========================================================
+   08 / 11 / 12 — OFERTAS
+   Cada bloco continua sendo uma seção independente.
+   ========================================================= */
 
-            font-size: 24px;
+.offer {
+    padding: 96px 20px 108px;
 
-            font-weight: 700;
+    background: var(--white);
 
-            line-height: 1.3;
+    text-align: center;
+}
 
-            margin-bottom: 14px;
-        }
+.offer-inner {
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
 
-        .material-content p {
-            color: var(--text-gray);
+.offer-logo {
+    width: 275px;
+    max-width: 70vw;
 
-            font-family: var(--heading-font);
+    margin: 0 auto 28px;
+}
 
-            font-size: 18px;
+.offer-product {
+    width: 655px;
+    max-width: min(90vw, 655px);
 
-            font-weight: 400;
+    margin: 0 auto 38px;
 
-            line-height: 1.5;
-        }
+    object-fit: contain;
+}
 
+.offer-title {
+    width: min(700px, 100%);
 
-        /* =========================================================
-           SEÇÃO 06
-           ISSO É PARA VOCÊ
-        ========================================================== */
+    margin: 0 auto 34px;
 
-        .audience {
-            background: var(--dark);
+    color: #0D141A;
 
-            padding: 100px 0 110px;
+    font-family: var(--quicksand);
+    font-size: clamp(32px, 3.5vw, 40px);
+    font-weight: 700;
+    line-height: 1.3;
+}
 
-            overflow: hidden;
-        }
+.offer-price {
+    margin-bottom: 5px;
 
-        .audience-inner {
-            width: min(1100px, 100%);
+    color: #0D141A;
 
-            margin: 0 auto;
-        }
+    font-family: var(--open-sans);
+    font-size: clamp(42px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.25;
+}
 
-        .audience-title {
-            color: rgb(236, 239, 243);
+.offer-or {
+    margin-bottom: 5px;
 
-            font-family: var(--heading-font);
+    color: #0D141A;
 
-            font-size: 48px;
+    font-family: var(--open-sans);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.25;
+}
 
-            font-weight: 600;
+.offer-cash {
+    margin-bottom: 34px;
 
-            line-height: 1.3;
+    color: #0D141A;
 
-            text-align: center;
+    font-family: var(--open-sans);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+}
 
-            margin-bottom: 65px;
-        }
+.offer-note {
+    margin-top: 23px;
 
-        .audience-list {
-            display: flex;
+    color: var(--text-dark);
 
-            flex-direction: column;
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
 
-            gap: 18px;
 
-            list-style: none;
+/* =========================================================
+   09 — CONVERSA DIRETA
+   ========================================================= */
 
-            padding: 0;
+.conversation {
+    padding: 108px 20px 118px;
 
-            margin: 0;
-        }
+    background: var(--dark-2);
+}
 
-        .audience-item {
-            display: grid;
+.conversation-inner {
+    width: min(900px, 100%);
+    margin: 0 auto;
 
-            grid-template-columns: 36px 1fr;
+    text-align: center;
+}
 
-            align-items: center;
+.conversation-title {
+    margin-bottom: 58px;
 
-            gap: 16px;
-        }
+    color: var(--white);
 
-        .audience-check {
-            color: var(--orange);
+    font-family: var(--quicksand);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+}
 
-            font-family: var(--heading-font);
+.conversation-text {
+    margin-bottom: 32px;
 
-            font-size: 26px;
+    color: var(--white);
 
-            font-weight: 600;
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.45;
+}
 
-            text-align: center;
-        }
+.conversation-decision {
+    width: min(850px, 100%);
 
-        .audience-item p {
-            display: inline-block;
+    margin: 52px auto;
 
-            width: fit-content;
+    color: var(--orange);
 
-            max-width: 100%;
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.45;
+}
 
-            color: rgb(18, 18, 18);
+.conversation-spaced {
+    margin-bottom: 20px;
+}
 
-            background: white;
+.conversation-final {
+    margin-top: 42px;
 
-            padding: 17px 25px;
+    color: var(--orange);
 
-            font-family: var(--body-font);
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.45;
+}
 
-            font-size: 24px;
+.conversation-image {
+    width: 720px;
+    max-width: 90vw;
 
-            line-height: 1.3;
-        }
+    margin: 68px auto 0;
 
-        .audience-conclusion {
-            margin: 65px auto 0;
+    object-fit: contain;
+}
 
-            text-align: center;
 
-            color: rgb(236, 239, 243);
+/* =========================================================
+   10 — CONFIANÇA
+   ========================================================= */
 
-            font-family: var(--body-font);
+.about {
+    padding: 105px 20px 110px;
 
-            font-size: 29px;
+    background: var(--cream);
+}
 
-            line-height: 1.3;
+.about-inner {
+    width: min(1050px, 100%);
+    margin: 0 auto;
 
-            font-weight: 400;
-        }
+    display: grid;
+    grid-template-columns: 310px minmax(0, 1fr);
 
-        .audience-logo {
-            width: 305px;
+    align-items: center;
 
-            margin: 20px auto;
+    gap: 72px;
+}
 
-        }
+.about-image {
+    width: 305px;
+    max-width: 100%;
 
-        .audience-conclusion-last {
-            color: rgb(236, 239, 243);
+    margin: 0 auto;
 
-            font-family: var(--body-font);
+    object-fit: contain;
+}
 
-            font-size: 32px;
+.about-title {
+    margin-bottom: 32px;
 
-            line-height: 1.3;
+    color: var(--text-dark);
 
-            text-align: center;
-        }
+    font-family: var(--quicksand);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+}
 
+.about-text {
+    color: #1A1A1C;
 
-        /* =========================================================
-           SEÇÃO 07
-           COMPARAÇÃO DE PREÇOS
-        ========================================================== */
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
 
-        .comparison {
-            background: var(--cream);
+.about-text p {
+    margin-bottom: 24px;
+}
 
-            padding: 90px 0 100px;
-        }
+.about-text p:last-child {
+    margin-bottom: 0;
+}
 
-        .comparison-inner {
-            width: min(800px, 100%);
 
-            margin: 0 auto;
+/* =========================================================
+   13 — FAQ
+   ========================================================= */
 
-            text-align: center;
-        }
+.faq {
+    padding: 105px 20px 115px;
 
-        .comparison-title {
-            color: rgb(52, 52, 54);
+    background: var(--white);
+}
 
-            font-family: var(--quicksand);
+.faq-inner {
+    width: min(1000px, 100%);
+    margin: 0 auto;
+}
 
-            font-size: 26px;
+.faq-main-title {
+    margin-bottom: 62px;
 
-            font-weight: 700;
+    color: var(--text-dark);
 
-            line-height: 1.3;
+    font-family: var(--heading-font);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3;
 
-            margin-bottom: 45px;
-        }
+    text-align: center;
+}
 
-        .price-list {
-            width: min(650px, 100%);
+.faq-item {
+    padding: 29px 0;
 
-            margin: 0 auto;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.13);
+}
 
-            display: flex;
+.faq-item:first-of-type {
+    padding-top: 0;
+}
 
-            flex-direction: column;
+.faq-question {
+    margin-bottom: 13px;
 
-            gap: 5px;
-        }
+    color: var(--orange);
 
-        .price-row {
-            display: flex;
+    font-family: var(--heading-font);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+}
 
-            justify-content: space-between;
+.faq-answer {
+    color: var(--text-gray);
 
-            align-items: center;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.45;
+}
 
-            gap: 25px;
-        }
 
-        .price-name {
-            color: rgb(52, 52, 54);
+/* =========================================================
+   14 — FOOTER
+   ========================================================= */
 
-            font-family: var(--poppins);
+footer {
+    min-height: 121px;
 
-            font-size: 20px;
+    padding: 40px 20px;
 
-            font-weight: 500;
+    background: var(--black);
+    color: var(--white);
 
-            line-height: 1.3;
+    text-align: center;
+}
 
-            text-align: left;
-        }
+.footer-support {
+    margin-bottom: 10px;
 
-        .price-old {
-            color: var(--price-gray);
+    color: var(--white);
 
-            font-family: var(--poppins);
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
 
-            font-size: 20px;
+    text-transform: uppercase;
+}
 
-            font-weight: 500;
+.footer-email {
+    margin-bottom: 13px;
 
-            line-height: 1.3;
+    color: var(--white);
 
-            white-space: nowrap;
-        }
+    font-family: var(--body-font);
+    font-size: 20px;
+    line-height: 1.5;
+}
 
-        .comparison-total {
-            color: rgb(52, 52, 54);
+.footer-email a {
+    color: var(--white);
 
-            font-family: var(--poppins);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 
-            font-size: 20px;
+    transition: opacity 0.2s ease;
+}
 
-            font-weight: 700;
+.footer-email a:hover {
+    opacity: 0.75;
+}
 
-            line-height: 1.3;
+.footer-copy {
+    color: var(--white);
 
-            margin-top: 35px;
-        }
+    font-family: var(--body-font);
+    font-size: 14px;
+    line-height: 1.3;
+}
 
-        .comparison-today {
-            color: rgb(52, 52, 54);
 
-            font-family: var(--poppins);
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-            font-size: 20px;
+@media (max-width: 1000px) {
 
-            font-weight: 700;
+    .problem-inner {
+        grid-template-columns: 1fr 420px;
+        gap: 45px;
+    }
 
-            line-height: 1.3;
+    .about-inner {
+        grid-template-columns: 270px minmax(0, 1fr);
+        gap: 45px;
+    }
 
-            margin-top: 30px;
-        }
+    .material {
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 30px;
+    }
 
-        .comparison-today u {
-            text-underline-offset: 3px;
-        }
+    .audience-item p {
+        font-size: 21px;
+    }
+}
 
 
-        /* =========================================================
-           OFERTAS
-           SEÇÕES 08, 11 E 12
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
 
-           Elas NÃO são fundidas.
-           Cada uma continua sendo uma seção independente.
-        ========================================================== */
+@media (max-width: 760px) {
 
-        .offer {
-            background: white;
+    .container {
+        width: calc(100% - 32px);
+    }
 
-            padding: 90px 0 100px;
 
-            text-align: center;
-        }
+    /* HERO */
 
-        .offer-inner {
-            width: min(900px, 100%);
+    .hero {
+        min-height: auto;
 
-            margin: 0 auto;
-        }
+        padding: 58px 16px 66px;
+    }
 
-        .offer-logo {
-            width: 275px;
+    .hero-logo {
+        width: 195px;
+        max-width: 65vw;
 
-            max-width: 70vw;
+        margin-bottom: 34px;
+    }
 
-            margin: 0 auto 25px;
-        }
+    .hero-main-image {
+        width: 318px;
+        max-width: 90vw;
 
-        .offer-product {
-            width: 655px;
+        margin-bottom: 34px;
+    }
 
-            max-width: 90vw;
+    .hero-title {
+        width: min(360px, 100%);
 
-            margin: 0 auto 35px;
+        font-size: 24px;
+        line-height: 1.32;
+    }
 
-            object-fit: contain;
-        }
 
-        .offer-title {
-            max-width: 700px;
+    /* RUMINAÇÕES */
 
-            margin: 0 auto 35px;
+    .ruminations {
+        min-height: auto;
 
-            color: rgb(13, 20, 26);
+        padding: 66px 16px 72px;
+    }
 
-            font-family: var(--quicksand);
+    .ruminations-title {
+        margin-bottom: 28px;
 
-            font-size: 40px;
+        font-size: 32px;
+        line-height: 1.28;
+    }
 
-            font-weight: 700;
+    .ruminations-intro {
+        margin-bottom: 24px;
 
-            line-height: 1.3;
-        }
+        font-size: 16px;
+        line-height: 1.45;
+    }
 
-        .offer-price {
-            color: rgb(13, 20, 26);
+    .ruminations-image {
+        width: 375px;
+        max-width: 100%;
 
-            font-family: var(--open-sans);
+        margin-bottom: 25px;
+    }
 
-            font-size: 48px;
+    .ruminations-final {
+        font-size: 16px;
+        line-height: 1.45;
+    }
 
-            font-weight: 700;
 
-            line-height: 1.3;
+    /* PROBLEMA */
 
-            margin-bottom: 8px;
-        }
+    .problem {
+        padding: 72px 16px 78px;
+    }
 
-        .offer-or {
-            color: rgb(13, 20, 26);
+    .problem-inner {
+        grid-template-columns: 1fr;
 
-            font-family: var(--open-sans);
+        gap: 42px;
 
-            font-size: 40px;
+        text-align: center;
+    }
 
-            font-weight: 700;
+    .problem-content {
+        text-align: center;
+    }
 
-            line-height: 1.3;
+    .problem-title {
+        margin-bottom: 24px;
 
-            margin-bottom: 8px;
-        }
+        font-size: 32px;
+        line-height: 1.3;
+    }
 
-        .offer-cash {
-            color: rgb(13, 20, 26);
+    .problem-text {
+        margin-bottom: 23px;
 
-            font-family: var(--open-sans);
+        font-size: 18px;
+        line-height: 1.5;
+    }
 
-            font-size: 24px;
+    .problem-final {
+        margin-top: 34px;
 
-            font-weight: 700;
+        font-size: 24px;
+        line-height: 1.35;
+    }
 
-            line-height: 1.3;
+    .problem-image {
+        width: 375px;
+        max-width: 100%;
+    }
 
-            margin-bottom: 35px;
-        }
 
-        .offer-note {
-            color: rgb(26, 26, 26);
+    /* SEQUÊNCIA */
 
-            font-family: var(--heading-font);
+    .sequence-image {
+        width: 100%;
+    }
 
-            font-size: 18px;
 
-            font-weight: 400;
+    /* MATERIAIS */
 
-            line-height: 1.3;
+    .materials {
+        padding: 67px 16px 78px;
+    }
 
-            margin-top: 25px;
-        }
+    .materials-title {
+        margin-bottom: 48px;
 
+        font-size: 32px;
+        line-height: 1.3;
+    }
 
-        /* =========================================================
-           SEÇÃO 09
-           CONVERSA DIRETA
-        ========================================================== */
+    .materials-list {
+        gap: 48px;
+    }
 
-        .conversation {
-            background: var(--dark-2);
+    .material {
+        display: grid;
+        grid-template-columns: 1fr;
 
-            padding: 105px 0 115px;
-        }
+        gap: 19px;
 
-        .conversation-inner {
-            width: min(900px, 100%);
+        text-align: center;
+    }
 
-            margin: 0 auto;
+    .material-image {
+        width: 100px;
+        height: 100px;
 
-            text-align: center;
-        }
+        margin: 0 auto;
+    }
 
-        .conversation-title {
-            color: white;
+    .material-content h3 {
+        margin-bottom: 11px;
 
-            font-family: var(--quicksand);
+        font-size: 24px;
+        line-height: 1.3;
+    }
 
-            font-size: 40px;
+    .material-content p {
+        font-size: 16px;
+        line-height: 1.55;
+    }
 
-            font-weight: 700;
 
-            line-height: 1.3;
+    /* AUDIÊNCIA */
 
-            margin-bottom: 60px;
-        }
+    .audience {
+        padding: 68px 16px 78px;
+    }
 
-        .conversation-text {
-            color: white;
+    .audience-title {
+        margin-bottom: 43px;
 
-            font-family: var(--poppins);
+        font-size: 32px;
+        line-height: 1.3;
+    }
 
-            font-size: 20px;
+    .audience-list {
+        gap: 15px;
+    }
 
-            font-weight: 500;
+    .audience-item {
+        grid-template-columns: 24px minmax(0, 1fr);
 
-            line-height: 1.3;
+        gap: 9px;
 
-            margin-bottom: 35px;
-        }
+        align-items: start;
+    }
 
-        .conversation-decision {
-            color: var(--orange);
+    .audience-check {
+        padding-top: 12px;
 
-            font-family: var(--poppins);
+        font-size: 19px;
+    }
 
-            font-size: 20px;
+    .audience-item p {
+        width: 100%;
 
-            font-weight: 500;
+        padding: 14px 15px;
 
-            line-height: 1.3;
+        font-size: 16px;
+        line-height: 1.45;
 
-            margin: 55px auto;
+        text-align: left;
+    }
 
-            max-width: 850px;
-        }
+    .audience-conclusion {
+        margin-top: 44px;
 
-        .conversation-spaced {
-            margin-bottom: 20px;
-        }
+        font-size: 20px;
+        line-height: 1.45;
+    }
 
-        .conversation-final {
-            color: var(--orange);
+    .audience-logo {
+        width: 195px;
+        max-width: 65vw;
 
-            font-family: var(--poppins);
+        margin: 15px auto;
+    }
 
-            font-size: 20px;
+    .audience-conclusion-last {
+        font-size: 20px;
+        line-height: 1.4;
+    }
 
-            font-weight: 500;
 
-            line-height: 1.3;
+    /* COMPARAÇÃO */
 
-            margin-top: 45px;
-        }
+    .comparison {
+        padding: 68px 16px 78px;
+    }
 
-        .conversation-image {
-            width: 720px;
+    .comparison-title {
+        margin-bottom: 34px;
 
-            max-width: 90vw;
+        font-size: 24px;
+        line-height: 1.35;
+    }
 
-            margin: 70px auto 0;
+    .price-list {
+        gap: 10px;
+    }
 
-            object-fit: contain;
-        }
+    .price-row {
+        align-items: flex-start;
 
+        gap: 12px;
+    }
 
-        /* =========================================================
-           SEÇÃO 10
-           SOBRE / CONFIANÇA
-        ========================================================== */
+    .price-name,
+    .price-old {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-        .about {
-            background: var(--cream);
+    .price-name {
+        max-width: 75%;
 
-            padding: 100px 0;
-        }
+        text-align: left;
+    }
 
-        .about-inner {
-            width: min(1050px, 100%);
+    .comparison-total,
+    .comparison-today {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-            margin: 0 auto;
+    .comparison-total {
+        margin-top: 30px;
+    }
 
-            display: grid;
+    .comparison-today {
+        margin-top: 25px;
+    }
 
-            grid-template-columns: 340px 1fr;
 
-            align-items: center;
+    /* OFERTAS */
 
-            gap: 70px;
-        }
+    .offer {
+        padding: 68px 16px 78px;
+    }
 
-        .about-image {
-            width: 305px;
+    .offer-logo {
+        width: 173px;
+        max-width: 60vw;
 
-            max-width: 100%;
+        margin-bottom: 23px;
+    }
 
-            margin: 0 auto;
+    .offer-product {
+        width: 328px;
+        max-width: 90vw;
 
-            object-fit: contain;
-        }
+        margin-bottom: 29px;
+    }
 
-        .about-title {
-            color: rgb(26, 26, 26);
+    .offer-title {
+        margin-bottom: 28px;
 
-            font-family: var(--quicksand);
+        font-size: 26px;
+        line-height: 1.35;
+    }
 
-            font-size: 40px;
+    .offer-price {
+        margin-bottom: 5px;
 
-            font-weight: 700;
+        font-size: 48px;
+        line-height: 1.2;
+    }
 
-            line-height: 1.3;
+    .offer-or {
+        font-size: 26px;
+        line-height: 1.25;
+    }
 
-            margin-bottom: 35px;
-        }
+    .offer-cash {
+        margin-bottom: 28px;
 
-        .about-text {
-            color: rgb(26, 26, 28);
+        font-size: 18px;
+        line-height: 1.35;
+    }
 
-            font-family: var(--poppins);
+    .buy-button {
+        width: 100%;
+        min-width: 0;
 
-            font-size: 20px;
+        min-height: 68px;
 
-            font-weight: 500;
+        padding: 14px 20px;
 
-            line-height: 1.3;
-        }
+        border-radius: 6px;
 
-        .about-text p {
-            margin-bottom: 25px;
-        }
+        font-size: 18px;
+        line-height: 1.3;
+    }
 
+    .offer-note {
+        margin-top: 19px;
 
-        /* =========================================================
-           FAQ — SEÇÃO 13
-        ========================================================== */
+        font-size: 16px;
+        line-height: 1.45;
+    }
 
-        .faq {
-            background: white;
 
-            padding: 100px 0 110px;
-        }
+    /* CONVERSA */
 
-        .faq-inner {
-            width: min(1000px, 100%);
+    .conversation {
+        padding: 72px 16px 82px;
+    }
 
-            margin: 0 auto;
-        }
+    .conversation-title {
+        margin-bottom: 43px;
 
-        .faq-main-title {
-            color: rgb(26, 26, 26);
+        font-size: 26px;
+        line-height: 1.3;
+    }
 
-            font-family: var(--heading-font);
+    .conversation-text {
+        margin-bottom: 27px;
 
-            font-size: 40px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
-            font-weight: 600;
+    .conversation-decision {
+        margin: 38px auto;
 
-            line-height: 1.3;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
-            text-align: center;
+    .conversation-spaced {
+        margin-bottom: 19px;
+    }
 
-            margin-bottom: 65px;
-        }
+    .conversation-final {
+        margin-top: 34px;
 
-        .faq-item {
-            padding: 30px 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
-            border-bottom: 1px solid rgba(26, 26, 26, 0.14);
-        }
+    .conversation-image {
+        width: 375px;
+        max-width: 100%;
 
-        .faq-question {
-            color: var(--orange);
+        margin-top: 48px;
+    }
 
-            font-family: var(--heading-font);
 
-            font-size: 32px;
+    /* SOBRE */
 
-            font-weight: 700;
+    .about {
+        padding: 72px 16px 80px;
+    }
 
-            line-height: 1.3;
+    .about-inner {
+        grid-template-columns: 1fr;
 
-            margin-bottom: 15px;
-        }
+        gap: 34px;
 
-        .faq-answer {
-            color: var(--text-gray);
+        text-align: center;
+    }
 
-            font-family: var(--heading-font);
+    .about-image {
+        width: 250px;
+        max-width: 75vw;
+    }
 
-            font-size: 24px;
+    .about-title {
+        margin-bottom: 27px;
 
-            font-weight: 400;
+        font-size: 26px;
+        line-height: 1.35;
+    }
 
-            line-height: 1.3;
-        }
+    .about-text {
+        font-size: 16px;
+        line-height: 1.55;
 
+        text-align: center;
+    }
 
-        /* =========================================================
-           FOOTER — SEÇÃO 14
-        ========================================================== */
+    .about-text p {
+        margin-bottom: 21px;
+    }
 
-        footer {
-            background: var(--black);
 
-            min-height: 121px;
+    /* FAQ */
 
-            padding: 40px 16px;
+    .faq {
+        padding: 72px 16px 82px;
+    }
 
-            color: white;
+    .faq-main-title {
+        margin-bottom: 43px;
 
-            text-align: center;
-        }
+        font-size: 32px;
+        line-height: 1.3;
+    }
 
-        .footer-support {
-            color: white;
+    .faq-item {
+        padding: 24px 0;
+    }
 
-            font-family: var(--body-font);
+    .faq-question {
+        margin-bottom: 12px;
 
-            font-size: 14px;
+        font-size: 24px;
+        line-height: 1.35;
+    }
 
-            font-weight: 500;
+    .faq-answer {
+        font-size: 16px;
+        line-height: 1.55;
+    }
 
-            line-height: 1.5;
 
-            text-transform: uppercase;
+    /* FOOTER */
 
-            margin-bottom: 12px;
-        }
+    footer {
+        min-height: 121px;
 
-        .footer-email {
-            color: white;
+        padding: 40px 16px;
+    }
 
-            font-family: var(--body-font);
+    .footer-email {
+        font-size: 18px;
+    }
+}
 
-            font-size: 20px;
 
-            line-height: 1.5;
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
 
-            margin-bottom: 15px;
-        }
+@media (max-width: 380px) {
 
-        .footer-email a {
-            color: white;
+    .hero {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 
-            text-decoration: underline;
+    .hero-logo {
+        width: 180px;
+    }
 
-            text-underline-offset: 3px;
-        }
+    .hero-title {
+        font-size: 22px;
+    }
 
-        .footer-copy {
-            color: white;
+    .ruminations-title,
+    .materials-title,
+    .audience-title {
+        font-size: 28px;
+    }
 
-            font-family: var(--body-font);
+    .problem-title {
+        font-size: 28px;
+    }
 
-            font-size: 14px;
+    .offer-title {
+        font-size: 24px;
+    }
 
-            line-height: 1.3;
-        }
+    .offer-price {
+        font-size: 42px;
+    }
 
+    .buy-button {
+        font-size: 17px;
+    }
 
-        /* =========================================================
-           TABLET
-        ========================================================== */
-
-        @media (max-width: 900px) {
-
-            .hero {
-                min-height: 665px;
-            }
-
-            .hero-inner {
-                min-height: 585px;
-            }
-
-            .hero-title {
-                font-size: 40px;
-            }
-
-            .problem-inner {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-
-                text-align: center;
-            }
-
-            .problem-content {
-                text-align: center;
-            }
-
-            .problem-image {
-                width: 420px;
-            }
-
-            .material {
-                grid-template-columns: 150px 1fr;
-
-                gap: 30px;
-            }
-
-            .about-inner {
-                grid-template-columns: 280px 1fr;
-
-                gap: 45px;
-            }
-        }
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================== */
-
-        @media (max-width: 600px) {
-
-            .container {
-                width: calc(100% - 32px);
-            }
-
-
-            /* -----------------------------------------------------
-               HERO
-            ----------------------------------------------------- */
-
-            .hero {
-                min-height: auto;
-
-                padding: 64px 16px;
-            }
-
-            .hero-inner {
-                width: 100%;
-
-                min-height: auto;
-            }
-
-            .hero-logo {
-                width: 195px;
-
-                margin-bottom: 35px;
-            }
-
-            .hero-main-image {
-                width: 318px;
-
-                max-width: 90vw;
-
-                margin-bottom: 35px;
-            }
-
-            .hero-title {
-                max-width: 360px;
-
-                font-size: 24px;
-
-                line-height: 1.3;
-            }
-
-
-            /* -----------------------------------------------------
-               RUMINAÇÕES
-            ----------------------------------------------------- */
-
-            .ruminations {
-                padding: 64px 16px;
-            }
-
-            .ruminations-title {
-                font-size: 32px;
-
-                margin-bottom: 30px;
-            }
-
-            .ruminations-intro {
-                font-size: 16px;
-
-                margin-bottom: 25px;
-            }
-
-            .ruminations-image {
-                width: 375px;
-
-                max-width: 100%;
-
-                margin-bottom: 25px;
-            }
-
-            .ruminations-final {
-                font-size: 16px;
-            }
-
-
-            /* -----------------------------------------------------
-               PROBLEMA
-            ----------------------------------------------------- */
-
-            .problem {
-                padding: 70px 16px;
-            }
-
-            .problem-title {
-                font-size: 32px;
-
-                margin-bottom: 25px;
-            }
-
-            .problem-text {
-                font-size: 18px;
-
-                margin-bottom: 24px;
-            }
-
-            .problem-final {
-                font-size: 24px;
-
-                margin-top: 35px;
-            }
-
-            .problem-image {
-                width: 375px;
-
-                max-width: 100%;
-            }
-
-
-            /* -----------------------------------------------------
-               SEQUÊNCIA
-            ----------------------------------------------------- */
-
-            .sequence-image {
-                width: 100%;
-            }
-
-
-            /* -----------------------------------------------------
-               MATERIAIS
-            ----------------------------------------------------- */
-
-            .materials {
-                padding: 65px 16px 75px;
-            }
-
-            .materials-title {
-                font-size: 32px;
-
-                margin-bottom: 50px;
-            }
-
-            .materials-list {
-                gap: 50px;
-            }
-
-            .material {
-                display: grid;
-
-                grid-template-columns: 1fr;
-
-                gap: 20px;
-
-                text-align: center;
-            }
-
-            .material-image {
-                width: 95px;
-
-                height: 95px;
-
-                margin: 0 auto;
-            }
-
-            .material-content h3 {
-                font-size: 24px;
-
-                margin-bottom: 12px;
-            }
-
-            .material-content p {
-                font-size: 16px;
-
-                line-height: 1.5;
-            }
-
-
-            /* -----------------------------------------------------
-               AUDIENCE
-            ----------------------------------------------------- */
-
-            .audience {
-                padding: 65px 16px 75px;
-            }
-
-            .audience-title {
-                font-size: 32px;
-
-                margin-bottom: 45px;
-            }
-
-            .audience-list {
-                gap: 16px;
-            }
-
-            .audience-item {
-                grid-template-columns: 25px 1fr;
-
-                gap: 10px;
-
-                align-items: start;
-            }
-
-            .audience-check {
-                font-size: 20px;
-
-                padding-top: 14px;
-            }
-
-            .audience-item p {
-                width: 100%;
-
-                padding: 14px 16px;
-
-                font-size: 16px;
-            }
-
-            .audience-conclusion {
-                font-size: 20px;
-
-                margin-top: 45px;
-            }
-
-            .audience-logo {
-                width: 195px;
-
-                margin: 15px auto;
-            }
-
-            .audience-conclusion-last {
-                font-size: 20px;
-            }
-
-
-            /* -----------------------------------------------------
-               COMPARAÇÃO
-            ----------------------------------------------------- */
-
-            .comparison {
-                padding: 65px 16px 75px;
-            }
-
-            .comparison-title {
-                font-size: 26px;
-
-                margin-bottom: 35px;
-            }
-
-            .price-list {
-                gap: 10px;
-            }
-
-            .price-row {
-                gap: 15px;
-            }
-
-            .price-name,
-            .price-old {
-                font-size: 16px;
-            }
-
-            .comparison-total,
-            .comparison-today {
-                font-size: 16px;
-            }
-
-
-            /* -----------------------------------------------------
-               OFERTA
-            ----------------------------------------------------- */
-
-            .offer {
-                padding: 65px 16px 75px;
-            }
-
-            .offer-inner {
-                width: 100%;
-            }
-
-            .offer-logo {
-                width: 173px;
-
-                margin-bottom: 25px;
-            }
-
-            .offer-product {
-                width: 328px;
-
-                max-width: 90vw;
-
-                margin-bottom: 30px;
-            }
-
-            .offer-title {
-                font-size: 26px;
-
-                margin-bottom: 30px;
-            }
-
-            .offer-price {
-                font-size: 48px;
-            }
-
-            .offer-or {
-                font-size: 26px;
-            }
-
-            .offer-cash {
-                font-size: 18px;
-
-                margin-bottom: 30px;
-            }
-
-            .buy-button {
-                width: 86.111vw;
-
-                min-height: 70px;
-
-                padding: 14px 20px;
-
-                font-size: 18px;
-            }
-
-            .offer-note {
-                font-size: 16px;
-
-                margin-top: 20px;
-            }
-
-
-            /* -----------------------------------------------------
-               CONVERSA
-            ----------------------------------------------------- */
-
-            .conversation {
-                padding: 70px 16px 80px;
-            }
-
-            .conversation-title {
-                font-size: 26px;
-
-                margin-bottom: 45px;
-            }
-
-            .conversation-text {
-                font-size: 16px;
-
-                margin-bottom: 28px;
-            }
-
-            .conversation-decision {
-                font-size: 16px;
-
-                margin: 40px auto;
-            }
-
-            .conversation-final {
-                font-size: 16px;
-
-                margin-top: 35px;
-            }
-
-            .conversation-image {
-                width: 375px;
-
-                max-width: 100%;
-
-                margin-top: 50px;
-            }
-
-
-            /* -----------------------------------------------------
-               SOBRE
-            ----------------------------------------------------- */
-
-            .about {
-                padding: 70px 16px;
-            }
-
-            .about-inner {
-                grid-template-columns: 1fr;
-
-                gap: 35px;
-
-                text-align: center;
-            }
-
-            .about-image {
-                width: 250px;
-            }
-
-            .about-title {
-                font-size: 26px;
-
-                margin-bottom: 30px;
-            }
-
-            .about-text {
-                font-size: 16px;
-
-                text-align: center;
-            }
-
-            .about-text p {
-                margin-bottom: 22px;
-            }
-
-
-            /* -----------------------------------------------------
-               FAQ
-            ----------------------------------------------------- */
-
-            .faq {
-                padding: 70px 16px 80px;
-            }
-
-            .faq-main-title {
-                font-size: 32px;
-
-                margin-bottom: 45px;
-            }
-
-            .faq-item {
-                padding: 25px 0;
-            }
-
-            .faq-question {
-                font-size: 24px;
-            }
-
-            .faq-answer {
-                font-size: 16px;
-            }
-
-
-            /* -----------------------------------------------------
-               FOOTER
-            ----------------------------------------------------- */
-
-            footer {
-                padding: 40px 16px;
-            }
-
-            .footer-email {
-                font-size: 18px;
-            }
-        }
-
-
-        /* =========================================================
-           CELULARES MUITO PEQUENOS
-        ========================================================== */
-
-        @media (max-width: 380px) {
-
-            .hero-title {
-                font-size: 22px;
-            }
-
-            .ruminations-title,
-            .materials-title,
-            .audience-title {
-                font-size: 28px;
-            }
-
-            .problem-title {
-                font-size: 28px;
-            }
-
-            .offer-price {
-                font-size: 42px;
-            }
-
-            .buy-button {
-                font-size: 17px;
-            }
-        }
+    .faq-main-title {
+        font-size: 28px;
+    }
+}
